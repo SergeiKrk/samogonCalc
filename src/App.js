@@ -1,17 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Components/Header';
-import Footer from './Components/Footer';
+import Home from './Pages/Home';
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
-      <body id="page-top">
-        page
-        <Footer />
-      </body>
+      <Home/>
     </div>
   );
 }

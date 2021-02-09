@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HeaderTag = () => {
+const HomeHeader = () => {
     return(
         <div>
             <header className="masthead bg-primary text-white text-center">
@@ -19,4 +19,4 @@ const HeaderTag = () => {
     )
 }
 
-export default HeaderTag;
+export default HomeHeader;
