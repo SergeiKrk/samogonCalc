@@ -3,6 +3,7 @@ import '../css/styles.css'
 import HomeHeader from '../Components/HomeHeader';
 import Footer from '../Components/Footer';
 import NavbarMenu from '../Components/NavbarMenu';
+import CalcBlock from '../Components/CalcBlock';
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       <NavbarMenu/>
       <HomeHeader/>
       <body id="page-top">
-        page
+        <CalcBlock/>
         <Footer />
       </body>
     </div>

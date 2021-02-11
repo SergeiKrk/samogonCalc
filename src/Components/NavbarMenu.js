@@ -15,9 +15,9 @@ const NavbarMenu = () => {
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="#home">SamagonCalc</Navbar.Brand>
+            <Container><Navbar.Brand href="#home">SamagonCalc</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav" className="container">
+                <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                     <Nav.Link href="#features">Features</Nav.Link>
                     <Nav.Link href="#pricing">Pricing</Nav.Link>
@@ -35,7 +35,7 @@ const NavbarMenu = () => {
                         Dank memes
                     </Nav.Link>
                     </Nav>
-                </Navbar.Collapse>
+                </Navbar.Collapse></Container>
             </Navbar>
         </div>
     );

@@ -1,11 +1,16 @@
 import React from 'react'
+import logo from '../assets/img/kalkulyator-samogonshchika.png'
 
 const HomeHeader = () => {
     return(
         <div>
             <header className="masthead bg-primary text-white text-center">
                 <div className="container d-flex align-items-center flex-column">
-                    <img className="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="" />
+                    <img 
+                                src={logo}
+                                className="masthead-avatar mb-5"
+                                alt="калькулятор самогонщика"
+                            />
                     <h1 className="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
                     <div className="divider-custom divider-light">
                         <div className="divider-custom-line"></div>
