@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/styles.css'
-import HomeHeader from '../Components/HomeHeader';
-import Footer from '../Components/Footer';
-import NavbarMenu from '../Components/NavbarMenu';
-import CalcBlock from '../Components/CalcBlock';
+import HomeHeader from '../Components/Header/HomeHeader';
+import Footer from '../Components/Footer/Footer';
+import NavbarMenu from '../Components/Header/NavbarMenu';
+import CalcBlock from '../Components/CalcBlock/CalcBlock';
 
 const Home = () => {
   return (

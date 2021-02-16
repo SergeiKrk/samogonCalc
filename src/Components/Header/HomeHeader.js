@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/img/kalkulyator-samogonshchika.png'
+import logo from '../../assets/img/kalkulyator-samogonshchika.png'
 
 const HomeHeader = () => {
     return(
