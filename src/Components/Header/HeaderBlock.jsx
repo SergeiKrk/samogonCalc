@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../assets/img/kalkulyator-samogonshchika.png'
 
-const HomeHeader = () => {
+const HeaderBlock = () => {
     return(
         <div>
             <header className="masthead bg-primary text-white text-center">
@@ -24,4 +24,4 @@ const HomeHeader = () => {
     )
 }
 
-export default HomeHeader;
+export default HeaderBlock;

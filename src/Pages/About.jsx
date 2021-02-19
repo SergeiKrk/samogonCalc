@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/styles.css'
-import HomeHeader from '../Components/Header/HomeHeader';
+import HeaderBlock from '../Components/Header/HeaderBlock';
 import Footer from '../Components/Footer/Footer';
 import NavbarMenu from '../Components/Header/NavbarMenu';
 import CalcBlock from '../Components/CalcBlock/CalcBlock';
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div>
       <NavbarMenu/>
-      <HomeHeader/>
+      <HeaderBlock/>
       <body id="page-top">
         <CalcBlock/>
         <Footer />
