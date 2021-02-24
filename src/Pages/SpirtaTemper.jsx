@@ -7,12 +7,10 @@ const SpirtaTemper = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         SpirtaTemper
         -
         <Footer />
-      </body>
     </div>
   );
 }

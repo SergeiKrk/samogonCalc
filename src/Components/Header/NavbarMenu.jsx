@@ -4,11 +4,11 @@ import {
     Navbar,
     Nav,
     NavDropdown
- } from 'react-bootstrap'
+} from 'react-bootstrap'
 
 const NavbarMenu = () => {
     return (
-        <div>
+        <>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container><Navbar.Brand href="/">SamagonCalc</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -32,15 +32,11 @@ const NavbarMenu = () => {
                     </NavDropdown>
                     </Nav>
                     <Nav>
-                    <Nav.Link href="#deets">More deets</Nav.Link>
-                    <Nav.Link eventKey={2} href="#memes">
-                        Dank memes
-                    </Nav.Link>
+                    <Nav.Link href="/about">О проекте</Nav.Link>
                     </Nav>
                 </Navbar.Collapse></Container>
             </Navbar>
-
-        </div>
+        </>
     );
 }
 

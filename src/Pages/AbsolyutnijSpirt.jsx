@@ -7,12 +7,10 @@ const AbsolyutnijSpirt = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         Калькулятор абсолютного спирта
         -
         <Footer />
-      </body>
     </div>
   );
 }

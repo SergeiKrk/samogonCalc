@@ -7,12 +7,10 @@ const SmeshSpirt = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         SmeshSpirt
         -
         <Footer />
-      </body>
     </div>
   );
 }

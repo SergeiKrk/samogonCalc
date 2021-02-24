@@ -7,12 +7,10 @@ const DrobnayaPeregonka = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         DrobnayaPeregonka
         -
         <Footer />
-      </body>
     </div>
   );
 }

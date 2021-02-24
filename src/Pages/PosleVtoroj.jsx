@@ -7,12 +7,10 @@ const PosleVtoroj = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         PosleVtoroj
         -
         <Footer />
-      </body>
     </div>
   );
 }

@@ -7,12 +7,10 @@ const SebestoimSamogona = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         SebestoimSamogona
         -
         <Footer />
-      </body>
     </div>
   );
 }

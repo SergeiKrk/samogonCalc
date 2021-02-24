@@ -8,12 +8,9 @@ import CalcBlock from '../Components/CalcBlock/CalcBlock';
 const Home = () => {
   return (
     <div>
-      <NavbarMenu/>
       <HeaderBlock/>
-      <body id="page-top">
         <CalcBlock/>
         <Footer />
-      </body>
     </div>
   );
 }

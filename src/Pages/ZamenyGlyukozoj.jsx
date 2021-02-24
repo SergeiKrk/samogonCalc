@@ -7,12 +7,10 @@ const ZamenyGlyukozoj = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         ZamenyGlyukozoj
         -
         <Footer />
-      </body>
     </div>
   );
 }

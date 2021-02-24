@@ -7,12 +7,10 @@ const SaharBragi = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         SaharBragi
         -
         <Footer />
-      </body>
     </div>
   );
 }

@@ -1,21 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/styles.css'
-import HeaderBlock from '../Components/Header/HeaderBlock';
-import Footer from '../Components/Footer/Footer';
-import NavbarMenu from '../Components/Header/NavbarMenu';
-import CalcBlock from '../Components/CalcBlock/CalcBlock';
 
-const Home = () => {
+const About = () => {
   return (
     <div>
-      <NavbarMenu/>
-      <HeaderBlock/>
-      <body id="page-top">
-        <CalcBlock/>
-        <Footer />
-      </body>
+      <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        About
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
   );
 }
 
-export default Home;
+export default About;

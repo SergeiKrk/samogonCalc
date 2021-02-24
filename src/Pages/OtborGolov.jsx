@@ -7,12 +7,10 @@ const OtborGolov = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         OtborGolov
         -
         <Footer />
-      </body>
     </div>
   );
 }

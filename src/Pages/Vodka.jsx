@@ -7,12 +7,10 @@ const Vodka = () => {
   return (
     <div>
       <HeaderBlock/>
-      <body id="page-top">
         -
         Vodka
         -
         <Footer />
-      </body>
     </div>
   );
 }
