@@ -25,18 +25,18 @@ const CalcBlock = (props) => {
                     <div className="divider-custom-line"></div>
                 </div>
                 <div className="row justify-content-center">
-                    <CalcCard CalcCard={{Img: `${razbavSam}`, Name: 'Калькулятор разбавления самогона водой', descriptionCard: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'}}/>
-                    <CalcCard CalcCard={{Img: `${otborGolov}`, Name: 'Калькулятор отбор голов', descriptionCard: 'Рассчитает объем чистого спирта в полученном и объем вредных «голов» в спирте первой перегонки.'}}/>
-                    <CalcCard CalcCard={{Img: `${drobPeregon}`, Name: 'Калькулятор дробной перегонки спирта-сырца', descriptionCard: 'Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!'}}/>
-                    <CalcCard CalcCard={{Img: `${absSpirt}`, Name: 'Калькулятор разбавления самогона водой (после первого перегона)', descriptionCard: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях!'}}/>
-                    <CalcCard CalcCard={{Img: `${razbavlPerv}`, Name: 'Калькулятор разбавления самогона водой (после второго перегона)', descriptionCard: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях!'}}/>
-                    <CalcCard CalcCard={{Img: `${razbavlVtor}`, Name: 'Калькулятор смешивания спиртов', descriptionCard: 'Смешиваете две разных крепости? Узнайте сейчас какой градус будет на выходе!'}}/>
-                    <CalcCard CalcCard={{Img: `${smeshSpirt}`, Name: 'Калькулятор абсолютного спирта', descriptionCard: 'Рассчитает объем чистого спирта в полученном и объем вредных «голов» в спирте первой перегонки.'}}/>
-                    <CalcCard CalcCard={{Img: `${sebestoim}`, Name: 'Калькулятор себестоимости самогона', descriptionCard: 'Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.'}}/>
-                    <CalcCard CalcCard={{Img: `${saharBragi}`, Name: 'Калькулятор сахарной браги', descriptionCard: 'Вычисляет крепость браги и оптимальные пропорции сахара и воды для браги.'}}/>
-                    <CalcCard CalcCard={{Img: `${vodka}`, Name: 'Калькулятор водки из спирта', descriptionCard: 'Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.'}}/>
-                    <CalcCard CalcCard={{Img: `${vspirtTemperatury}`, Name: 'Калькулятор спирта от температуры', descriptionCard: 'Рассчитает реальную крепость самогона при температуре больше или меньше 20 °C.'}}/>
-                    <CalcCard CalcCard={{Img: `${saharGlukoza}`, Name: 'Калькулятор замены сахара глюкозой', descriptionCard: 'Определяет насколько меньше потребуется глюкозы, чтобы выход спирта из браги был как с 1 кг обычного сахара.'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-razbavleniya-samogona-vodoj', Img: `${razbavSam}`, Name: 'Калькулятор разбавления самогона водой', descriptionCard: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-otbor-golov', Img: `${otborGolov}`, Name: 'Калькулятор отбор голов', descriptionCard: 'Рассчитает объем чистого спирта в полученном и объем вредных «голов» в спирте первой перегонки.'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-drobnoj-peregonki', Img: `${drobPeregon}`, Name: 'Калькулятор дробной перегонки спирта-сырца', descriptionCard: 'Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!'}}/>
+                    <CalcCard CalcCard={{Href: 'razbavlenie-samogona-vodoj-posle-pervoj-peregonki', Img: `${absSpirt}`, Name: 'Калькулятор разбавления самогона водой (после первого перегона)', descriptionCard: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях!'}}/>
+                    <CalcCard CalcCard={{Href: 'razbavlenie-samogona-vodoj-posle-vtorogo-peregona', Img: `${razbavlPerv}`, Name: 'Калькулятор разбавления самогона водой (после второго перегона)', descriptionCard: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях!'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-smeshivaniya-spirtov', Img: `${razbavlVtor}`, Name: 'Калькулятор смешивания спиртов', descriptionCard: 'Смешиваете две разных крепости? Узнайте сейчас какой градус будет на выходе!'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-absolyutnogo-spirta', Img: `${smeshSpirt}`, Name: 'Калькулятор абсолютного спирта', descriptionCard: 'Рассчитает объем чистого спирта в полученном и объем вредных «голов» в спирте первой перегонки.'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-sebestoimosti-samogona', Img: `${sebestoim}`, Name: 'Калькулятор себестоимости самогона', descriptionCard: 'Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-saharnoj-bragi', Img: `${saharBragi}`, Name: 'Калькулятор сахарной браги', descriptionCard: 'Вычисляет крепость браги и оптимальные пропорции сахара и воды для браги.'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-vodki-iz-spirta', Img: `${vodka}`, Name: 'Калькулятор водки из спирта', descriptionCard: 'Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-spirta-ot-temperatury', Img: `${vspirtTemperatury}`, Name: 'Калькулятор спирта от температуры', descriptionCard: 'Рассчитает реальную крепость самогона при температуре больше или меньше 20 °C.'}}/>
+                    <CalcCard CalcCard={{Href: 'kalkulyator-zameny-sahara-glyukozoj', Img: `${saharGlukoza}`, Name: 'Калькулятор замены сахара глюкозой', descriptionCard: 'Определяет насколько меньше потребуется глюкозы, чтобы выход спирта из браги был как с 1 кг обычного сахара.'}}/>
                 </div>
             </div>
         </section>

@@ -4,11 +4,12 @@ import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
 import CalcBlock from '../Components/CalcBlock/CalcBlock'
+import logo from '../assets/img/kalkulyator-samogonshchika.png'
 
-const Home = () => {
+const Home = (props) => {
   return (
     <>
-      <HeaderBlock/>
+      <HeaderBlock HeaderBlock={{Img: `${logo}`, Title: 'Калькулятор самогонщика', Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'}}/>
       <CalcBlock/>
       <Footer />
     </>
