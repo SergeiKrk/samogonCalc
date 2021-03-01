@@ -12,13 +12,13 @@ const CalcCard = (props) => {
                 <img 
                     src={props.CalcCard.Img}
                     className={`${s.imgCard} img-fluid`}
-                    alt={props.CalcCard.Name}
+                    alt={props.CalcCard.Title}
                 />
             </div>
             <Link className="text-secondary" to={`${props.CalcCard.Href}`}>
-                <h3 className={`${s.titleCard} text-secondary text-center`}>{props.CalcCard.Name}</h3>
+                <h3 className={`${s.titleCard} text-secondary text-center`}>{props.CalcCard.Title}</h3>
             </Link>
-            <p className="text-center">{props.CalcCard.descriptionCard}</p>
+            <p className="text-center">{props.CalcCard.Description}</p>
         </div>
     )
 }
