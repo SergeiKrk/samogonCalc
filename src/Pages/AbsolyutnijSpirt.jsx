@@ -3,6 +3,7 @@ import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
 import absSpirt from '../assets/img/kalkulyator-absolyutnogo-spirta.png'
+import Dialogs from '../Components/Dialogs/Dialogs'
 
 const AbsolyutnijSpirt = (props) => {
   return (
@@ -11,6 +12,7 @@ const AbsolyutnijSpirt = (props) => {
         -
         Калькулятор разбавления самогона водой
         -
+        <Dialogs/>
         <Footer />
     </div>
   );
