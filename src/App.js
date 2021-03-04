@@ -23,6 +23,7 @@ import Vodka from './Pages/Vodka';
 import SpirtaTemper from './Pages/SpirtaTemper';
 import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
+import Profile from "./Pages/Profile";
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
               <Route path="/kalkulyator-spirta-ot-temperatury" component={SpirtaTemper}/>
               <Route path="/kalkulyator-zameny-sahara-glyukozoj" component={ZamenyGlyukozoj}/>
               <Route path="/about" component={About}/>
+              <Route path="/profile" component={Profile}/>
           </Switch>
       </Router>
     </div>

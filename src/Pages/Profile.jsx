@@ -4,19 +4,21 @@ import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
 import myProfileImg from '../assets/img/portfolio/submarine.png'
 import Dialogs from '../Components/Dialogs/Dialogs'
-import Profiles from "./Profiles";
 
-const Profile = () => {
+const Profile = (props) => {
     return (
-        <>
+        <div>
             <HeaderBlock HeaderBlock={{
                 Img: `${myProfileImg}`,
-                Title: 'Калькулятор разбавления самогона водой',
-                Description: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'
+                Title: 'Полное погружение в самогон',
+                Description: 'Разработчик сего ресурса'
             }}/>
-            <Profiles />
-            <Footer />
-        </>
+            -
+            Калькулятор разбавления самогона водой
+            -
+            <Dialogs/>
+            <Footer/>
+        </div>
     );
 }
 
