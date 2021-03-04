@@ -29,6 +29,7 @@ const NavbarMenu = () => {
                         <NavDropdown.Item href="/kalkulyator-vodki-iz-spirta">Калькулятор водки из спирта</NavDropdown.Item>
                         <NavDropdown.Item href="/kalkulyator-spirta-ot-temperatury">Калькулятор спирта от температуры</NavDropdown.Item>
                         <NavDropdown.Item href="/kalkulyator-zameny-sahara-glyukozoj">Калькулятор замены сахара глюкозой</NavDropdown.Item>
+                        <NavDropdown.Item href="/profile">Мой профиль</NavDropdown.Item>
                     </NavDropdown>
                     </Nav>
                     <Nav>

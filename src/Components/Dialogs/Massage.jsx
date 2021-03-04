@@ -18,13 +18,13 @@ const Massage = (props) => {
                             className={s.ml25}
                             alt='fsvfksmvkms'
                         />
-                        <Col className="text-left" md={2} xs={9}>
+                        <Col className="text-left" md={2}>
                             <div className={s.ma7}><b>Анатолий</b></div>
                         </Col>
-                        <Col className="text-left" xs={12}>
+                        <Col className="text-left" md={6}>
                             <div className={s.ma7}>Привет ребята!</div>
                         </Col>
-                        <Col className="text-right" md={3} xs={12}>
+                        <Col className="text-right" md={3}>
                             <Button variant="outline-success" size="sm">1</Button>{' '}
                             <Button variant="outline-danger" size="sm">2</Button>{' '}
                             <Button variant="outline-dark"  size="sm">Комментировать</Button>

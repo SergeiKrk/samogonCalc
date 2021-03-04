@@ -6,13 +6,13 @@ import NavbarMenu from '../Components/Header/NavbarMenu';
 import CalcBlock from '../Components/CalcBlock/CalcBlock';
 
 const Home = () => {
-  return (
-    <div>
-      <HeaderBlock/>
-        <CalcBlock/>
-        <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <HeaderBlock/>
+            <CalcBlock/>
+            <Footer/>
+        </div>
+    );
 }
 
 export default Home;
