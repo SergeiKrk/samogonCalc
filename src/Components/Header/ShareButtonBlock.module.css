@@ -1,0 +1,12 @@
+.contain {
+  display: block;
+}
+.someNetwork {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+}
+.btnShare {
+
+}

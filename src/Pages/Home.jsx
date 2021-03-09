@@ -7,13 +7,17 @@ import CalcBlock from '../Components/CalcBlock/CalcBlock'
 import logo from '../assets/img/kalkulyator-samogonshchika.png'
 
 const Home = (props) => {
-  return (
-    <>
-      <HeaderBlock HeaderBlock={{Img: `${logo}`, Title: 'Калькулятор самогонщика', Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'}}/>
-      <CalcBlock/>
-      <Footer />
-    </>
-  );
+    return (
+        <>
+            <HeaderBlock HeaderBlock={{
+                Img: `${logo}`,
+                Title: 'Калькулятор самогонщика',
+                Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'
+            }}/>
+            <CalcBlock/>
+            <Footer/>
+        </>
+    );
 }
 
 export default Home;

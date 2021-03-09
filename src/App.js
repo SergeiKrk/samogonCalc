@@ -8,7 +8,6 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavbarMenu from './Components/Header/NavbarMenu'
-
 import Home from './Pages/Home'
 import AbsolyutnijSpirt from './Pages/AbsolyutnijSpirt'
 import DrobnayaPeregonka from './Pages/DrobnayaPeregonka';

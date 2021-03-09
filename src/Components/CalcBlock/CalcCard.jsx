@@ -18,7 +18,7 @@ const CalcCard = (props) => {
             <Link className="text-secondary" to={`${props.CalcCard.Href}`}>
                 <h3 className={`${s.titleCard} text-secondary text-center`}>{props.CalcCard.Title}</h3>
             </Link>
-            <p className="text-center">{props.CalcCard.Description}11</p>
+            <p className="text-center">{props.CalcCard.Description}</p>
         </div>
     )
 }
