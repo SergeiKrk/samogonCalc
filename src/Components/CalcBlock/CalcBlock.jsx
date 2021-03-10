@@ -13,6 +13,7 @@ import vspirtTemperatury from '../../assets/img/kalkulyator-spirta-ot-temperatur
 import saharGlukoza from '../../assets/img/kalkulyator-zameny-sahara-glyukozoj.png'
 import s from './CalcBlock.module.css'
 import CalcCard from './CalcCard'
+import DisqusBlock from "../Header/DisqusBlock";
 
 const CalcBlock = (props) => {
     return(
@@ -39,6 +40,7 @@ const CalcBlock = (props) => {
                     <CalcCard CalcCard={{Href: 'kalkulyator-zameny-sahara-glyukozoj', Img: `${saharGlukoza}`, Title: 'Калькулятор замены сахара глюкозой', Description: 'Определяет насколько меньше потребуется глюкозы, чтобы выход спирта из браги был как с 1 кг обычного сахара.'}}/>
                 </div>
             </div>
+            <DisqusBlock />
         </section>
     )
 }

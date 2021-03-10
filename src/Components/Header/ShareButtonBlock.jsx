@@ -1,8 +1,8 @@
 import React from 'react'
 import s from './ShareButtonBlock.module.css'
-import {TelegramShareButton,ViberShareButton,WhatsappShareButton,VKShareButton,FacebookShareButton,TwitterShareButton} from "react-share";
-import {VKIcon,WhatsappIcon,ViberIcon,TelegramIcon,FacebookIcon,TwitterIcon} from "react-share";
-import {Container, Tooltip} from "react-bootstrap";
+import {TelegramShareButton,ViberShareButton,WhatsappShareButton,VKShareButton,FacebookShareButton,TwitterShareButton} from "react-share"
+import {VKIcon,WhatsappIcon,ViberIcon,TelegramIcon,FacebookIcon,TwitterIcon} from "react-share"
+import {Container, Tooltip} from "react-bootstrap"
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
 const renderTooltip = (props) => (
