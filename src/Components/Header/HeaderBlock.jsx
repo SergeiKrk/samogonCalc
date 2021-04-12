@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaCalculator } from "react-icons/fa";
 import ShareButtonBlock from "./ShareButtonBlock";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 const HeaderBlock = (props) => {
     return (
@@ -19,8 +20,18 @@ const HeaderBlock = (props) => {
                         <div className="divider-custom-line"></div>
                     </div>
                     <p className="masthead-subheading font-weight-light mb-0">{props.HeaderBlock.Description}</p>
+
                 </div>
             </header>
+            <div className="container">
+                <Breadcrumb className="text-center">
+                    <Breadcrumb.Item href="/">Калькуляторы самогонщика</Breadcrumb.Item>
+                    <Breadcrumb.Item href={props.HeaderBlock.Href}>
+                        {props.HeaderBlock.Title}
+                    </Breadcrumb.Item>
+                </Breadcrumb>
+            </div>
+
         </div>
     )
 }
