@@ -3,6 +3,7 @@ import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
 import saharBragi from '../assets/img/kalkulyator-saharnoj-bragi.png'
+import RazbavleniyaSamogonaCalc from "../Components/Calcs/RazbavleniyaSamogonaCalc";
 
 const SaharBragi = () => {
   return (
@@ -11,6 +12,7 @@ const SaharBragi = () => {
         -
         SaharBragi
         -
+      <RazbavleniyaSamogonaCalc />
         <Footer />
     </div>
   );

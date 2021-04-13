@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCalculator } from "react-icons/fa";
 import ShareButtonBlock from "./ShareButtonBlock";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
+import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 const HeaderBlock = (props) => {
     return (
@@ -25,13 +26,13 @@ const HeaderBlock = (props) => {
             </header>
             <div className="container">
                 <Breadcrumb className="text-center">
+                    <Breadcrumb.Item href="/">Главная</Breadcrumb.Item>
                     <Breadcrumb.Item href="/">Калькуляторы самогонщика</Breadcrumb.Item>
                     <Breadcrumb.Item href={props.HeaderBlock.Href}>
                         {props.HeaderBlock.Title}
                     </Breadcrumb.Item>
                 </Breadcrumb>
             </div>
-
         </div>
     )
 }
