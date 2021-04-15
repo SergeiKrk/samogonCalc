@@ -5,7 +5,7 @@ import Footer from '../Components/Footer/Footer';
 import NavbarMenu from '../Components/Header/NavbarMenu';
 import CalcBlock from '../Components/CalcBlock/CalcBlock';
 
-const Home = () => {
+const Home = (props) => {
     return (
         <div>
             <CalcBlock/>

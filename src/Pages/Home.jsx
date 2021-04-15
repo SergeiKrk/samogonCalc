@@ -4,13 +4,12 @@ import '../css/styles.css'
 import HeaderBlockHome from '../Components/Header/HeaderBlockHome'
 import Footer from '../Components/Footer/Footer'
 import CalcBlock from '../Components/CalcBlock/CalcBlock'
-import logo from '../assets/img/kalkulyator-samogonshchika.png'
 
 const Home = (props) => {
     return (
         <>
             <HeaderBlockHome HeaderBlockHome={{
-                Img: `${logo}`,
+                Img: 'https://samogoncalc.ru/img/kalkulyator-samogonshchika.png',
                 Title: 'Калькулятор самогонщика',
                 Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'
             }}/>
