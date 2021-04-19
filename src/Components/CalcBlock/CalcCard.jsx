@@ -10,15 +10,15 @@ const CalcCard = (props) => {
                     <div className="portfolio-item-caption-content text-center text-white"><i className="fas fa-plus fa-3x"></i></div>
                 </div>
                 <img 
-                    src={props.CalcCard.Img}
+                    src={props.Img}
                     className={`${s.imgCard} img-fluid`}
-                    alt={props.CalcCard.Title}
+                    alt={props.Title}
                 />
             </div>
-            <Link className="text-secondary" to={`${props.CalcCard.Href}`}>
-                <h3 className={`${s.titleCard} text-secondary text-center`}>{props.CalcCard.Title}</h3>
+            <Link className="text-secondary" to={`${props.Href}`}>
+                <h3 className={`${s.titleCard} text-secondary text-center`}>{props.Title}</h3>
             </Link>
-            <p className="text-center">{props.CalcCard.Description}</p>
+            <p className="text-center">{props.Description}</p>
         </div>
     )
 }

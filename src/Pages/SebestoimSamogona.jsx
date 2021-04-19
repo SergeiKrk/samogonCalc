@@ -6,12 +6,12 @@ import Footer from '../Components/Footer/Footer'
 const SebestoimSamogona = (props) => {
   return (
     <div>
-      <HeaderBlock HeaderBlock={{
-        Href: 'kalkulyator-sebestoimosti-samogona',
-        Img: 'https://samogoncalc.ru/img/kalkulyator-sebestoimosti-samogona.png',
-        Title: 'Калькулятор себестоимости самогона',
-        Description: 'Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.'
-      }}/>
+      <HeaderBlock
+        Href='kalkulyator-sebestoimosti-samogona'
+        Img='https://samogoncalc.ru/img/kalkulyator-sebestoimosti-samogona.png'
+        Title='Калькулятор себестоимости самогона'
+        Description='Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.'
+      />
         -
         SebestoimSamogona
         -

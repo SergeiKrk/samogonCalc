@@ -6,12 +6,12 @@ import Footer from '../Components/Footer/Footer'
 const SmeshSpirt = (props) => {
   return (
     <div>
-      <HeaderBlock HeaderBlock={{
-        Href: 'kalkulyator-smeshivaniya-spirtov',
-        Img: 'https://samogoncalc.ru/img/kalkulyator-smeshivaniya-spirtov.png',
-        Title: 'Калькулятор смешивания спиртов',
-        Description: 'Смешиваете две разных крепости? Узнайте сейчас какой градус будет на выходе!'
-      }}/>
+      <HeaderBlock
+        Href='kalkulyator-smeshivaniya-spirtov'
+        Img='https://samogoncalc.ru/img/kalkulyator-smeshivaniya-spirtov.png'
+        Title='Калькулятор смешивания спиртов'
+        Description='Смешиваете две разных крепости? Узнайте сейчас какой градус будет на выходе!'
+      />
         -
         SmeshSpirt
         -
