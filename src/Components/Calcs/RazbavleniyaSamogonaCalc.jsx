@@ -6,6 +6,15 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 
 const RazbavleniyaSamogonaCalc = (props) => {
+
+    let sum = () => {
+        let valInitVol = document.getElementById('InitVol').value;
+        let valInitFortr= document.getElementById('InitFortr').value;
+        let valNecessFortr= document.getElementById('NecessFortr').value;
+        let VolMunit = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol);
+        alert(VolMunit.toFixed(2));
+    }
+
     return (
 
             <div className="container">
@@ -23,7 +32,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Объем разбавляемого самогона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control type="text" placeholder="начальный объем, литров" />
+                                            <Form.Control id='InitVol' type="text" placeholder="начальный объем, литров" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -32,7 +41,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Крепость разбавляемого самогона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control type="text" placeholder="начальная крепость, градусов" />
+                                            <Form.Control id='InitFortr' type="text" placeholder="начальная крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -41,14 +50,14 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Крепость, которую хотите получить:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control type="text" placeholder="требуемая крепость, градусов" />
+                                            <Form.Control id="NecessFortr" type="text" placeholder="требуемая крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                 </Form.Group>
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button variant="primary">Рассчитать</Button>
+                            <Button onClick={ sum } variant="primary">Рассчитать</Button>
                         </Card.Footer>
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
