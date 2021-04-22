@@ -1,18 +1,34 @@
+import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
+import s from './RazbavleniyaSamogonaCalc.module.css'
 
 const RazbavleniyaSamogonaCalc = (props) => {
 
-    let sum = () => {
-        let valInitVol = document.getElementById('InitVol').value;
-        let valInitFortr= document.getElementById('InitFortr').value;
-        let valNecessFortr= document.getElementById('NecessFortr').value;
-        let VolMunit = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol);
-        alert(VolMunit.toFixed(2));
+    /*Разбавление самогона водой*/
+    let InitVol = React.createRef();
+    let InitFortr = React.createRef();
+    let NecessFortr = React.createRef();
+
+    let Water = () => {
+        let valInitVol = InitVol.current.value;
+        let valInitFortr = InitFortr.current.value;
+        let valNecessFortr = NecessFortr.current.value;
+        let initWater = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol);
+        alert(initWater.toFixed(2));
+    }
+
+    /*Получение нужного объема разведенного самогона (разбавленного спирта) нужной крепости*/
+    let requiredVolume = () => {
+        let valInitVol = InitVol.current.value;
+        let valInitFortr = InitFortr.current.value;
+        let valNecessFortr = NecessFortr.current.value;
+        let reqVol = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr);
+        alert(reqVol.toFixed(2));
     }
 
     return (
@@ -32,7 +48,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Объем разбавляемого самогона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control id='InitVol' type="text" placeholder="начальный объем, литров" />
+                                            <Form.Control ref={InitVol} type="text" placeholder="начальный объем, литров" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -41,7 +57,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Крепость разбавляемого самогона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control id='InitFortr' type="text" placeholder="начальная крепость, градусов" />
+                                            <Form.Control ref={InitFortr} type="text" placeholder="начальная крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -50,21 +66,26 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Крепость, которую хотите получить:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control id="NecessFortr" type="text" placeholder="требуемая крепость, градусов" />
+                                            <Form.Control ref={NecessFortr} type="text" placeholder="требуемая крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                 </Form.Group>
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button onClick={ sum } variant="primary">Рассчитать</Button>
+                            <Button onClick={ Water } variant="primary">Сколько воды долить</Button>
+                            <span className={s.ml_20} />
+                            <Button onClick={ requiredVolume } variant="primary">Сколько всего получится</Button>
                         </Card.Footer>
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
                         <blockquote className="blockquote mb-0 card-body">
                             <p>
                                 Необходимо долить воды:<br/>
-                                25 л.<br/>
+                                <p className={s.sought}><span>20</span> л.</p>
+                                Общий объем разбавленного самогона (спирта):
+                                <p className={s.sought}><span>30</span> л.</p>
+                                <br/>
                                 Результаты рассчета актуальны, если температура получаемой жидкости равна 20°С
                             </p>
                         </blockquote>
