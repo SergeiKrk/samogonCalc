@@ -1,5 +1,6 @@
 import React from 'react'
 import s from './CalcBlock.module.css'
+import { FaStar } from "react-icons/fa";
 import CalcCard from './CalcCard'
 import DisqusBlock from "../Header/DisqusBlock";
 
@@ -11,7 +12,7 @@ const CalcBlock = (props) => {
                 <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">Полезные калькуляторы для винокуров и самогонщиков</h2>
                 <div className="divider-custom">
                     <div className="divider-custom-line"></div>
-                    <div className="divider-custom-icon"><i className="fas fa-star"></i></div>
+                    <div className="divider-custom-icon"> <FaStar /> </div>
                     <div className="divider-custom-line"></div>
                 </div>
                 <div className="row justify-content-center">

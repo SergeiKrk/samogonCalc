@@ -1,8 +1,6 @@
 import React from 'react'
-import { FaCalculator } from "react-icons/fa";
 import ShareButtonBlock from "./ShareButtonBlock";
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
 
 const HeaderBlock = (props) => {
     return (
