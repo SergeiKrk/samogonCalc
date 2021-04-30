@@ -4,6 +4,7 @@ import '../css/styles.css'
 import HeaderBlockHome from '../Components/Header/HeaderBlockHome'
 import Footer from '../Components/Footer/Footer'
 import CalcBlock from '../Components/CalcBlock/CalcBlock'
+import Test from "../Components/Tests/Test";
 
 const Home = (props) => {
     return (
@@ -14,6 +15,7 @@ const Home = (props) => {
                 Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'
             }}/>
             <CalcBlock/>
+            <Test />
             <Footer/>
         </>
     );

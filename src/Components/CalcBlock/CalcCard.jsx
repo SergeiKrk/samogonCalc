@@ -33,7 +33,9 @@ const CalcCard = (props) => {
                 <Modal.Header closeButton>
                     <Modal.Title>{props.Title}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body><RazbavleniyaSamogonaCalc /></Modal.Body>
+                <Modal.Body>
+                    <RazbavleniyaSamogonaCalc />
+                </Modal.Body>
             </Modal>
         </>
     )
