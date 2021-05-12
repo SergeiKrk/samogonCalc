@@ -15,11 +15,11 @@ const Massage = (props) => {
                     className={s.toast}
                 >
                     <Toast.Header>
-                        <img src= {msgIcon} className="rounded mr-2" alt="" />
-                        <strong className="mr-auto">Bootstrap</strong>
+                        <img width='30px' src= {props.UserAva} className="rounded mr-2" alt={props.UserName} />
+                        <strong className="mr-auto">{props.UserName}</strong>
                         <small>just now</small>
                     </Toast.Header>
-                    <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
+                    <Toast.Body>{props.Massage}</Toast.Body>
                 </Toast>
             </div>
     )

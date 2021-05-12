@@ -6,9 +6,8 @@ const Dialogs = (props) => {
     return  (
         <div>
             <Container>
-                <Massage />
-                <Massage />
-                <Massage />
+                <Massage UserAva='https://samogoncalc.ru/img/Ava.jpg' UserName='Admin Tolya' Massage='Dcdjfsvn dfvodivj dfvnodv dfvodivj dfvnodv dfvodivj dfvnodv' />
+                <Massage UserAva='https://samogoncalc.ru/img/Kolya.jpg' UserName='Kolya' Massage='Ba-Ra-Ga-Be-De! Kergudu!' />
             </Container>
         </div>
     )
