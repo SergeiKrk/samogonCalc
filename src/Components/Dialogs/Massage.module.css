@@ -1,6 +1,11 @@
-.ml25 {
-  margin-left: 25px;
+.toastBlock {
+    position: relative;
+    min-height: 100px;
 }
-.ma7 {
-  margin: 7px 0 7px;
+
+.toast {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 900px;
 }

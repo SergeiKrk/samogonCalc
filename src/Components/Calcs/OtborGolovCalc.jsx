@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
@@ -7,18 +7,14 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import s from './Calc.module.css'
 
-const RazbavleniyaSamogonaCalc = (props) => {
-
-    React.state = {
-        text: 'something'
-    }
+const OtborGolovCalc = (props) => {
 
     /*Разбавление самогона водой*/
     let InitVol = React.createRef();
     let InitFortr = React.createRef();
     let NecessFortr = React.createRef();
 
-    let Water = () => {
+    let inWater = () => {
         let valInitVol = InitVol.current.value;
         let valInitFortr = InitFortr.current.value;
         let valNecessFortr = NecessFortr.current.value;
@@ -77,7 +73,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button onClick={ Water } variant="primary">Сколько воды долить</Button>
+                            <Button  onClick={ inWater } variant="primary">Сколько воды долить</Button>
                             <span className={s.ml_20} />
                             <Button onClick={ requiredVolume } variant="primary">Сколько всего получится</Button>
                         </Card.Footer>
@@ -86,7 +82,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                         <blockquote className="blockquote mb-0 card-body">
                             <p>
                                 Необходимо долить воды:<br/>
-                                <p className={s.sought}><span>20</span> л.</p>
+                                <p className={s.sought}><span>0</span> л.</p>
                                 Общий объем разбавленного самогона (спирта):
                                 <p className={s.sought}><span>30</span> л.</p>
                                 <br/>
@@ -100,4 +96,4 @@ const RazbavleniyaSamogonaCalc = (props) => {
     );
 }
 
-export default RazbavleniyaSamogonaCalc;
+export default OtborGolovCalc;

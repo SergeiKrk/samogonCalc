@@ -1,38 +1,27 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import Button from 'react-bootstrap/Button'
-import Image from 'react-bootstrap/Image'
-import Card from 'react-bootstrap/Card'
-import s from './Massage.module.css'
+import Toast from 'react-bootstrap/Toast'
 import msgIcon from '../../assets/img/msg-icon-36.png'
+import s from './Massage.module.css'
 
 
 const Massage = (props) => {
     return  (
-        <>
-            <Card>
-                <Card.Body>
-                    <Row>
-                        <img 
-                            src={msgIcon}
-                            className={s.ml25}
-                            alt='fsvfksmvkms'
-                        />
-                        <Col className="text-left" md={2}>
-                            <div className={s.ma7}><b>Анатолий</b></div>
-                        </Col>
-                        <Col className="text-left" md={6}>
-                            <div className={s.ma7}>Привет ребята!</div>
-                        </Col>
-                        <Col className="text-right" md={3}>
-                            <Button variant="outline-success" size="sm">1</Button>{' '}
-                            <Button variant="outline-danger" size="sm">2</Button>{' '}
-                            <Button variant="outline-dark"  size="sm">Комментировать</Button>
-                        </Col>
-                    </Row>
-                </Card.Body>
-            </Card>
-        </>
+            <div
+                aria-live="polite"
+                aria-atomic="true"
+                className={s.toastBlock}
+            >
+                <Toast
+                    className={s.toast}
+                >
+                    <Toast.Header>
+                        <img src= {msgIcon} className="rounded mr-2" alt="" />
+                        <strong className="mr-auto">Bootstrap</strong>
+                        <small>just now</small>
+                    </Toast.Header>
+                    <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
+                </Toast>
+            </div>
     )
 }
 
