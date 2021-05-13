@@ -14,8 +14,6 @@ const NavbarMenu = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="#features">Features</Nav.Link>
-                            <Nav.Link href="#pricing">Pricing</Nav.Link>
                             <NavDropdown title="Все калькуляторы" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="/kalkulyator-razbavleniya-samogona-vodoj">Калькулятор
                                     разбавления самогона водой</NavDropdown.Item>
@@ -42,6 +40,7 @@ const NavbarMenu = () => {
                                 <NavDropdown.Item href="/kalkulyator-zameny-sahara-glyukozoj">Калькулятор замены сахара
                                     глюкозой</NavDropdown.Item>
                             </NavDropdown>
+                            <Nav.Link href="/dialogs">Мои беседы</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link href="/about">О проекте</Nav.Link>

@@ -1,0 +1,25 @@
+.dialog {
+
+}
+.dialogs {
+    padding-top: 20px;
+}
+.dialogItems {
+    margin: 0 0 10px 10px;
+}
+.dialogItems.active {
+    margin: 0 0 10px 20px;
+    color: #1abc9c;
+}
+.cardHead {
+
+}
+.cardBody {
+    background-color: #EDF2F6;
+    border-radius: 0.5rem;
+}
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 10%);
+}

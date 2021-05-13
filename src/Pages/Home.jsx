@@ -15,7 +15,6 @@ const Home = (props) => {
                 Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'
             }}/>
             <CalcBlock/>
-            <Dialogs />
             <Footer/>
         </>
     );

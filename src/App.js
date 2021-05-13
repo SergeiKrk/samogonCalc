@@ -23,6 +23,7 @@ import SpirtaTemper from './Pages/SpirtaTemper';
 import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
 import Profile from "./Pages/Profile";
+import DialogsPage from "./Pages/Dialogs";
 
 const App = () => {
   return (
@@ -45,6 +46,7 @@ const App = () => {
               <Route path="/kalkulyator-zameny-sahara-glyukozoj" component={ZamenyGlyukozoj}/>
               <Route path="/about" component={About}/>
               <Route path="/profile" component={Profile}/>
+              <Route path="/dialogs" component={DialogsPage}/>
           </Switch>
       </Router>
     </div>
