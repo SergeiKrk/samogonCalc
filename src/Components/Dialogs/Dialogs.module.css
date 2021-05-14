@@ -1,25 +1,46 @@
 .dialog {
 
 }
+
 .dialogs {
     padding-top: 20px;
 }
+
 .dialogItems {
+    color: #000;
+}
+
+.dialogItemsBlock {
     margin: 0 0 10px 10px;
 }
+
 .dialogItems.active {
     margin: 0 0 10px 20px;
     color: #1abc9c;
 }
+
 .cardHead {
 
 }
+
 .cardBody {
     background-color: #EDF2F6;
     border-radius: 0.5rem;
 }
+
 .card {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 10%);
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    margin: 0 10px 0 0;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
 }
