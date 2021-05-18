@@ -1,7 +1,7 @@
 import React from 'react'
 import Toast from 'react-bootstrap/Toast'
 import msgIcon from '../../assets/img/msg-icon-36.png'
-import s from './Massage.module.css'
+import s from './Dialogs.module.css'
 
 
 const Massage = (props) => {

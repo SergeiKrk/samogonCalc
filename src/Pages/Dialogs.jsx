@@ -8,7 +8,7 @@ const DialogsPage = (props) => {
     return (
         <>
             <HeaderBlockHome HeaderBlockHome={{
-                Img: 'https://samogoncalc.ru/img/submarine.png',
+                Img: 'https://samogoncalc.ru/img/Ava.jpg',
                 Title: 'Мои беседы'
             }}/>
             <Dialogs />

@@ -33,6 +33,17 @@
     border-radius: 0.5rem;
     box-shadow: 0 0.25rem 0.75rem rgb(0 0 0 / 10%);
 }
+.toastBlock {
+     position: relative;
+     min-height: 100px;
+ }
+
+.toast {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 900px;
+}
 
 .icon {
     width: 45px;
@@ -41,6 +52,7 @@
     margin: 0 10px 0 0;
     padding: 10px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #2c3e50;
+    color: #fff;
     display: inline-block;
 }
