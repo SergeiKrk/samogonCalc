@@ -29,8 +29,8 @@ const Dialogs = (props) => {
                             </Card>
                         </div>
                         <div className={`col-md-8 ${s.dialogs}`}>
-                            <Massage UserAva='https://samogoncalc.ru/img/Ava.jpg' UserName='Admin Tolya' Massage='Hi everybody!'/>
-                            <Massage UserAva='https://samogoncalc.ru/img/Yura.jpg' UserName='Yura' Massage='Ba-Ra-Ga-Be-De! Kergudu!'/>
+                            <Massage UserAva='https://samogoncalc.ru/img/Ava.jpg' UserName='Admin Tolya' Massage='Ba-Ra-Ga-Be-De!'/>
+                            <Massage UserAva='https://samogoncalc.ru/img/Yura.jpg' UserName='Yura' Massage='Bambarbiya, Kergudu.'/>
                             <Massage UserAva='https://samogoncalc.ru/img/Gosha.jpg' UserName='Gosha' Massage='Where is Grandma?'/>
                         </div>
 
