@@ -1,11 +1,11 @@
 import React from 'react'
 import {Container} from 'react-bootstrap'
-import {BrowserRouter as Router, Switch, NavLink} from "react-router-dom"
+import {BrowserRouter as Router} from "react-router-dom"
 import Card from 'react-bootstrap/Card'
 import s from './Dialogs.module.css'
 import Massage from './Massage'
 import DialogItem from './DialogItem'
-import {FaCalculator} from "react-icons/fa"
+import {FaUsers} from "react-icons/fa"
 
 const Dialogs = (props) => {
     return (
@@ -18,7 +18,7 @@ const Dialogs = (props) => {
                                 <Card.Body className='toast-body'>
                                     <Card.Title>
                                         <div className={`${s.icon}`}>
-                                            <FaCalculator size="21px"/>
+                                            <FaUsers size="21px"/>
                                         </div>
                                         Собеседники
                                     </Card.Title>
