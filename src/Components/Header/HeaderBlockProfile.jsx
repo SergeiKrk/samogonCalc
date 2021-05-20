@@ -23,10 +23,9 @@ const HeaderBlockProfile = (props) => {
 
                 </div>
             </header>
-            <div className="container">
+            <div className="container mt-3">
                 <Breadcrumb className="text-center">
                     <Breadcrumb.Item href="/">Главная</Breadcrumb.Item>
-                    <Breadcrumb.Item href="/">Калькуляторы самогонщика</Breadcrumb.Item>
                     <Breadcrumb.Item href={props.Href}>
                         {props.Title}
                     </Breadcrumb.Item>
