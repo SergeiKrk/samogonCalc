@@ -8,6 +8,14 @@ import DialogItem from './DialogItem'
 import {FaUsers} from "react-icons/fa"
 
 const Dialogs = (props) => {
+
+    let dialogsData = [
+        {id:1, UserName: 'Tolya'},
+        {id:2, UserName: 'Gosha'},
+        {id:3, UserName: 'Kolya'},
+        {id:4, UserName: 'Sasha'},
+        {id:5, UserName: 'Pasha'},
+    ]
     return (
         <Router>
             <div>
@@ -22,9 +30,11 @@ const Dialogs = (props) => {
                                         </div>
                                         Собеседники
                                     </Card.Title>
-                                    <DialogItem id="1" UserName="Tolya"/>
-                                    <DialogItem id="2" UserName="Gosha"/>
-                                    <DialogItem id="3" UserName="Kolya"/>
+                                    <DialogItem id={dialogsData[0].id} UserName={dialogsData[0].UserName}/>
+                                    <DialogItem id={dialogsData[1].id} UserName={dialogsData[1].UserName}/>
+                                    <DialogItem id={dialogsData[2].id} UserName={dialogsData[2].UserName}/>
+                                    <DialogItem id={dialogsData[3].id} UserName={dialogsData[3].UserName}/>
+                                    <DialogItem id={dialogsData[4].id} UserName={dialogsData[4].UserName}/>
                                 </Card.Body>
                             </Card>
                         </div>

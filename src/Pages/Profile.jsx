@@ -9,20 +9,20 @@ import MyPosts from "../Components/Profile/MyPosts/MyPosts";
 import ProfileInfo from "../Components/Profile/ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
+    let profileinfoData = [
+        {id:1, img:'https://samogoncalc.ru/img/Ava.jpg', title:'Админ Евгений', description:'Я тут админ!'}
+    ]
   return (
       <>
         <ProfileInfo
-            Img='https://samogoncalc.ru/img/Ava.jpg'
-            Title='Админ Евгений'
-            Description='Я тут админ!'
+            Img={profileinfoData[0].img}
+            Title={profileinfoData[0].title}
+            Description={profileinfoData[0].description}
         />
           <div className="container text-left">
-
               <NewPost />
               <MyPosts />
           </div>
-
-        <DisqusBlock />
         <Footer />
       </>
   );

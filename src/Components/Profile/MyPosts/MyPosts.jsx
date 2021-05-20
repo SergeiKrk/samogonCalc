@@ -2,12 +2,18 @@ import React from "react"
 import Post from "./Post";
 
 const MyPosts = (props) => {
+    let postsData = [
+        {id:1, userName:'Админ Евгений', MyMassagePost:'My first post My first post My first post My first post'},
+        {id:2, userName:'Админ Евгений', MyMassagePost:'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv'},
+        {id:3, userName:'Админ Евгений', MyMassagePost:'My fadfvad fadvda afvadva'},
+    ]
     return (
         <>
-            <h2>Все мои посты</h2>
+            <h2>Мои посты</h2>
 
-            <Post MyMassagePost="My first post My first post My first post My first post" userName="Админ Евгений"/>
-            <Post MyMassagePost="My two post" userName="Админ Евгений"/>
+            <Post userName={postsData[0].userName} MyMassagePost={postsData[0].MyMassagePost}/>
+            <Post userName={postsData[1].userName} MyMassagePost={postsData[1].MyMassagePost}/>
+            <Post userName={postsData[2].userName} MyMassagePost={postsData[2].MyMassagePost}/>
         </>
     );
 }

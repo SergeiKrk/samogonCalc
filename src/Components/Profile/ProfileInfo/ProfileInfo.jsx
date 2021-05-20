@@ -14,11 +14,6 @@ const ProfileInfo = (props) => {
                         alt={props.Title}
                     />
                     <h1 className="masthead-heading text-uppercase mb-0">{props.Title}</h1>
-                    <div className="divider-custom divider-light">
-                        <div className="divider-custom-line"></div>
-                        <div className="divider-custom-icon"><ShareButtonBlock /></div>
-                        <div className="divider-custom-line"></div>
-                    </div>
                     <p className="masthead-subheading font-weight-light mb-0">{props.Description}</p>
 
                 </div>
