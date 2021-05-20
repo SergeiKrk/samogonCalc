@@ -1,12 +1,19 @@
 import React from 'react'
-import {Col, Form, Button} from 'react-bootstrap'
+import {Col, Row, Button} from 'react-bootstrap'
 import s from './Post.module.css'
-import {FaArrowRight} from "react-icons/fa";
 
 const Post = (props) => {
     return (
         <div className={`${s.whiteBlock}`}>
-
+            <div className={`${s.postImg}`}>
+                <img width='40px' src='https://samogoncalc.ru/img/Ava.jpg' className="rounded mb-2" alt='Admin Tolya'/>
+            </div>
+            <div className={`${s.postName}`}>
+                {props.userName}
+            </div>
+            <div className={`${s.postMassage}`}>
+                {props.MyMassagePost}
+            </div>
         </div>
     )
 }

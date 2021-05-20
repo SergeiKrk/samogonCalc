@@ -4,6 +4,7 @@ import HeaderBlockProfile from '../Components/Header/HeaderBlockProfile'
 import Footer from '../Components/Footer/Footer'
 import DisqusBlock from "../Components/Header/DisqusBlock"
 import NewPost from "../Components/Profile/NewPost";
+import Post from "../Components/Profile/Post";
 
 const Profile = (props) => {
   return (
@@ -16,6 +17,8 @@ const Profile = (props) => {
           <div className="container text-left">
 
               <NewPost />
+              <Post MyMassagePost="My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post " userName="Админ Евгений"/>
+              <Post MyMassagePost="My two post" userName="Админ Евгений"/>
 
               post 1
               post 2
