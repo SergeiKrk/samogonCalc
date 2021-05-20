@@ -1,15 +1,17 @@
 import React from "react"
 import 'bootstrap/dist/css/bootstrap.min.css'
-import HeaderBlockProfile from '../Components/Header/HeaderBlockProfile'
+import HeaderBlockProfile from '../Components/Profile/ProfileInfo/ProfileInfo'
 import Footer from '../Components/Footer/Footer'
 import DisqusBlock from "../Components/Header/DisqusBlock"
-import NewPost from "../Components/Profile/NewPost";
-import Post from "../Components/Profile/Post";
+import NewPost from "../Components/Profile/NewPost/NewPost";
+import Post from "../Components/Profile/MyPosts/Post";
+import MyPosts from "../Components/Profile/MyPosts/MyPosts";
+import ProfileInfo from "../Components/Profile/ProfileInfo/ProfileInfo";
 
 const Profile = (props) => {
   return (
       <>
-        <HeaderBlockProfile
+        <ProfileInfo
             Img='https://samogoncalc.ru/img/Ava.jpg'
             Title='Админ Евгений'
             Description='Я тут админ!'
@@ -17,11 +19,7 @@ const Profile = (props) => {
           <div className="container text-left">
 
               <NewPost />
-              <Post MyMassagePost="My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post My first post " userName="Админ Евгений"/>
-              <Post MyMassagePost="My two post" userName="Админ Евгений"/>
-
-              post 1
-              post 2
+              <MyPosts />
           </div>
 
         <DisqusBlock />

@@ -1,9 +1,9 @@
 import React from 'react'
-import ShareButtonBlock from "./ShareButtonBlock"
+import ShareButtonBlock from "../../Header/ShareButtonBlock"
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
-import s from './HeaderBlock.module.css'
+import s from './ProfileInfo.module.css'
 
-const HeaderBlockProfile = (props) => {
+const ProfileInfo = (props) => {
     return (
         <div>
             <header className="masthead bg-primary text-white text-center">
@@ -35,4 +35,4 @@ const HeaderBlockProfile = (props) => {
     )
 }
 
-export default HeaderBlockProfile;
+export default ProfileInfo;
