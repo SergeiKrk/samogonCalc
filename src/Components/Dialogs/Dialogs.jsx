@@ -3,8 +3,8 @@ import {Container} from 'react-bootstrap'
 import {BrowserRouter as Router} from "react-router-dom"
 import Card from 'react-bootstrap/Card'
 import s from './Dialogs.module.css'
-import Massage from './Massage'
-import DialogItem from './DialogItem'
+import Massage from './Massage/Massage'
+import DialogItem from './DialogItem/DialogItem'
 import {FaUsers} from "react-icons/fa"
 
 const Dialogs = (props) => {

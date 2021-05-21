@@ -1,6 +1,6 @@
 import React from 'react'
 import Toast from 'react-bootstrap/Toast'
-import s from './Dialogs.module.css'
+import s from './Massage.module.css'
 
 
 const Massage = (props) => {

@@ -1,0 +1,11 @@
+.toastBlock {
+    position: relative;
+    min-height: 100px;
+}
+
+.toast {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 900px;
+}
