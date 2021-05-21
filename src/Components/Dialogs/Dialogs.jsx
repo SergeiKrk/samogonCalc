@@ -10,14 +10,22 @@ import {FaUsers} from "react-icons/fa"
 const Dialogs = (props) => {
 
     let dialogsData = [
-        {id: 1, UserName: 'Tolya'},
-        {id: 2, UserName: 'Gosha'},
-        {id: 3, UserName: 'Kolya'},
-        {id: 4, UserName: 'Sasha'},
-        {id: 5, UserName: 'Pasha'}
+        {id: 1, userName: 'Tolya'},
+        {id: 2, userName: 'Gosha'},
+        {id: 3, userName: 'Kolya'},
+        {id: 4, userName: 'Sasha'},
+        {id: 5, userName: 'Pasha'}
     ]
 
-    let dialogsElements = dialogsData.map(dialog => <DialogItem id={dialog.id} UserName={dialog.UserName}/>)
+    let massageData = [
+        {id:1, userAva:'https://samogoncalc.ru/img/Ava.jpg', userName:'Admin Tolya', massage:'Ba-Ra-Ga-Be-De!'},
+        {id:2, userAva:'https://samogoncalc.ru/img/Yura.jpg', userName:'Yura', massage:'Bambarbiya, Kergudu.'},
+        {id:3, userAva:'https://samogoncalc.ru/img/Gosha.jpg', userName:'Gosha', massage:'Where is Grandma?'}
+    ];
+
+    let dialogsElements = dialogsData.map(d => <DialogItem id={d.id} dialogUserName={d.userName}/>);
+
+    let massageElement = massageData.map(m => <Massage massageUserAva={m.userAva} massageUserName={m.userName} massage={m.massage}/>);
 
     return (
         <Router>
@@ -38,12 +46,7 @@ const Dialogs = (props) => {
                             </Card>
                         </div>
                         <div className={`col-md-8 ${s.dialogs}`}>
-                            <Massage UserAva='https://samogoncalc.ru/img/Ava.jpg' UserName='Admin Tolya'
-                                     Massage='Ba-Ra-Ga-Be-De!'/>
-                            <Massage UserAva='https://samogoncalc.ru/img/Yura.jpg' UserName='Yura'
-                                     Massage='Bambarbiya, Kergudu.'/>
-                            <Massage UserAva='https://samogoncalc.ru/img/Gosha.jpg' UserName='Gosha'
-                                     Massage='Where is Grandma?'/>
+                            {massageElement}
                         </div>
 
                         {/*<Switch>
