@@ -26,7 +26,7 @@ import Dialog from "./Pages/Dialog";
 
 const App = (props) => {
 
-    let dialogsData = [
+    /*let dialogsData = [
         {id: 1, userName: 'Tolya'},
         {id: 2, userName: 'Gosha'},
         {id: 3, userName: 'Kolya'},
@@ -48,7 +48,7 @@ const App = (props) => {
         {id: 1, userName: 'Админ Евгений', MyMassagePost: 'My first post My first post My first post My first post'},
         {id: 2, userName: 'Админ Евгений', MyMassagePost: 'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv'},
         {id: 3, userName: 'Админ Евгений', MyMassagePost: 'My fadfvad fadvda afvadva'},
-    ]
+    ]*/
 
   return (
     <div className="App">
@@ -69,8 +69,8 @@ const App = (props) => {
               <Route path="/kalkulyator-spirta-ot-temperatury" render={ () => <SpirtaTemper /> }/>
               <Route path="/kalkulyator-zameny-sahara-glyukozoj" render={ () => <ZamenyGlyukozoj /> }/>
               <Route path="/about" render={ () => <About /> }/>
-              <Route path="/profile" render={ () => <Profile profileinfoData={profileinfoData} postsData={postsData} /> }/>
-              <Route path="/dialogs" render={ () => <Dialog dialogsData={dialogsData} massageData={massageData} /> }/>
+              <Route path="/profile" render={ () => <Profile profileinfoData={props.profileinfoData} postsData={props.postsData} /> }/>
+              <Route path="/dialogs" render={ () => <Dialog dialogsData={props.dialogsData} massageData={props.massageData} /> }/>
           </Switch>
       </Router>
     </div>
