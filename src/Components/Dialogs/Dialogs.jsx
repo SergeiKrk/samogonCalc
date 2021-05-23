@@ -9,7 +9,7 @@ import {FaUsers} from "react-icons/fa"
 
 const Dialogs = (props) => {
 
-    let dialogsData = [
+    /*let dialogsData = [
         {id: 1, userName: 'Tolya'},
         {id: 2, userName: 'Gosha'},
         {id: 3, userName: 'Kolya'},
@@ -21,11 +21,11 @@ const Dialogs = (props) => {
         {id:1, userAva:'https://samogoncalc.ru/img/Ava.jpg', userName:'Admin Tolya', massage:'Ba-Ra-Ga-Be-De!'},
         {id:2, userAva:'https://samogoncalc.ru/img/Yura.jpg', userName:'Yura', massage:'Bambarbiya, Kergudu.'},
         {id:3, userAva:'https://samogoncalc.ru/img/Gosha.jpg', userName:'Gosha', massage:'Where is Grandma?'}
-    ];
+    ]*/
 
-    let dialogsElements = dialogsData.map(d => <DialogItem id={d.id} dialogUserName={d.userName}/>);
+    let dialogsElements = props.dialogsData.map(d => <DialogItem id={d.id} dialogUserName={d.userName}/>);
 
-    let massageElement = massageData.map(m => <Massage massageUserAva={m.userAva} massageUserName={m.userName} massage={m.massage}/>);
+    let massageElement = props.massageData.map(m => <Massage massageUserAva={m.userAva} massageUserName={m.userName} massage={m.massage}/>);
 
     return (
         <Router>

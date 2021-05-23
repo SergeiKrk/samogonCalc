@@ -22,9 +22,34 @@ import SpirtaTemper from './Pages/SpirtaTemper';
 import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
 import Profile from "./Pages/Profile";
-import DialogsPage from "./Pages/Dialogs";
+import Dialog from "./Pages/Dialog";
 
-const App = () => {
+const App = (props) => {
+
+    let dialogsData = [
+        {id: 1, userName: 'Tolya'},
+        {id: 2, userName: 'Gosha'},
+        {id: 3, userName: 'Kolya'},
+        {id: 4, userName: 'Sasha'},
+        {id: 5, userName: 'Pasha'}
+    ]
+
+    let massageData = [
+        {id:1, userAva:'https://samogoncalc.ru/img/Ava.jpg', userName:'Admin Tolya', massage:'Ba-Ra-Ga-Be-De!'},
+        {id:2, userAva:'https://samogoncalc.ru/img/Yura.jpg', userName:'Yura', massage:'Bambarbiya, Kergudu.'},
+        {id:3, userAva:'https://samogoncalc.ru/img/Gosha.jpg', userName:'Gosha', massage:'Where is Grandma?'}
+    ]
+
+    let profileinfoData = [
+        {id: 1, img: 'https://samogoncalc.ru/img/Ava.jpg', title: 'Админ Евгений', description: 'Я тут админ!'}
+    ]
+
+    let postsData = [
+        {id: 1, userName: 'Админ Евгений', MyMassagePost: 'My first post My first post My first post My first post'},
+        {id: 2, userName: 'Админ Евгений', MyMassagePost: 'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv'},
+        {id: 3, userName: 'Админ Евгений', MyMassagePost: 'My fadfvad fadvda afvadva'},
+    ]
+
   return (
     <div className="App">
       <Router>
@@ -44,8 +69,8 @@ const App = () => {
               <Route path="/kalkulyator-spirta-ot-temperatury" render={ () => <SpirtaTemper /> }/>
               <Route path="/kalkulyator-zameny-sahara-glyukozoj" render={ () => <ZamenyGlyukozoj /> }/>
               <Route path="/about" render={ () => <About /> }/>
-              <Route path="/profile" render={ () => <Profile /> }/>
-              <Route path="/dialogs" render={ () => <DialogsPage /> }/>
+              <Route path="/profile" render={ () => <Profile profileinfoData={profileinfoData} postsData={postsData} /> }/>
+              <Route path="/dialogs" render={ () => <Dialog dialogsData={dialogsData} massageData={massageData} /> }/>
           </Switch>
       </Router>
     </div>
