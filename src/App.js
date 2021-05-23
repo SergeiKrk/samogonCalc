@@ -30,22 +30,22 @@ const App = () => {
       <Router>
         <NavbarMenu/>
           <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" component={RazbavleniyaSamogona}/>
-              <Route path="/kalkulyator-otbor-golov" component={OtborGolov}/>
-              <Route path="/kalkulyator-drobnoj-peregonki" component={DrobnayaPeregonka}/>
-              <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" component={PoslePervoj}/>
-              <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" component={PosleVtoroj}/>
-              <Route path="/kalkulyator-absolyutnogo-spirta" component={AbsolyutnijSpirt}/>
-              <Route path="/kalkulyator-smeshivaniya-spirtov" component={SmeshSpirt}/>
-              <Route path="/kalkulyator-sebestoimosti-samogona" component={SebestoimSamogona}/>
-              <Route path="/kalkulyator-saharnoj-bragi" component={SaharBragi}/>
-              <Route path="/kalkulyator-vodki-iz-spirta" component={Vodka}/>
-              <Route path="/kalkulyator-spirta-ot-temperatury" component={SpirtaTemper}/>
-              <Route path="/kalkulyator-zameny-sahara-glyukozoj" component={ZamenyGlyukozoj}/>
-              <Route path="/about" component={About}/>
-              <Route path="/profile" component={Profile}/>
-              <Route path="/dialogs" component={DialogsPage}/>
+              <Route exact path="/" render={ () => <Home /> }/>
+              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona /> }/>
+              <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov /> }/>
+              <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka /> }/>
+              <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
+              <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" render={ () => <PosleVtoroj /> }/>
+              <Route path="/kalkulyator-absolyutnogo-spirta" render={ () => <AbsolyutnijSpirt /> }/>
+              <Route path="/kalkulyator-smeshivaniya-spirtov" render={ () => <SmeshSpirt /> }/>
+              <Route path="/kalkulyator-sebestoimosti-samogona" render={ () => <SebestoimSamogona /> }/>
+              <Route path="/kalkulyator-saharnoj-bragi" render={ () => <SaharBragi /> }/>
+              <Route path="/kalkulyator-vodki-iz-spirta" render={ () => <Vodka /> }/>
+              <Route path="/kalkulyator-spirta-ot-temperatury" render={ () => <SpirtaTemper /> }/>
+              <Route path="/kalkulyator-zameny-sahara-glyukozoj" render={ () => <ZamenyGlyukozoj /> }/>
+              <Route path="/about" render={ () => <About /> }/>
+              <Route path="/profile" render={ () => <Profile /> }/>
+              <Route path="/dialogs" render={ () => <DialogsPage /> }/>
           </Switch>
       </Router>
     </div>
