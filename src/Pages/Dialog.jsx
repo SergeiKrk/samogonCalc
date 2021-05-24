@@ -12,7 +12,7 @@ const Dialog = (props) => {
                 Img: 'https://samogoncalc.ru/img/Ava.jpg',
                 Title: 'Мои беседы'
             }}/>
-            <Dialogs dialogsData={props.dialogsData} massageData={props.massageData}/>
+            <Dialogs dialogsData={props.state.dialogsData} massageData={props.state.massageData}/>
             <Footer/>
         </>
     );
