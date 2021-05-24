@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import state from './redux/state'
 
-let dialogsData = [
+/*let dialogsData = [
     {id: 1, userName: 'Tolya'},
     {id: 2, userName: 'Gosha'},
     {id: 3, userName: 'Kolya'},
@@ -25,11 +26,11 @@ let postsData = [
     {id: 1, userName: 'Админ Евгений', MyMassagePost: 'My first post My first post My first post My first post'},
     {id: 2, userName: 'Админ Евгений', MyMassagePost: 'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv'},
     {id: 3, userName: 'Админ Евгений', MyMassagePost: 'My fadfvad fadvda afvadva'},
-]
+]*/
 
 ReactDOM.render(
   <React.StrictMode>
-    <App  profileinfoData={profileinfoData} postsData={postsData} dialogsData={dialogsData} massageData={massageData} />
+    <App  appState={state} />
   </React.StrictMode>,
   document.getElementById('root')
 );

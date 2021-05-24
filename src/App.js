@@ -69,8 +69,8 @@ const App = (props) => {
               <Route path="/kalkulyator-spirta-ot-temperatury" render={ () => <SpirtaTemper /> }/>
               <Route path="/kalkulyator-zameny-sahara-glyukozoj" render={ () => <ZamenyGlyukozoj /> }/>
               <Route path="/about" render={ () => <About /> }/>
-              <Route path="/profile" render={ () => <Profile profileinfoData={props.profileinfoData} postsData={props.postsData} /> }/>
-              <Route path="/dialogs" render={ () => <Dialog dialogsData={props.dialogsData} massageData={props.massageData} /> }/>
+              <Route path="/profile" render={ () => <Profile profileinfoData={props.appState.profilePage.profileinfoData} postsData={props.appState.profilePage.postsData} /> }/>
+              <Route path="/dialogs" render={ () => <Dialog dialogsData={props.appState.dialogPage.dialogsData} massageData={props.appState.dialogPage.massageData} /> }/>
           </Switch>
       </Router>
     </div>
