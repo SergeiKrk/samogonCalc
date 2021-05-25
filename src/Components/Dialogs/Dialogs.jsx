@@ -2,10 +2,11 @@ import React from 'react'
 import {Container} from 'react-bootstrap'
 import {BrowserRouter as Router} from "react-router-dom"
 import Card from 'react-bootstrap/Card'
+import {FaUsers} from "react-icons/fa"
 import s from './Dialogs.module.css'
 import Massage from './Massage/Massage'
 import DialogItem from './DialogItem/DialogItem'
-import {FaUsers} from "react-icons/fa"
+import NewMassage from "./NewMassage/NewMassage";
 
 const Dialogs = (props) => {
 
@@ -33,6 +34,7 @@ const Dialogs = (props) => {
                         </div>
                         <div className={`col-md-8 ${s.dialogs}`}>
                             {massageElement}
+                            <NewMassage />
                         </div>
 
                         {/*<Switch>
