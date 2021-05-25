@@ -4,6 +4,14 @@ import { FaArrowRight } from "react-icons/fa";
 import s from './NewPost.module.css'
 
 const NewPost = (props) => {
+
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let textNewPost = newPostElement.current.value;
+        alert(textNewPost);
+    }
+
     return (
         <div className={`${s.whiteBlock}`}>
             <Form>
@@ -16,13 +24,14 @@ const NewPost = (props) => {
                             Post
                         </Form.Label>
                         <Form.Control
+                            ref={newPostElement}
                             className="mb-2"
                             id="inlineFormInput"
-                            placeholder="Введите текст сообщения"
+                            placeholder="Введите текст поста"
                         />
                     </Col>
                     <Col xs="auto">
-                        <Button type="submit" className="mb-2">
+                        <Button type="submit" onClick={ addPost } className="mb-2">
                             <FaArrowRight />
                         </Button>
                     </Col>
