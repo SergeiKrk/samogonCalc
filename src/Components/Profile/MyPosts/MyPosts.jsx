@@ -3,7 +3,7 @@ import Post from "./Post";
 
 const MyPosts = (props) => {
 
-    let postElement = props.postsData.map(post => <Post userName={post.userName} MyMassagePost={post.MyMassagePost}/>)
+    let postElement = props.postsData.map(post => <Post userName={post.userName} MyMassagePost={post.MyMassagePost} likeCount={post.likeCount}/>)
 
     return (
         <>

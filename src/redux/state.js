@@ -4,9 +4,11 @@ let state = {
             {id: 1, img: 'https://samogoncalc.ru/img/Ava.jpg', title: 'Админ Евгений', description: 'Я тут админ!'}
         ],
         postsData: [
-            {id: 1, userName: 'Админ Евгений', MyMassagePost: 'My first post My first post My first post My first post'},
-            {id: 2, userName: 'Админ Евгений', MyMassagePost: 'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv'},
-            {id: 3, userName: 'Админ Евгений', MyMassagePost: 'My fadfvad fadvda afvadva'},
+            {id: 1, userName: 'Админ Евгений', MyMassagePost: 'My first post My first post My first post My first' +
+                    ' post ncxkjznvzkj njnvjnzkjn ndkjfvzkjnkjn nkjnfvkjnzkjvnfkj kjnafdkjnVKJNFKJ kjnkjnafvkjnfdkjn' +
+                    ' kjnfvv dsvnl ndfk nfdkjn dfnvjdnfkn  kfdnvkldnflk dsklvnk', likeCount: 10},
+            {id: 2, userName: 'Админ Евгений', MyMassagePost: 'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv', likeCount: 1},
+            {id: 3, userName: 'Админ Евгений', MyMassagePost: 'My fadfvad fadvda afvadva', likeCount: 2},
         ]
     },
     dialogPage: {
