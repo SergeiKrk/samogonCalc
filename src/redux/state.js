@@ -28,14 +28,15 @@ let state = {
 }
 
 export let addPost = (postMassage) => {
-    let newPost = {
+    debugger;
+    let profileinfoData = {
         id: 4,
         username: 'Админ Евгений',
         MyMassagePost: postMassage,
         likeCount: 0
     };
 
-    state.profilePage.postsData.push(newPost);
+    state.profilePage.push(profileinfoData);
 }
 
 export default state;
