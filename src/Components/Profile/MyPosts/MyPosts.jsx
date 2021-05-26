@@ -1,5 +1,5 @@
 import React from "react"
-import Post from "./Post";
+import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
@@ -8,7 +8,6 @@ const MyPosts = (props) => {
     return (
         <>
             <h2>Мои посты</h2>
-
             {postElement}
         </>
     );

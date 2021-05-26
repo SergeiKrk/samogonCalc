@@ -21,7 +21,7 @@ const NewPost = (props) => {
                     </Col>
                     <Col xs="10">
                         <Form.Label htmlFor="inlineFormInput" srOnly>
-                            Post
+                            Пост
                         </Form.Label>
                         <Form.Control
                             ref={newPostElement}

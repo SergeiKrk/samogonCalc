@@ -27,4 +27,15 @@ let state = {
     }
 }
 
+export let addPost = (postMassage) => {
+    let newPost = {
+        id: 4,
+        username: 'Админ Евгений',
+        MyMassagePost: postMassage,
+        likeCount: 0
+    };
+
+    state.profilePage.postsData.push(newPost);
+}
+
 export default state;

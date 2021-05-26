@@ -4,7 +4,7 @@ import HeaderBlockHome from '../Components/Header/HeaderBlockHome'
 import Footer from '../Components/Footer/Footer'
 import Dialogs from "../Components/Dialogs/Dialogs";
 
-const Dialog = (props) => {
+const DialogPage = (props) => {
 
     return (
         <>
@@ -18,4 +18,4 @@ const Dialog = (props) => {
     );
 }
 
-export default Dialog;
+export default DialogPage;
