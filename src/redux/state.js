@@ -4,10 +4,17 @@ let state = {
             {id: 1, img: 'https://samogoncalc.ru/img/Ava.jpg', title: 'Админ Евгений', description: 'Я тут админ!'}
         ],
         postsData: [
-            {id: 1, userName: 'Админ Евгений', MyMassagePost: 'My first post My first post My first post My first' +
+            {
+                id: 1, userName: 'Админ Евгений', MyMassagePost: 'My first post My first post My first post My first' +
                     ' post ncxkjznvzkj njnvjnzkjn ndkjfvzkjnkjn nkjnfvkjnzkjvnfkj kjnafdkjnVKJNFKJ kjnkjnafvkjnfdkjn' +
-                    ' kjnfvv dsvnl ndfk nfdkjn dfnvjdnfkn  kfdnvkldnflk dsklvnk', likeCount: 10},
-            {id: 2, userName: 'Админ Евгений', MyMassagePost: 'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv', likeCount: 1},
+                    ' kjnfvv dsvnl ndfk nfdkjn dfnvjdnfkn  kfdnvkldnflk dsklvnk', likeCount: 10
+            },
+            {
+                id: 2,
+                userName: 'Админ Евгений',
+                MyMassagePost: 'My twwfwv mfav;mda;flvm adfm;advmdav  adflmvfavmkfvfv',
+                likeCount: 1
+            },
             {id: 3, userName: 'Админ Евгений', MyMassagePost: 'My fadfvad fadvda afvadva', likeCount: 2},
         ]
     },
@@ -20,23 +27,23 @@ let state = {
             {id: 5, userName: 'Pasha'}
         ],
         massageData: [
-            {id:1, userAva:'https://samogoncalc.ru/img/Ava.jpg', userName:'Admin Tolya', massage:'Ba-Ra-Ga-Be-De!'},
-            {id:2, userAva:'https://samogoncalc.ru/img/Yura.jpg', userName:'Yura', massage:'Bambarbiya, Kergudu.'},
-            {id:3, userAva:'https://samogoncalc.ru/img/Gosha.jpg', userName:'Gosha', massage:'Where is Grandma?'}
+            {id: 1, userAva: 'https://samogoncalc.ru/img/Ava.jpg', userName: 'Admin Tolya', massage: 'Ba-Ra-Ga-Be-De!'},
+            {id: 2, userAva: 'https://samogoncalc.ru/img/Yura.jpg', userName: 'Yura', massage: 'Bambarbiya, Kergudu.'},
+            {id: 3, userAva: 'https://samogoncalc.ru/img/Gosha.jpg', userName: 'Gosha', massage: 'Where is Grandma?'}
         ]
     }
 }
 
 export let addPost = (postMassage) => {
-    debugger;
-    let profileinfoData = {
+
+    let textNewPost = {
         id: 4,
-        username: 'Админ Евгений',
+        userName: 'Админ Евгений',
         MyMassagePost: postMassage,
         likeCount: 0
     };
-
-    state.profilePage.push(profileinfoData);
+    debugger;
+    state.profilePage.postsData.push(textNewPost);
 }
 
 export default state;

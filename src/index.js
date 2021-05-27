@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals'
 import state from './redux/state'
 import {addPost} from './redux/state'
 
-
 ReactDOM.render(
   <React.StrictMode>
     <App  appState={state} addPost={addPost} />
