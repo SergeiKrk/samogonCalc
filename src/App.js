@@ -46,8 +46,8 @@ const App = (props) => {
               <Route path="/kalkulyator-spirta-ot-temperatury" render={ () => <SpirtaTemper /> }/>
               <Route path="/kalkulyator-zameny-sahara-glyukozoj" render={ () => <ZamenyGlyukozoj /> }/>
               <Route path="/about" render={ () => <About /> }/>
-              <Route path="/profile" render={ () => <ProfilePage state={props.appState.profilePage} addPost={props.addPost} /> }/>
-              <Route path="/dialogs" render={ () => <DialogPage state={props.appState.dialogPage} /> }/>
+              <Route path="/profile" render={ () => <ProfilePage state={props.state.profilePage} addPost={props.addPost} /> }/>
+              <Route path="/dialogs" render={ () => <DialogPage state={props.state.dialogPage} /> }/>
           </Switch>
       </Router>
     </div>

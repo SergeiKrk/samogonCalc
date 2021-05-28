@@ -1,3 +1,5 @@
+import {rerenderEntireDom} from "../render";
+
 let state = {
     profilePage: {
         profileinfoData: [
@@ -42,8 +44,8 @@ export let addPost = (postMassage) => {
         MyMassagePost: postMassage,
         likeCount: 0
     };
-    debugger;
     state.profilePage.postsData.push(textNewPost);
+    rerenderEntireDom(state);
 }
 
 export default state;

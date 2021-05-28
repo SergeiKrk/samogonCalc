@@ -1,20 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
-import state from './redux/state'
-import {addPost} from './redux/state'
+import {rerenderEntireDom} from "./render";
+import state from "./redux/state";
 
-let rerenderEntireDom = () => {
-    ReactDOM.render(
-        <React.StrictMode>
-            <App  appState={state} addPost={addPost} />
-        </React.StrictMode>,
-        document.getElementById('root')
-    );
-}
-
-rerenderEntireDom();
+rerenderEntireDom(state);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

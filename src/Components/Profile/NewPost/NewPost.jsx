@@ -14,15 +14,12 @@ const NewPost = (props) => {
 
     return (
         <div className={`${s.whiteBlock}`}>
-            <Form>
+            {/*<Form>
                 <Form.Row className="align-items-center">
                     <Col xs="auto">
                         <img width='40px' src='https://samogoncalc.ru/img/Ava.jpg' className="rounded mb-2" alt='Admin Tolya' />
                     </Col>
                     <Col xs="10">
-                        <Form.Label htmlFor="inlineFormInput" srOnly>
-                            Пост
-                        </Form.Label>
                         <Form.Control
                             ref={newPostElement}
                             className="mb-2"
@@ -36,7 +33,25 @@ const NewPost = (props) => {
                         </Button>
                     </Col>
                 </Form.Row>
-            </Form>
+            </Form>*/}
+                <Row className="align-items-center">
+                    <Col xs="auto">
+                        <img width='40px' src='https://samogoncalc.ru/img/Ava.jpg' className="rounded mb-2" alt='Admin Tolya' />
+                    </Col>
+                    <Col xs="10">
+                        <input
+                            ref={newPostElement}
+                            className="mb-2"
+                            id="inlineFormInput"
+                            placeholder="Введите текст поста"
+                        />
+                    </Col>
+                    <Col xs="auto">
+                        <Button type="submit" onClick={ addPost } className="mb-2">
+                            <FaArrowRight />
+                        </Button>
+                    </Col>
+                </Row>
         </div>
     )
 }
