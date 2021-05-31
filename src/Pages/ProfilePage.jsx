@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Footer from '../Components/Footer/Footer'
 import ProfileInfo from "../Components/Profile/ProfileInfo/ProfileInfo"
 import Profile from "../Components/Profile/Profile";
+import {updateNewPostText} from "../redux/state";
 
 const ProfilePage = (props) => {
 
@@ -12,7 +13,7 @@ const ProfilePage = (props) => {
     return (
         <>
             {profileinfoElement}
-            <Profile  postsData={props.state.postsData} addPost={props.addPost}/>
+            <Profile  postsData={props.state.postsData} newPostText={props.state.newPostText} addPost={props.addPost} updateNewPostText={updateNewPostText}/>
             <Footer/>
         </>
     );

@@ -23,7 +23,7 @@ import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
 import ProfilePage from "./Pages/ProfilePage";
 import DialogPage from "./Pages/DialogPage";
-import state, {addPost} from "./redux/state";
+import state, {addPost, updateNewPostText} from "./redux/state";
 
 const App = (props) => {
 
@@ -46,7 +46,7 @@ const App = (props) => {
               <Route path="/kalkulyator-spirta-ot-temperatury" render={ () => <SpirtaTemper /> }/>
               <Route path="/kalkulyator-zameny-sahara-glyukozoj" render={ () => <ZamenyGlyukozoj /> }/>
               <Route path="/about" render={ () => <About /> }/>
-              <Route path="/profile" render={ () => <ProfilePage state={props.state.profilePage} addPost={props.addPost} /> }/>
+              <Route path="/profile" render={ () => <ProfilePage state={props.state.profilePage} addPost={props.addPost} updateNewPostText={updateNewPostText} /> }/>
               <Route path="/dialogs" render={ () => <DialogPage state={props.state.dialogPage} /> }/>
           </Switch>
       </Router>

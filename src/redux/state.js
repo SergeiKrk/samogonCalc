@@ -18,7 +18,8 @@ let state = {
                 likeCount: 1
             },
             {id: 3, userName: 'Админ Евгений', MyMassagePost: 'My fadfvad fadvda afvadva', likeCount: 2},
-        ]
+        ],
+        newPostText: ''
     },
     dialogPage: {
         dialogsData: [
@@ -45,6 +46,11 @@ export let addPost = (postMassage) => {
         likeCount: 0
     };
     state.profilePage.postsData.push(textNewPost);
+    rerenderEntireDom(state);
+}
+export let updateNewPostText = (newPostText) => {
+
+    state.profilePage.newPostText = newPostText;
     rerenderEntireDom(state);
 }
 

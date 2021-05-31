@@ -2,6 +2,7 @@ import React from 'react'
 import {Col, Row, Button,InputGroup,FormControl} from 'react-bootstrap'
 import { FaArrowRight } from "react-icons/fa";
 import s from './NewPost.module.css'
+import {updateNewPostText} from "../../../redux/state";
 
 const NewPost = (props) => {
 
@@ -13,6 +14,11 @@ const NewPost = (props) => {
         newPostElement.current.value = '';
     }
 
+    let onPostChange = () => {
+        let textNewPost = newPostElement.current.value;
+        props.updateNewPostText();
+    };
+
     return (
         <div className={`${s.whiteBlock}`}>
             <Row>
@@ -23,8 +29,9 @@ const NewPost = (props) => {
                     <InputGroup className="mb-3">
                         <FormControl
                             ref={newPostElement}
+                            onChange={onPostChange}
+                            value={props.newPostText}
                             placeholder="Введите текст поста"
-                            aria-label="Введите текст поста"
                             aria-describedby="basic-addon2"
                         />
                         <InputGroup.Append>
