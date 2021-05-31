@@ -46,6 +46,7 @@ export let addPost = () => {
         likeCount: 0
     };
     state.profilePage.postsData.push(textNewPost);
+    state.profilePage.newPostText = "";
     rerenderEntireDom(state);
 }
 export let updateNewPostText = (newPostText) => {
