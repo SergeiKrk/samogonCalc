@@ -37,12 +37,12 @@ let state = {
     }
 }
 
-export let addPost = (postMassage) => {
+export let addPost = () => {
 
     let textNewPost = {
         id: 4,
         userName: 'Админ Евгений',
-        MyMassagePost: postMassage,
+        MyMassagePost: state.profilePage.newPostText,
         likeCount: 0
     };
     state.profilePage.postsData.push(textNewPost);

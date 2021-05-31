@@ -2,21 +2,19 @@ import React from 'react'
 import {Col, Row, Button,InputGroup,FormControl} from 'react-bootstrap'
 import { FaArrowRight } from "react-icons/fa";
 import s from './NewPost.module.css'
-import {updateNewPostText} from "../../../redux/state";
 
 const NewPost = (props) => {
 
     let newPostElement = React.createRef();
 
     let addPost = () => {
-        let textNewPost = newPostElement.current.value;
-        props.addPost(textNewPost);
-        newPostElement.current.value = '';
+        props.addPost();
+        props.updateNewPostText('');
     }
 
     let onPostChange = () => {
         let textNewPost = newPostElement.current.value;
-        props.updateNewPostText();
+        props.updateNewPostText(textNewPost);
     };
 
     return (
