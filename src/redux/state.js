@@ -37,6 +37,7 @@ let state = {
     }
 }
 
+
 export let addPost = () => {
 
     let textNewPost = {
