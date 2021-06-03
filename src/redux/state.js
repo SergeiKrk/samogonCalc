@@ -1,4 +1,6 @@
-import {rerenderEntireDom} from "../render";
+let rerenderEntireDom = () => {
+    console.log('State is changed')
+}
 
 let state = {
     profilePage: {
@@ -38,7 +40,7 @@ let state = {
 }
 
 
-export let addPost = () => {
+export const addPost = () => {
 
     let textNewPost = {
         id: 4,
@@ -50,10 +52,13 @@ export let addPost = () => {
     state.profilePage.newPostText = "";
     rerenderEntireDom(state);
 }
-export let updateNewPostText = (newPostText) => {
+export const updateNewPostText = (newPostText) => {
 
     state.profilePage.newPostText = newPostText;
     rerenderEntireDom(state);
+}
+export const subscribe = (observer) => {
+    rerenderEntireDom = observer;
 }
 
 export default state;
