@@ -39,7 +39,6 @@ let state = {
     }
 }
 
-
 export const addPost = () => {
 
     let textNewPost = {
@@ -50,12 +49,12 @@ export const addPost = () => {
     };
     state.profilePage.postsData.push(textNewPost);
     state.profilePage.newPostText = "";
-    rerenderEntireDom(state);
+    rerenderEntireDom();
 }
 export const updateNewPostText = (newPostText) => {
 
     state.profilePage.newPostText = newPostText;
-    rerenderEntireDom(state);
+    rerenderEntireDom();
 }
 export const subscribe = (observer) => {
     rerenderEntireDom = observer;
