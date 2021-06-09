@@ -35,14 +35,13 @@ let store = {
             ]
         }
     },
-    getState {
+    getState() {
         return this._state;
     },
     _callSubscriber() {
         console.log('State is changed')
     },
     addPost() {
-
         let textNewPost = {
             id: 4,
             userName: 'Админ Евгений',

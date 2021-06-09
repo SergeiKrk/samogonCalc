@@ -4,12 +4,11 @@ import store from "./redux/state";
 import ReactDOM from 'react-dom'
 import App from './App'
 
-let rerenderEntireDom = () => {
+let rerenderEntireDom = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <App
-                state={store.getState()}
-                addPost={store.addPost}
+                state={store.getState()} addPost={store.addPost}
                 updateNewPostText={store.updateNewPostText} />
         </React.StrictMode>,
         document.getElementById('root')
@@ -18,7 +17,7 @@ let rerenderEntireDom = () => {
 
 rerenderEntireDom(store.getState());
 
-subscribe(rerenderEntireDom);
+store.subscribe(rerenderEntireDom);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
