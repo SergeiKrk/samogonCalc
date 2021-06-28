@@ -1,0 +1,72 @@
+* [33m6fb9878[m[33m ([m[1;36mHEAD[m[33m)[m test commit
+* [33m01331a3[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m debugg 'Profile'
+* [33mf15d5ea[m refactoring 'state', added 'store', trable in 'store'
+* [33m0f4ed1c[m educatin'
+* [33mb98828b[m delete rerender.js, added the observer function
+* [33ma80b370[m I didn't do anything all day :)
+* [33mdbb800a[m a day wasted
+* [33m141a710[m refactoring the adPost function in state.js
+* [33ma89ff4b[m refactoring the functions 'addPost' and 'onPostChange'
+* [33mcc2c6ea[m added 'props.newPostText' in NewPost.jsx
+* [33ma596860[m refactoring addPost function
+* [33m38b1aed[m refactoring NewPost.jsx
+* [33m26f2e34[m add 'render/js' + refactoring interaction render+index+state
+* [33mb0927e7[m add function 'rerenderEntireDom' in index.js
+* [33mee1eb34[m add function 'addPost' in 'NewPost.jsx' and 'textNewPost' in 'state.js'
+* [33md02e72f[m err in 'state.profilePage.push(profileinfoData)'
+* [33m83da029[m improving the project structure
+* [33m8f411ba[m add 'NewMassage' in 'MyMassage'
+* [33m5dfda98[m add 'postLike' in 'Post'
+* [33m8b2e7d0[m move 'addPost' in 'NewPost'
+* [33m4f861f8[m debug 'props' in 'Profile'
+* [33mac0cfbc[m refactoring 'state', debug
+* [33mbf10827[m  move 'profileinfoData', 'postsData', 'dialogsData', 'massageData' in 'state'
+* [33m9a5df71[m moved 'profileinfoData', 'postsData', 'dialogsData', 'massageData' from App.js to index.js via the props
+* [33m9c1be36[m moved 'dialogsData', 'massageData', 'profileInfo' and 'postData' to the 'App' via the props
+* [33m6a7be8f[m refactoring Router through components
+* [33m368e7de[m refactoring the structure 'Dialogs'
+* [33m1a4631a[m refactoring 'Dialogs' with a .map
+* [33mc09bdd4[m refactoring with a .map 'MyPosts', 'Dialogs', 'Profileinfo'
+* [33m14e5c87[m create postsData, dialogsData, profileinfoData
+* [33m10ba971[m create 'ProfileInfo' + refactoring 'Profile'
+* [33mc2e5e85[m create 'Post' + refactoring 'Profile'
+* [33me8fa93a[m create NewPost + refactoring Profile
+* [33m7d71972[m refactoring HeaderBlockProfile
+* [33m0c11d91[m create Profile page
+* [33m5ef198a[m refactoring 'Dialogs'
+* [33m353d72f[m added Routing in Dialogs
+* [33m8d183c2[m partially stylized 'Dialogs'
+* [33mb1c0f33[m added images to UserAva
+* [33m71d855c[m changed component 'Massage'
+* [33mb241756[m stuck in setState for Modal
+* [33m090997d[m modal calcs in 'CalcCard'
+* [33md8abac1[m логика - общий объем разбавленного самогона
+* [33m039a0f0[m логика Калькулятор разбавления самогона водой
+* [33mb817ff5[m переделал пропсы
+* [33mbe82cd4[m прописал img прямыми ссылками
+* [33mc7bc922[m костыли для хлебных крошек на главной
+* [33m12d5a10[m сверстал форму калькулятора разбавления спирта водой
+* [33mb1f017d[m DisqusBlock
+* [33m8e228ea[m Добавил viber,whatsapp react-share кнопки
+* [33ma917c44[m Добавил fb,vk,tw react-share кнопки
+* [33m7575752[m Добавил страницу Profile - работает
+* [33m282fafb[m Добавил страницу Profile
+* [33mc6b993e[m Massage + Massage.module
+* [33mdacdd38[m Dialogs
+* [33m21e29b2[m Заполнил все HeaderBlock страниц калькуляторов
+* [33m3f3e907[m props.HeaderBlock
+* [33mb5353d9[m Route заработал
+* [33m4d12b36[m Router + страницы калькуляторов
+* [33m660d7d0[m CalcCard.js
+* [33m277ad76[m Разместил все карточки калькуляторов
+* [33m681039e[m 4 карточки
+* [33m687de2f[m Добавил calcBlock
+* [33m0d7553c[m Добавил шаблон меню NavbarMenu
+* [33m1c425ff[m Добавил HeaderTag, Footer, Header, Head, Navbar
+* [33m21a2a62[m Установил bootstrap, разнес Header, Footer
+* [33me21e1f2[m Накатил React-router
+* [33m6e5f1dd[m Накатил ReactJS
+* [33mf904c0f[m Удалил тестовый index.html
+* [33m8696ebc[m Изменил index.html
+* [33md8c5b50[m 111
+* [33m65df318[m Initial commit
