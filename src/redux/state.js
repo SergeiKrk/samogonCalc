@@ -60,4 +60,7 @@ export const subscribe = (observer) => {
     rerenderEntireDom = observer;
 }
 
+// 0f4ed1c
+
+
 export default state;
