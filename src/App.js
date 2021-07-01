@@ -26,7 +26,6 @@ import DialogPage from "./Pages/DialogPage";
 import state, {addPost, updateNewPostText} from "./redux/state";
 
 const App = (props) => {
-
   return (
     <div className="App">
       <Router>
