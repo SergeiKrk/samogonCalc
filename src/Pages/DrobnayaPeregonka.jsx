@@ -4,10 +4,14 @@ import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
 import DisqusBlock from "../Components/Header/DisqusBlock";
 import React from "react";
+import {Helmet} from "react-helmet";
 
 const DrobnayaPeregonka = (props) => {
   return (
     <div>
+      <Helmet>
+        <title>Калькулятор дробной перегонки спирта-сырца</title>
+      </Helmet>
       <HeaderBlock
         Href='kalkulyator-drobnoj-peregonki'
         Img='https://samogoncalc.ru/img/kalkulyator-drobnoj-peregonki.png'
