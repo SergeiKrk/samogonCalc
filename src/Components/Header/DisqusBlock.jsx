@@ -4,8 +4,8 @@ import { DiscussionEmbed } from 'disqus-react'
 
 const DisqusBlock = () => {
     return (
-        <>
             <Container>
+                <h3 className="page-section-heading text-uppercase text-secondary">Вопросы и комментарии</h3>
                 <DiscussionEmbed
                     shortname='SamagonCalc'
                     config={
@@ -19,7 +19,6 @@ const DisqusBlock = () => {
                 />
 
             </Container>
-        </>
     )
 }
 

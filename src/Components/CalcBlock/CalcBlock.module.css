@@ -1,5 +1,5 @@
 .FullContainer {
-  margin: 0 10%;
+  margin: 0 10% 30px;
 }
 
 .imgCard {
@@ -13,8 +13,8 @@
   font-size: 14px;
 }
 .dlockCard {
-  margin-bottom: 0px!important;
+  margin-bottom: 0px !important;
 }
 .iconCalc {
-  font-size: 3em!important;
+  font-size: 3em !important;
 }
