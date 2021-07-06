@@ -40,11 +40,9 @@ const NavbarMenu = () => {
                                 <NavDropdown.Item href="/kalkulyator-zameny-sahara-glyukozoj">Калькулятор замены сахара
                                     глюкозой</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link href="/dialogs">Мои беседы</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link href="/about">О проекте</Nav.Link>
-                            <Nav.Link href="/profile">Мой профиль</Nav.Link>
                         </Nav>
                     </Navbar.Collapse></Container>
             </Navbar>
