@@ -39,6 +39,8 @@ let state = {
     }
 }
 
+window.state = state;
+
 export const addPost = () => {
 
     let textNewPost = {
