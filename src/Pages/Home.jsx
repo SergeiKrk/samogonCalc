@@ -4,7 +4,6 @@ import '../css/styles.css'
 import HeaderBlockHome from '../Components/Header/HeaderBlockHome'
 import Footer from '../Components/Footer/Footer'
 import CalcBlock from '../Components/CalcBlock/CalcBlock'
-import Dialogs from "../Components/Dialogs/Dialogs";
 
 const Home = (props) => {
     return (

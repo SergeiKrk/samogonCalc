@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
-import Dialogs from '../Components/Dialogs/Dialogs'
 
 const AbsolyutnijSpirt = (props) => {
     return (
@@ -16,7 +15,6 @@ const AbsolyutnijSpirt = (props) => {
             -
             Калькулятор разбавления самогона водой
             -
-            <Dialogs/>
             <Footer/>
         </div>
     );
