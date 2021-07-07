@@ -15,7 +15,6 @@ const AbsolyutnijSpirt = (props) => {
             -
             Калькулятор разбавления самогона водой
             -
-
             <Footer/>
         </div>
     );
