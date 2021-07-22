@@ -30,7 +30,7 @@ const App = (props) => {
       <Router>
         <NavbarMenu/>
           <Switch>
-              <Route exact path="/" render={ () => <Home calcsData={props.calcsData} /> }/>
+              <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka /> }/>

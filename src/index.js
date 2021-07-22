@@ -7,7 +7,7 @@ import App from './App'
 let rerenderEntireDom = () => {
     ReactDOM.render(
         <React.StrictMode>
-            <App  state={state} calcsData={state.calcPage.calcsData}/>
+            <App  state={state} />
         </React.StrictMode>,
         document.getElementById('root')
     );
