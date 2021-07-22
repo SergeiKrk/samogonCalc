@@ -24,13 +24,13 @@ import About from './Pages/About';
 import state, {addPost, updateNewPostText} from "./redux/state";
 
 const App = (props) => {
-
+//   
   return (
     <div className="App">
       <Router>
         <NavbarMenu/>
           <Switch>
-              <Route exact path="/" render={ () => <Home /> }/>
+              <Route exact path="/" render={ () => <Home calcsData={props.calcsData} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka /> }/>

@@ -36,6 +36,11 @@ let state = {
             {id: 2, userAva: 'https://samogoncalc.ru/img/Yura.jpg', userName: 'Yura', massage: 'Bambarbiya, Kergudu.'},
             {id: 3, userAva: 'https://samogoncalc.ru/img/Gosha.jpg', userName: 'Gosha', massage: 'Where is Grandma?'}
         ]
+    },
+    calcPage: {
+        addDilutionWaterData: [
+            {id: 1, addwater: 0, afterDelution: 0}
+        ]
     }
 }
 
@@ -53,6 +58,10 @@ export const addPost = () => {
     state.profilePage.newPostText = "";
     rerenderEntireDom();
 }
+
+export const addMoreWater = () => {
+    
+}
 export const updateNewPostText = (newPostText) => {
 
     state.profilePage.newPostText = newPostText;
@@ -62,6 +71,5 @@ export const subscribe = (observer) => {
     rerenderEntireDom = observer;
 }
 
-// 111
 
 export default state;

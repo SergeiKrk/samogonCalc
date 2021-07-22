@@ -6,6 +6,7 @@ import Footer from '../Components/Footer/Footer'
 import CalcBlock from '../Components/CalcBlock/CalcBlock'
 
 const Home = (props) => {
+
     return (
         <>
             <HeaderBlockHome HeaderBlockHome={{
@@ -13,7 +14,7 @@ const Home = (props) => {
                 Title: 'Калькулятор самогонщика',
                 Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'
             }}/>
-            <CalcBlock/>
+            <CalcBlock calcsData={props.calcsData}/>
             <Footer/>
         </>
     );
