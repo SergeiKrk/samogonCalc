@@ -25,6 +25,13 @@ let state = {
     
 }
 
+let addCalculateDilute = (postCalculateDilute) => {
+    let newCalculateDilute = {
+        id: 2, addwater: 10, afterDelution: 20
+    }
+    state.calcPage.calcsData.push(newCalculateDilute);
+}
+ 
 window.state = state;
 
 export const addPost = () => {

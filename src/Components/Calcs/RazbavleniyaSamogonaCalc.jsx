@@ -6,12 +6,9 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import s from './Calc.module.css'
+import ResultBlock from "./RazbavleniyaSamogonaCalc/ResultBlock";
 
 const RazbavleniyaSamogonaCalc = (props) => {
-
-    React.state = {
-        text: 'something'
-    }
 
     /*Разбавление самогона водой*/
     let InitVol = React.createRef();
@@ -34,6 +31,8 @@ const RazbavleniyaSamogonaCalc = (props) => {
         let reqVol = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr);
         alert(reqVol.toFixed(2));
     }
+
+    let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlock addwater={ca.addwater} afterDelution={ca.afterDelution}  />)
 
     return (
 
@@ -84,14 +83,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
                         <blockquote className="blockquote mb-0 card-body">
-                            <p>
-                                Необходимо долить воды:<br/>
-                                <p className={s.sought}><span>20</span> л.</p>
-                                Общий объем разбавленного самогона (спирта):
-                                <p className={s.sought}><span>30</span> л.</p>
-                                <br/>
-                                Результаты рассчета актуальны, если температура получаемой жидкости равна 20°С
-                            </p>
+                            {addDilutionWaterElements}
                         </blockquote>
                     </Card>
                 </CardGroup>

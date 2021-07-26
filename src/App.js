@@ -31,7 +31,7 @@ const App = (props) => {
         <NavbarMenu/>
           <Switch>
               <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData} /> }/>
-              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona /> }/>
+              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona addDilutionWaterData={state.calcPage.addDilutionWaterData}/> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
