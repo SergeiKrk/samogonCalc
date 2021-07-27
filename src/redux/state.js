@@ -37,14 +37,8 @@ export let addCalculateDilute = (initWater,reqVol) => {
  
 window.state = state;
 
-export const updateNewPostText = (newPostText) => {
-
-    state.profilePage.newPostText = newPostText;
-    rerenderEntireDom();
-}
 export const subscribe = (observer) => {
     rerenderEntireDom = observer;
 }
-
 
 export default state;

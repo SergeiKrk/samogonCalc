@@ -21,7 +21,7 @@ import Vodka from './Pages/Vodka';
 import SpirtaTemper from './Pages/SpirtaTemper';
 import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
-import state, {addPost, updateNewPostText} from "./redux/state";
+import state from "./redux/state";
 
 const App = (props) => {
 //   
@@ -30,7 +30,7 @@ const App = (props) => {
       <Router>
         <NavbarMenu/>
           <Switch>
-              <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData}  addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute}/> }/>
+              <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData}  addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka /> }/>
