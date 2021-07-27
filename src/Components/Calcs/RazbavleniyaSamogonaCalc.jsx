@@ -5,7 +5,6 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
-import s from './Calc.module.css'
 import ResultBlock from "./RazbavleniyaSamogonaCalc/ResultBlock";
 
 const RazbavleniyaSamogonaCalc = (props) => {
@@ -15,24 +14,8 @@ const RazbavleniyaSamogonaCalc = (props) => {
     let InitFortr = React.createRef();
     let NecessFortr = React.createRef();
 
-    // let Water = () => {
-    //     let valInitVol = InitVol.current.value;
-    //     let valInitFortr = InitFortr.current.value;
-    //     let valNecessFortr = NecessFortr.current.value;
-    //     let initWater = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol);
-    //     alert(initWater.toFixed(2));
-    // }
-
-    // /*Получение нужного объема разведенного самогона (разбавленного спирта) нужной крепости*/
-    // let requiredVolume = () => {
-    //     let valInitVol = InitVol.current.value;
-    //     let valInitFortr = InitFortr.current.value;
-    //     let valNecessFortr = NecessFortr.current.value;
-    //     let reqVol = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr);
-    //     alert(reqVol.toFixed(2));
-    // }
-
     let addCalculateDilute = () => {
+
         let valInitVol = InitVol.current.value;
         let valInitFortr = InitFortr.current.value;
         let valNecessFortr = NecessFortr.current.value;
@@ -42,8 +25,6 @@ const RazbavleniyaSamogonaCalc = (props) => {
     }
 
     let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlock addwater={ca.addwater} afterDelution={ca.afterDelution}  />)
-
-    
 
     return (
 

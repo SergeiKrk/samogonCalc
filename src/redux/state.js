@@ -26,32 +26,17 @@ let state = {
 }
 
 export let addCalculateDilute = (initWater,reqVol) => {
+
     let newCalculateDilute = {
         id: 2, addwater: initWater, afterDelution: reqVol
     }
     state.calcPage.addDilutionWaterData.splice(0);
     state.calcPage.addDilutionWaterData.push(newCalculateDilute);
-    return;
+    rerenderEntireDom();
 }
  
 window.state = state;
 
-export const addPost = () => {
-
-    let textNewPost = {
-        id: 4,
-        userName: 'Админ Евгений',
-        MyMassagePost: state.profilePage.newPostText,
-        likeCount: 0
-    };
-    state.profilePage.postsData.push(textNewPost);
-    state.profilePage.newPostText = "";
-    rerenderEntireDom();
-}
-
-export const addMoreWater = () => {
-    
-}
 export const updateNewPostText = (newPostText) => {
 
     state.profilePage.newPostText = newPostText;
