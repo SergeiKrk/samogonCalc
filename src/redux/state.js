@@ -25,11 +25,13 @@ let state = {
     
 }
 
-let addCalculateDilute = (postCalculateDilute) => {
+export let addCalculateDilute = (initWater,reqVol) => {
     let newCalculateDilute = {
-        id: 2, addwater: 10, afterDelution: 20
+        id: 2, addwater: initWater, afterDelution: reqVol
     }
-    state.calcPage.calcsData.push(newCalculateDilute);
+    state.calcPage.addDilutionWaterData.splice(0);
+    state.calcPage.addDilutionWaterData.push(newCalculateDilute);
+    return;
 }
  
 window.state = state;

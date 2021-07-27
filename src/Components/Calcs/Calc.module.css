@@ -1,7 +1,8 @@
 .sought {
-    font-size: 40px;
-    color: #94397E;
+  font-size: 40px;
+  color: #94397e;
+  margin: 0px auto;
 }
-.ml_20 {
-    margin-left: 10px;
+.explanation {
+  font-size: 14px;
 }

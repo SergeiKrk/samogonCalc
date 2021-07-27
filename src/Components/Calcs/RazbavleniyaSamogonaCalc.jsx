@@ -15,24 +15,35 @@ const RazbavleniyaSamogonaCalc = (props) => {
     let InitFortr = React.createRef();
     let NecessFortr = React.createRef();
 
-    let Water = () => {
+    // let Water = () => {
+    //     let valInitVol = InitVol.current.value;
+    //     let valInitFortr = InitFortr.current.value;
+    //     let valNecessFortr = NecessFortr.current.value;
+    //     let initWater = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol);
+    //     alert(initWater.toFixed(2));
+    // }
+
+    // /*Получение нужного объема разведенного самогона (разбавленного спирта) нужной крепости*/
+    // let requiredVolume = () => {
+    //     let valInitVol = InitVol.current.value;
+    //     let valInitFortr = InitFortr.current.value;
+    //     let valNecessFortr = NecessFortr.current.value;
+    //     let reqVol = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr);
+    //     alert(reqVol.toFixed(2));
+    // }
+
+    let addCalculateDilute = () => {
         let valInitVol = InitVol.current.value;
         let valInitFortr = InitFortr.current.value;
         let valNecessFortr = NecessFortr.current.value;
         let initWater = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol);
-        alert(initWater.toFixed(2));
-    }
-
-    /*Получение нужного объема разведенного самогона (разбавленного спирта) нужной крепости*/
-    let requiredVolume = () => {
-        let valInitVol = InitVol.current.value;
-        let valInitFortr = InitFortr.current.value;
-        let valNecessFortr = NecessFortr.current.value;
         let reqVol = Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr);
-        alert(reqVol.toFixed(2));
+        props.addCalculateDilute(initWater,reqVol);
     }
 
     let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlock addwater={ca.addwater} afterDelution={ca.afterDelution}  />)
+
+    
 
     return (
 
@@ -76,9 +87,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button onClick={ Water } variant="primary">Сколько воды долить</Button>
-                            <span className={s.ml_20} />
-                            <Button onClick={ requiredVolume } variant="primary">Сколько всего получится</Button>
+                            <Button onClick={ addCalculateDilute } variant="primary">Посчитать</Button>
                         </Card.Footer>
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
