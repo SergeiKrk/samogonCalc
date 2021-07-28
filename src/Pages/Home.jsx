@@ -14,7 +14,7 @@ const Home = (props) => {
                 Title: 'Калькулятор самогонщика',
                 Description: 'Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров'
             }}/>
-            <CalcBlock calcsData={props.calcsData}/>
+            <CalcBlock calcsData={props.calcsData} />
             <Footer/>
         </>
     );

@@ -32,7 +32,7 @@ const App = (props) => {
           <Switch>
               <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData}  addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
-              <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov /> }/>
+              <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov calculateHeadsData={state.calcPage.calculateHeadsData} addCalculateHeads={props.addCalculateHeads} /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" render={ () => <PosleVtoroj /> }/>

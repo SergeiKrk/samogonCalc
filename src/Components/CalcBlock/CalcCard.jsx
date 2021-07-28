@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import s from './CalcBlock.module.css'
 import Modal from "react-bootstrap/Modal";
 import { FaCalculator } from "react-icons/fa";
-import RazbavleniyaSamogonaCalc from "../Calcs/RazbavleniyaSamogonaCalc";
+import RazbavleniyaSamogonaCalc from "../Calcs/RazbavleniyaSamogonaCalc/RazbavleniyaSamogonaCalc";
 import OtborGolovCalc from "../Calcs/OtborGolovCalc";
 
 const CalcCard = (props) => {

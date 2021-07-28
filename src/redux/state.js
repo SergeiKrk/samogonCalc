@@ -7,9 +7,12 @@ let state = {
         addDilutionWaterData: [
             {id: 1, addwater: 0, afterDelution: 0}
         ],
+        calculateHeadsData: [
+            {id: 1, volOutHeads: 0, volAbsAlcohol: 0}
+        ],
         calcsData: [
             {id: 1, href: 'kalkulyator-razbavleniya-samogona-vodoj', img: 'https://samogoncalc.ru/img/kalkulyator-razbavleniya-samogona-vodoj.png', title:'Калькулятор разбавления самогона водой', description: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'},
-            {id: 2, href: 'kalkulyator-otbor-golov', img: 'https://samogoncalc.ru/img/kalkulyator-otbor-golov.png', title: 'Калькулятор отбор голов', description: 'Рассчитает объем чистого спирта в полученном и объем вредных «голов» в спирте первой перегонки.' },
+            {id: 2, href: 'kalkulyator-otbor-golov', img: 'https://samogoncalc.ru/img/kalkulyator-otbor-golov.png', title: 'Калькулятор отбор голов', description: 'Рассчитает объем чистого спирта в полученном дистилляте и объем вредных «голов» в спирте первой перегонки.' },
             {id: 3, href: 'kalkulyator-drobnoj-peregonki', img: 'https://samogoncalc.ru/img/kalkulyator-drobnoj-peregonki.png', title: 'Калькулятор дробной перегонки спирта-сырца', description: 'Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!' },
             {id: 4, href: 'razbavlenie-samogona-vodoj-posle-pervoj-peregonki', img: 'https://samogoncalc.ru/img/razbavlenie-samogona-vodoj-posle-pervoj-peregonki.png', title: 'Калькулятор разбавления самогона водой (после первого перегона)', description: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях!' },
             {id: 5, href: 'razbavlenie-samogona-vodoj-posle-vtorogo-peregona', img: 'https://samogoncalc.ru/img/razbavlenie-samogona-vodoj-posle-vtorogo-peregona.png', title: 'Калькулятор разбавления самогона водой (после второго перегона)', description: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях!' },
@@ -32,6 +35,15 @@ export let addCalculateDilute = (initWater,reqVol) => {
     }
     state.calcPage.addDilutionWaterData.splice(0);
     state.calcPage.addDilutionWaterData.push(newCalculateDilute);
+    rerenderEntireDom();
+}
+export let addCalculateHeads = (absAlcohol,outHeads) => {
+
+    let newCalculateHeads = {
+        id: 2, volOutHeads: outHeads, volAbsAlcohol: absAlcohol
+    }
+    state.calcPage.calculateHeadsData.splice(0);
+    state.calcPage.calculateHeadsData.push(newCalculateHeads);
     rerenderEntireDom();
 }
  

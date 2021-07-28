@@ -1,13 +1,13 @@
 import React from 'react'
 import reportWebVitals from './reportWebVitals'
-import state, {subscribe,addCalculateDilute} from "./redux/state";
+import state, {subscribe, addCalculateDilute, addCalculateHeads} from "./redux/state";
 import ReactDOM from 'react-dom'
 import App from './App'
 
 let rerenderEntireDom = () => {
     ReactDOM.render(
         <React.StrictMode>
-            <App  state={state} addCalculateDilute={addCalculateDilute} />
+            <App  state={state} addCalculateDilute={addCalculateDilute} addCalculateHeads={addCalculateHeads} />
         </React.StrictMode>,
         document.getElementById('root')
     );

@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
-import RazbavleniyaSamogonaCalc from "../Components/Calcs/RazbavleniyaSamogonaCalc";
+import RazbavleniyaSamogonaCalc from "../Components/Calcs/RazbavleniyaSamogonaCalc/RazbavleniyaSamogonaCalc";
 
 const RazbavleniyaSamogona = (props) => {
   return (
