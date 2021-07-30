@@ -18,9 +18,7 @@ const DrobnayaPeregonka = (props) => {
         Title='Калькулятор дробной перегонки спирта-сырца'
         Description='Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!'
       />
-        -
-        DrobnayaPeregonka
-        -
+        {/* <DrobnayaPeregonkaCalc /> */}
         <DisqusBlock />
         <Footer />
     </div>
