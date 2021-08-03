@@ -33,7 +33,7 @@ const App = (props) => {
               <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData}  addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov calculateHeadsData={state.calcPage.calculateHeadsData} addCalculateHeads={props.addCalculateHeads} /> }/>
-              <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka /> }/>
+              <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka calculateFractionalData={state.calcPage.calculateFractionalData} addCalculateFractional={props.addCalculateFractional} /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" render={ () => <PosleVtoroj /> }/>
               <Route path="/kalkulyator-absolyutnogo-spirta" render={ () => <AbsolyutnijSpirt /> }/>

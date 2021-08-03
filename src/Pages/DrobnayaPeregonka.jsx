@@ -5,6 +5,7 @@ import Footer from '../Components/Footer/Footer'
 import DisqusBlock from "../Components/Header/DisqusBlock";
 import React from "react";
 import {Helmet} from "react-helmet";
+import DrobnayaPeregonkaCalc from "../Components/Calcs/DrobnayaPeregonka/DrobnayaPeregonkaCalc";
 
 const DrobnayaPeregonka = (props) => {
   return (
@@ -12,13 +13,13 @@ const DrobnayaPeregonka = (props) => {
       <Helmet>
         <title>Калькулятор дробной перегонки спирта-сырца</title>
       </Helmet>
-      <HeaderBlock
+        <HeaderBlock
         Href='kalkulyator-drobnoj-peregonki'
         Img='https://samogoncalc.ru/img/kalkulyator-drobnoj-peregonki.png'
         Title='Калькулятор дробной перегонки спирта-сырца'
         Description='Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!'
       />
-        {/* <DrobnayaPeregonkaCalc /> */}
+         <DrobnayaPeregonkaCalc addCalculateFractional={props.addCalculateFractional} calculateFractionalData={props.calculateFractionalData} />
         <DisqusBlock />
         <Footer />
     </div>

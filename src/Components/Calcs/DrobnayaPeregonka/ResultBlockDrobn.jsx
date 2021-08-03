@@ -1,19 +1,22 @@
 import React from "react";
 import s from '../Calc.module.css';
 
-const ResultBlock = (props) => {
+/*volAbsAlcohol: 0, volOutHeads: 0, volOutTails: 0, distillingFortr: 0*/
+
+const ResultBlockDrobn = (props) => {
     return (
         <p>
-            Необходимо долить воды:<br/>
-            <p className={s.sought}><span> {props.addwater} </span> л.</p>
-            Общий объем разбавленного самогона (спирта):
-            <p className={s.sought}><span>{props.afterDelution}</span> л.</p>
-            получится после разбавления
-            <br/>
-            <br/>
+            Абсолютного спирта на выходе:<br/>
+            <p className={s.sought}><span> {props.volAbsAlcohol} </span> л.</p>
+            Объем «голов»:
+            <p className={s.sought}><span>{props.volOutHeads}</span> л.</p>
+            Объем «хвостов»:
+            <p className={s.sought}><span>{props.volOutTails}</span> л.</p>
+            Объем продукта крепостью {props.distillingFortr}° на выходе:
+            <p className={s.sought}><span>{props.reqVol}</span> л.</p>
             <div className={s.explanation}>Результаты рассчета актуальны, если температура получаемой жидкости равна 20°С</div>
         </p>
     );
 }
 
-export default ResultBlock;
+export default ResultBlockDrobn;

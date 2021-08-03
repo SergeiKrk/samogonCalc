@@ -9,7 +9,6 @@ import ResultBlockHeads from "./ResultBlockHeads"
 
 const OtborGolovCalc = (props) => {
 
-    /*Разбавление самогона водой*/
     let InitVol = React.createRef();
     let InitFortr = React.createRef();
     let partHead = React.createRef();
@@ -25,8 +24,6 @@ const OtborGolovCalc = (props) => {
     }
 
     let addCalculateHeadsElements = props.calculateHeadsData.map(c => <ResultBlockHeads volOutHeads={c.volOutHeads} volAbsAlcohol={c.volAbsAlcohol}  />)
-
-
 
     return (
 

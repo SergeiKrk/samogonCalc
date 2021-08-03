@@ -10,6 +10,12 @@ let state = {
         calculateHeadsData: [
             {id: 1, volOutHeads: 0, volAbsAlcohol: 0}
         ],
+        calculateTailsData: [
+            {id: 1, volOutHeads: 0, volAbsAlcohol: 0}
+        ],
+        calculateFractionalData: [
+            {volAbsAlcohol: 0, reqVol: 0, volOutHeads: 0, volOutTails: 0, distillingFortr: 0}
+        ],
         calcsData: [
             {id: 1, href: 'kalkulyator-razbavleniya-samogona-vodoj', img: 'https://samogoncalc.ru/img/kalkulyator-razbavleniya-samogona-vodoj.png', title:'Калькулятор разбавления самогона водой', description: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'},
             {id: 2, href: 'kalkulyator-otbor-golov', img: 'https://samogoncalc.ru/img/kalkulyator-otbor-golov.png', title: 'Калькулятор отбор голов', description: 'Рассчитает объем чистого спирта в полученном дистилляте и объем вредных «голов» в спирте первой перегонки.' },
@@ -44,6 +50,15 @@ export let addCalculateHeads = (absAlcohol,outHeads) => {
     }
     state.calcPage.calculateHeadsData.splice(0);
     state.calcPage.calculateHeadsData.push(newCalculateHeads);
+    rerenderEntireDom();
+}
+
+export  let addCalculateFractional = (absAlcohol, reqVol, outHeads, outTails, distillingFortr) => {
+    let newCalculateFraction = {
+        volAbsAlcohol: absAlcohol, reqVol: reqVol, volOutHeads: outHeads, volOutTails: outTails, distillingFortr: distillingFortr
+    }
+    state.calcPage.calculateFractionalData.splice(0);
+    state.calcPage.calculateFractionalData.push(newCalculateFraction);
     rerenderEntireDom();
 }
  

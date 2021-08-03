@@ -5,26 +5,30 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
-import ResultBlock from "./ResultBlock";
+import ResultBlockDrobn from "./ResultBlockDrobn";
 
-const RazbavleniyaSamogonaCalc = (props) => {
+const DrobnayaPeregonkaCalc = (props) => {
 
-    /*Разбавление самогона водой*/
-    let InitVol = React.createRef();
-    let InitFortr = React.createRef();
-    let NecessFortr = React.createRef();
+    let rawAlcoholVol = React.createRef();
+    let rawAlcoholFortr = React.createRef();
+    let afterDistillingFortr = React.createRef();
+    let partHead = React.createRef();
+    let partTail = React.createRef();
 
     let addCalculateDilute = () => {
-
-        let valInitVol = InitVol.current.value;
-        let valInitFortr = InitFortr.current.value;
-        let valNecessFortr = NecessFortr.current.value;
-        let initWater = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol)).toFixed(2);
-        let reqVol = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr)).toFixed(2);
-        props.addCalculateDilute(initWater,reqVol);
+        let alcoholVol = rawAlcoholVol.current.value;
+        let alcoholFortr = rawAlcoholFortr.current.value;
+        let distillingFortr = afterDistillingFortr.current.value;
+        let partHeadVol = partHead.current.value;
+        let partTailVol = partTail.current.value;
+        let absAlcohol = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) / 100 ).toFixed(2);
+        let reqVol = (Number.parseInt(alcoholVol) * Number.parseInt(alcoholFortr) / Number.parseInt(distillingFortr)).toFixed(2);
+        let outHeads = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partHeadVol) / 10000 ).toFixed(2);
+        let outTails = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partTailVol) / 10000 ).toFixed(2);
+        props.addCalculateFractional(absAlcohol,reqVol,outHeads,outTails,distillingFortr);
     }
 
-    let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlockDrobn addwater={ca.addwater} afterDelution={ca.afterDelution}  />)
+    let addCalculateFractionalElements = props.calculateFractionalData.map(c => <ResultBlockDrobn volAbsAlcohol={c.volAbsAlcohol} reqVol={c.reqVol} volOutHeads={c.volOutHeads} volOutTails={c.volOutTails} distillingFortr={c.distillingFortr} />)
 
     return (
 
@@ -40,28 +44,65 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                 <Form.Group>
                                     <Form.Row>
                                         <Form.Label column="sm" lg={6}>
-                                            Объем разбавляемого самогона:
+                                            Объем спирта-сырца:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={InitVol} type="text" placeholder="начальный объем, литров" />
+                                            <Form.Control ref={rawAlcoholVol} type="text" placeholder="начальный объем, литров" />
                                         </Col>
                                     </Form.Row>
                                     <br />
                                     <Form.Row>
                                         <Form.Label column="sm" lg={6}>
-                                            Крепость разбавляемого самогона:
+                                            Крепость спирта-сырца:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={InitFortr} type="text" placeholder="начальная крепость, градусов" />
+                                            <Form.Control ref={rawAlcoholFortr} type="text" placeholder="начальная крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                     <br />
                                     <Form.Row>
                                         <Form.Label column="sm" lg={6}>
-                                            Крепость, которую хотите получить:
+                                            Нужная крепость после перегона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={NecessFortr} type="text" placeholder="требуемая крепость, градусов" />
+                                            <Form.Control ref={afterDistillingFortr} type="text" placeholder="требуемая крепость, градусов" />
+                                        </Col>
+                                    </Form.Row>
+                                    <br />
+                                    <Form.Row>
+                                        <Form.Label column="sm" lg={6}>
+                                            Доля «Голов»:
+                                        </Form.Label>
+                                        <Col>
+                                            <select ref={partHead} className="form-control">
+                                                <option value="10">10% от общего объёма</option>
+                                                <option value="11">11% от общего объёма</option>
+                                                <option value="12">12% от общего объёма</option>
+                                                <option value="13">13% от общего объёма</option>
+                                                <option value="14">14% от общего объёма</option>
+                                                <option value="15">15% от общего объёма</option>
+                                            </select>
+                                        </Col>
+                                    </Form.Row>
+                                    <br />
+                                    <Form.Row>
+                                        <Form.Label column="sm" lg={6}>
+                                            Доля «Хвостов»:
+                                        </Form.Label>
+                                        <Col>
+                                            <select ref={partTail} className="form-control">
+                                                <option value="10">10% от общего объёма</option>
+                                                <option value="11">11% от общего объёма</option>
+                                                <option value="12">12% от общего объёма</option>
+                                                <option value="13">13% от общего объёма</option>
+                                                <option value="14">14% от общего объёма</option>
+                                                <option value="15">15% от общего объёма</option>
+                                                <option value="16">16% от общего объёма</option>
+                                                <option value="17">17% от общего объёма</option>
+                                                <option value="18">18% от общего объёма</option>
+                                                <option value="19">19% от общего объёма</option>
+                                                <option value="20">20% от общего объёма</option>
+                                            </select>
                                         </Col>
                                     </Form.Row>
                                 </Form.Group>
@@ -73,7 +114,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
                         <blockquote className="blockquote mb-0 card-body">
-                            {addDilutionWaterElements}
+                            {addCalculateFractionalElements}
                         </blockquote>
                     </Card>
                 </CardGroup>
@@ -82,4 +123,4 @@ const RazbavleniyaSamogonaCalc = (props) => {
     );
 }
 
-export default RazbavleniyaSamogonaCalc;
+export default DrobnayaPeregonkaCalc;
