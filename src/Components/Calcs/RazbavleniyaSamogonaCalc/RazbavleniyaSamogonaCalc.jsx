@@ -22,7 +22,8 @@ const RazbavleniyaSamogonaCalc = (props) => {
         let initWater = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol)).toFixed(2);
         let reqVol = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr)).toFixed(2);
         props.updateAllDataDilute(valInitVol,valInitFortr,valNecessFortr);
-        props.addCalculateDilute(initWater,reqVol);
+
+        if (valInitVol && valInitFortr && valNecessFortr) props.addCalculateDilute(initWater,reqVol);
     }
 
     return (
