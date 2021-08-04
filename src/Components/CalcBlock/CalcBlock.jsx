@@ -7,7 +7,7 @@ import DisqusBlock from "../Header/DisqusBlock";
 const CalcBlock = (props) => {
 
     let calcsElements = props.calcsData.map(calc => <CalcCard Href={calc.href} Img={calc.img} Title={calc.title} Description={calc.description} />)
-    debugger;
+
     return(
         <section className="page-section portfolio" id="portfolio">
             <div className={s.FullContainer}>

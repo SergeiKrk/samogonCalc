@@ -5,13 +5,13 @@ let rerenderEntireDom = () => {
 let state = {
     calcPage: {
         addDilutionWaterData: [
-            {id: 1, addwater: 0, afterDelution: 0}
+            {addwater: 0, afterDelution: 0}
         ],
         calculateHeadsData: [
-            {id: 1, volOutHeads: 0, volAbsAlcohol: 0}
+            {volOutHeads: 0, volAbsAlcohol: 0}
         ],
         calculateTailsData: [
-            {id: 1, volOutHeads: 0, volAbsAlcohol: 0}
+            {volOutHeads: 0, volAbsAlcohol: 0}
         ],
         calculateFractionalData: [
             {volAbsAlcohol: 0, reqVol: 0, volOutHeads: 0, volOutTails: 0, distillingFortr: 0}
@@ -29,24 +29,38 @@ let state = {
             {id: 10, href: 'kalkulyator-vodki-iz-spirta', img: 'https://samogoncalc.ru/img/kalkulyator-vodki-iz-spirta.png', title: 'Калькулятор водки из спирта', description: 'Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.' },
             {id: 11, href: 'kalkulyator-spirta-ot-temperatury', img: 'https://samogoncalc.ru/img/kalkulyator-spirta-ot-temperatury.png', title: 'Калькулятор спирта от температуры', description: 'Рассчитает реальную крепость самогона при температуре больше или меньше 20 °C.' },
             {id: 12, href: 'kalkulyator-zameny-sahara-glyukozoj', img: 'https://samogoncalc.ru/img/kalkulyator-zameny-sahara-glyukozoj.png', title: 'Калькулятор замены сахара глюкозой', description: 'Определяет насколько меньше потребуется глюкозы, чтобы выход спирта из браги был как с 1 кг обычного сахара.' }
-        ]
+        ],
+        valInitVol: '',
+        valInitFortr: '',
+        valNecessFortr: ''
     }
     
 }
 
+window.state = state;
+
 export let addCalculateDilute = (initWater,reqVol) => {
 
     let newCalculateDilute = {
-        id: 2, addwater: initWater, afterDelution: reqVol
+        addwater: initWater, afterDelution: reqVol
     }
     state.calcPage.addDilutionWaterData.splice(0);
     state.calcPage.addDilutionWaterData.push(newCalculateDilute);
     rerenderEntireDom();
 }
+
+export let updateAllDataDilute = (valInitVol,valInitFortr,valNecessFortr) => {
+
+    state.calcPage.valInitVol = valInitVol;
+    state.calcPage.valInitFortr = valInitFortr;
+    state.calcPage.valNecessFortr = valNecessFortr;
+    rerenderEntireDom();
+}
+
 export let addCalculateHeads = (absAlcohol,outHeads) => {
 
     let newCalculateHeads = {
-        id: 2, volOutHeads: outHeads, volAbsAlcohol: absAlcohol
+        volOutHeads: outHeads, volAbsAlcohol: absAlcohol
     }
     state.calcPage.calculateHeadsData.splice(0);
     state.calcPage.calculateHeadsData.push(newCalculateHeads);

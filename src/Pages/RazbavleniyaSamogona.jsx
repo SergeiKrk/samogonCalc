@@ -14,7 +14,14 @@ const RazbavleniyaSamogona = (props) => {
           Description='Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'
       />
         <br/>
-      <RazbavleniyaSamogonaCalc addDilutionWaterData={props.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} />
+      <RazbavleniyaSamogonaCalc
+          newInitVol={props.valInitVol}
+          newInitFortr={props.valInitFortr}
+          newNecessFortr={props.valNecessFortr}
+          addDilutionWaterData={props.addDilutionWaterData}
+          addCalculateDilute={props.addCalculateDilute}
+          updateAllDataDilute={props.updateAllDataDilute}
+      />
       <Footer />
     </div>
   );

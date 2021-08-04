@@ -30,10 +30,23 @@ const App = (props) => {
       <Router>
         <NavbarMenu/>
           <Switch>
-              <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData}  addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
-              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona addDilutionWaterData={state.calcPage.addDilutionWaterData} addCalculateDilute={props.addCalculateDilute} /> }/>
-              <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov calculateHeadsData={state.calcPage.calculateHeadsData} addCalculateHeads={props.addCalculateHeads} /> }/>
-              <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka calculateFractionalData={state.calcPage.calculateFractionalData} addCalculateFractional={props.addCalculateFractional} /> }/>
+              <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData} /> }/>
+              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona
+                  newInitVol={state.calcPage.valInitVol}
+                  newInitFortr={state.calcPage.valInitFortr}
+                  newNecessFortr={state.calcPage.valNecessFortr}
+                  addDilutionWaterData={state.calcPage.addDilutionWaterData}
+                  addCalculateDilute={props.addCalculateDilute}
+                  updateAllDataDilute={props.updateAllDataDilute}
+              /> }/>
+              <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov
+                  calculateHeadsData={state.calcPage.calculateHeadsData}
+                  addCalculateHeads={props.addCalculateHeads}
+              /> }/>
+              <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka
+                  calculateFractionalData={state.calcPage.calculateFractionalData}
+                  addCalculateFractional={props.addCalculateFractional}
+              /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" render={ () => <PosleVtoroj /> }/>
               <Route path="/kalkulyator-absolyutnogo-spirta" render={ () => <AbsolyutnijSpirt /> }/>

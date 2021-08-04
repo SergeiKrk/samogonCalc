@@ -2,7 +2,6 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
-import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlock from "./ResultBlock";
@@ -14,17 +13,17 @@ const RazbavleniyaSamogonaCalc = (props) => {
     let InitFortr = React.createRef();
     let NecessFortr = React.createRef();
 
-    let addCalculateDilute = () => {
+    let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlock addwater={ca.addwater} afterDelution={ca.afterDelution}  />)
 
+    let allValuesOnChange = () => {
         let valInitVol = InitVol.current.value;
         let valInitFortr = InitFortr.current.value;
         let valNecessFortr = NecessFortr.current.value;
         let initWater = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol)).toFixed(2);
         let reqVol = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr)).toFixed(2);
+        props.updateAllDataDilute(valInitVol,valInitFortr,valNecessFortr);
         props.addCalculateDilute(initWater,reqVol);
     }
-
-    let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlock addwater={ca.addwater} afterDelution={ca.afterDelution}  />)
 
     return (
 
@@ -38,12 +37,13 @@ const RazbavleniyaSamogonaCalc = (props) => {
                             <Card.Title>Введите данные для разбавления спирта (самогона) водой</Card.Title>
                             <Card.Text>
                                 <Form.Group>
+                                    <br/>
                                     <Form.Row>
                                         <Form.Label column="sm" lg={6}>
                                             Объем разбавляемого самогона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={InitVol} type="text" placeholder="начальный объем, литров" />
+                                            <Form.Control ref={InitVol} onChange={allValuesOnChange} value={props.valInitVol} type="text" placeholder="начальный объем, литров" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -52,7 +52,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Крепость разбавляемого самогона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={InitFortr} type="text" placeholder="начальная крепость, градусов" />
+                                            <Form.Control ref={InitFortr} onChange={allValuesOnChange} value={props.valInitFortr} type="text" placeholder="начальная крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -61,15 +61,12 @@ const RazbavleniyaSamogonaCalc = (props) => {
                                             Крепость, которую хотите получить:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={NecessFortr} type="text" placeholder="требуемая крепость, градусов" />
+                                            <Form.Control ref={NecessFortr} onChange={allValuesOnChange} value={props.valNecessFortr} type="text" placeholder="требуемая крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                 </Form.Group>
                             </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
-                            <Button onClick={ addCalculateDilute } variant="primary">Посчитать</Button>
-                        </Card.Footer>
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
                         <blockquote className="blockquote mb-0 card-body">
