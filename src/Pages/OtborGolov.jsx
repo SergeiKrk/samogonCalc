@@ -13,7 +13,13 @@ const OtborGolov = (props) => {
         Title='Калькулятор отбор голов'
         Description='Рассчитает объем чистого спирта в полученном дистилляте и объем вредных «голов» в спирте первой перегонки.'
       />
-        <OtborGolovCalc calculateHeadsData={props.calculateHeadsData} addCalculateHeads={props.addCalculateHeads} />
+        <OtborGolovCalc
+            newInitVol={props.valInitVol}
+            newInitFortr={props.valInitFortr}
+            newNecessFortr={props.valNecessFortr}
+            calculateHeadsData={props.calculateHeadsData}
+            updateAllDataHeads={props.updateAllDataHeads}
+            addCalculateHeads={props.addCalculateHeads} />
         <Footer />
     </div>
   );

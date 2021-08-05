@@ -41,7 +41,11 @@ const App = (props) => {
               /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov
                   calculateHeadsData={state.calcPage.calculateHeadsData}
+                  alcoholVol={state.calcPage.alcoholVol}
+                  alcoholFortr={state.calcPage.alcoholFortr}
+                  partHeadVol={state.calcPage.partHeadVol}
                   addCalculateHeads={props.addCalculateHeads}
+                  updateAllDataHeads={props.updateAllDataHeads}
               /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka
                   calculateFractionalData={state.calcPage.calculateFractionalData}

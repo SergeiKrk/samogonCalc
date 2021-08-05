@@ -32,7 +32,10 @@ let state = {
         ],
         valInitVol: '',
         valInitFortr: '',
-        valNecessFortr: ''
+        valNecessFortr: '',
+        alcoholVol: '',
+        alcoholFortr: '',
+        partHeadVol: ''
     }
     
 }
@@ -64,6 +67,13 @@ export let addCalculateHeads = (absAlcohol,outHeads) => {
     }
     state.calcPage.calculateHeadsData.splice(0);
     state.calcPage.calculateHeadsData.push(newCalculateHeads);
+    rerenderEntireDom();
+}
+
+export let updateAllDataHeads = (alcoholVol,alcoholFortr,partHeadVol) => {
+    state.calcPage.alcoholVol = alcoholVol;
+    state.calcPage.alcoholFortr = alcoholFortr;
+    state.calcPage.partHeadVol = partHeadVol;
     rerenderEntireDom();
 }
 

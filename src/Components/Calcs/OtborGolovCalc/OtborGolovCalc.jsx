@@ -2,7 +2,6 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
-import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlockHeads from "./ResultBlockHeads"
@@ -13,14 +12,15 @@ const OtborGolovCalc = (props) => {
     let InitFortr = React.createRef();
     let partHead = React.createRef();
 
-    let addCalculateHeads = () => {
-
+    let allValuesOnChange = () => {
         let alcoholVol = InitVol.current.value;
         let alcoholFortr = InitFortr.current.value;
         let partHeadVol = partHead.current.value;
         let absAlcohol = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) / 100 ).toFixed(2);
         let outHeads = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partHeadVol) / 10000 ).toFixed(2);
-        props.addCalculateHeads(absAlcohol,outHeads);
+
+        if(alcoholVol && alcoholFortr && partHeadVol) props.addCalculateHeads(absAlcohol,outHeads);
+        props.updateAllDataHeads(alcoholVol,alcoholFortr,partHeadVol);
     }
 
     let addCalculateHeadsElements = props.calculateHeadsData.map(c => <ResultBlockHeads volOutHeads={c.volOutHeads} volAbsAlcohol={c.volAbsAlcohol}  />)
@@ -43,7 +43,7 @@ const OtborGolovCalc = (props) => {
                                             Объем разбавляемого спирта-сырца:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={InitVol} type="text" placeholder="объем, литров" />
+                                            <Form.Control ref={InitVol} onChange={allValuesOnChange} value={props.alcoholVol} type="text" placeholder="объем, литров" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -52,7 +52,7 @@ const OtborGolovCalc = (props) => {
                                             Крепость разбавляемого самогона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={InitFortr} type="text" placeholder="крепость, градусов" />
+                                            <Form.Control ref={InitFortr} onChange={allValuesOnChange} value={props.alcoholFortr} type="text" placeholder="крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -61,7 +61,7 @@ const OtborGolovCalc = (props) => {
                                             Доля «Голов»:
                                         </Form.Label>
                                         <Col>
-                                            <select ref={partHead} className="form-control">
+                                            <select ref={partHead} onChange={allValuesOnChange} value={props.partHeadVol} className="form-control">
                                                 <option value="10">10% от общего объёма</option>
                                                 <option value="11">11% от общего объёма</option>
                                                 <option value="12">12% от общего объёма</option>
@@ -74,9 +74,6 @@ const OtborGolovCalc = (props) => {
                                 </Form.Group>
                             </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
-                            <Button onClick={ addCalculateHeads } variant="primary">Посчитать</Button>
-                        </Card.Footer>
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
                         <blockquote className="blockquote mb-0 card-body">
