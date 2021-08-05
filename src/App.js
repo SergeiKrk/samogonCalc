@@ -21,7 +21,7 @@ import Vodka from './Pages/Vodka';
 import SpirtaTemper from './Pages/SpirtaTemper';
 import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
-import state from "./redux/state";
+import state, {updateAllDataFractional} from "./redux/state";
 
 const App = (props) => {
 //   
@@ -49,7 +49,13 @@ const App = (props) => {
               /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka
                   calculateFractionalData={state.calcPage.calculateFractionalData}
+                  alcoholVol={state.calcPage.alcoholVol}
+                  alcoholFortr={state.calcPage.alcoholFortr}
+                  distillingFortr={state.calcPage.distillingFortr}
+                  partHeadVol={state.calcPage.partHeadVol}
+                  partTailVol={state.calcPage.partTailVol}
                   addCalculateFractional={props.addCalculateFractional}
+                  updateAllDataFractional={props.updateAllDataFractional}
               /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" render={ () => <PosleVtoroj /> }/>

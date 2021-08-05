@@ -6,7 +6,8 @@ import state, {
     addCalculateHeads,
     addCalculateFractional,
     updateAllDataDilute,
-    updateAllDataHeads
+    updateAllDataHeads,
+    updateAllDataFractional
 } from "./redux/state";
 import ReactDOM from 'react-dom'
 import App from './App'
@@ -21,6 +22,7 @@ let rerenderEntireDom = () => {
                 addCalculateFractional={addCalculateFractional}
                 updateAllDataDilute={updateAllDataDilute}
                 updateAllDataHeads={updateAllDataHeads}
+                updateAllDataFractional={updateAllDataFractional}
             />
         </React.StrictMode>,
         document.getElementById('root')

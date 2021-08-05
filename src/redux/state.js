@@ -35,7 +35,9 @@ let state = {
         valNecessFortr: '',
         alcoholVol: '',
         alcoholFortr: '',
-        partHeadVol: ''
+        partHeadVol: '',
+        distillingFortr: '',
+        partTailVol: ''
     }
     
 }
@@ -77,12 +79,21 @@ export let updateAllDataHeads = (alcoholVol,alcoholFortr,partHeadVol) => {
     rerenderEntireDom();
 }
 
-export  let addCalculateFractional = (absAlcohol, reqVol, outHeads, outTails, distillingFortr) => {
+export let addCalculateFractional = (absAlcohol, reqVol, outHeads, outTails, distillingFortr) => {
     let newCalculateFraction = {
         volAbsAlcohol: absAlcohol, reqVol: reqVol, volOutHeads: outHeads, volOutTails: outTails, distillingFortr: distillingFortr
     }
     state.calcPage.calculateFractionalData.splice(0);
     state.calcPage.calculateFractionalData.push(newCalculateFraction);
+    rerenderEntireDom();
+}
+
+export let updateAllDataFractional = (alcoholVol, alcoholFortr, distillingFortr, partHeadVol, partTailVol) => {
+    state.calcPage.alcoholVol = alcoholVol;
+    state.calcPage.alcoholFortr = alcoholFortr;
+    state.calcPage.distillingFortr = distillingFortr;
+    state.calcPage.partHeadVol = partHeadVol;
+    state.calcPage.partTailVol = partTailVol;
     rerenderEntireDom();
 }
  

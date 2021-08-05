@@ -19,7 +19,16 @@ const DrobnayaPeregonka = (props) => {
         Title='Калькулятор дробной перегонки спирта-сырца'
         Description='Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!'
       />
-         <DrobnayaPeregonkaCalc addCalculateFractional={props.addCalculateFractional} calculateFractionalData={props.calculateFractionalData} />
+         <DrobnayaPeregonkaCalc
+             alcoholVol={props.alcoholVol}
+             alcoholFortr={props.alcoholFortr}
+             distillingFortr={props.distillingFortr}
+             partHeadVol={props.partHeadVol}
+             partTailVol={props.partTailVol}
+             addCalculateFractional={props.addCalculateFractional}
+             calculateFractionalData={props.calculateFractionalData}
+             updateAllDataFractional={props.updateAllDataFractional}
+         />
         <DisqusBlock />
         <Footer />
     </div>

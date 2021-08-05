@@ -15,17 +15,20 @@ const DrobnayaPeregonkaCalc = (props) => {
     let partHead = React.createRef();
     let partTail = React.createRef();
 
-    let addCalculateDilute = () => {
+    let allValuesOnChange = () => {
         let alcoholVol = rawAlcoholVol.current.value;
         let alcoholFortr = rawAlcoholFortr.current.value;
         let distillingFortr = afterDistillingFortr.current.value;
         let partHeadVol = partHead.current.value;
         let partTailVol = partTail.current.value;
+
         let absAlcohol = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) / 100 ).toFixed(2);
         let reqVol = (Number.parseInt(alcoholVol) * Number.parseInt(alcoholFortr) / Number.parseInt(distillingFortr)).toFixed(2);
         let outHeads = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partHeadVol) / 10000 ).toFixed(2);
         let outTails = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partTailVol) / 10000 ).toFixed(2);
-        props.addCalculateFractional(absAlcohol,reqVol,outHeads,outTails,distillingFortr);
+
+        if(alcoholVol && alcoholFortr && distillingFortr) props.addCalculateFractional(absAlcohol,reqVol,outHeads,outTails,distillingFortr);
+        props.updateAllDataFractional(alcoholVol, alcoholFortr, distillingFortr, partHeadVol, partTailVol);
     }
 
     let addCalculateFractionalElements = props.calculateFractionalData.map(c => <ResultBlockDrobn volAbsAlcohol={c.volAbsAlcohol} reqVol={c.reqVol} volOutHeads={c.volOutHeads} volOutTails={c.volOutTails} distillingFortr={c.distillingFortr} />)
@@ -42,12 +45,13 @@ const DrobnayaPeregonkaCalc = (props) => {
                             <Card.Title>Введите данные для разбавления спирта (самогона) водой</Card.Title>
                             <Card.Text>
                                 <Form.Group>
+                                    <br/>
                                     <Form.Row>
                                         <Form.Label column="sm" lg={6}>
                                             Объем спирта-сырца:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={rawAlcoholVol} type="text" placeholder="начальный объем, литров" />
+                                            <Form.Control ref={rawAlcoholVol} onChange={allValuesOnChange} value={props.alcoholVol} type="text" placeholder="начальный объем, литров" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -56,7 +60,7 @@ const DrobnayaPeregonkaCalc = (props) => {
                                             Крепость спирта-сырца:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={rawAlcoholFortr} type="text" placeholder="начальная крепость, градусов" />
+                                            <Form.Control ref={rawAlcoholFortr} onChange={allValuesOnChange} value={props.alcoholFortr} type="text" placeholder="начальная крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -65,7 +69,7 @@ const DrobnayaPeregonkaCalc = (props) => {
                                             Нужная крепость после перегона:
                                         </Form.Label>
                                         <Col>
-                                            <Form.Control ref={afterDistillingFortr} type="text" placeholder="требуемая крепость, градусов" />
+                                            <Form.Control ref={afterDistillingFortr} onChange={allValuesOnChange} value={props.distillingFortr} type="text" placeholder="требуемая крепость, градусов" />
                                         </Col>
                                     </Form.Row>
                                     <br />
@@ -74,7 +78,7 @@ const DrobnayaPeregonkaCalc = (props) => {
                                             Доля «Голов»:
                                         </Form.Label>
                                         <Col>
-                                            <select ref={partHead} className="form-control">
+                                            <select ref={partHead} onChange={allValuesOnChange} value={props.partHeadVol} className="form-control">
                                                 <option value="10">10% от общего объёма</option>
                                                 <option value="11">11% от общего объёма</option>
                                                 <option value="12">12% от общего объёма</option>
@@ -90,7 +94,7 @@ const DrobnayaPeregonkaCalc = (props) => {
                                             Доля «Хвостов»:
                                         </Form.Label>
                                         <Col>
-                                            <select ref={partTail} className="form-control">
+                                            <select ref={partTail} onChange={allValuesOnChange} value={props.partTailVol} className="form-control">
                                                 <option value="10">10% от общего объёма</option>
                                                 <option value="11">11% от общего объёма</option>
                                                 <option value="12">12% от общего объёма</option>
@@ -108,9 +112,6 @@ const DrobnayaPeregonkaCalc = (props) => {
                                 </Form.Group>
                             </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
-                            <Button onClick={ addCalculateDilute } variant="primary">Посчитать</Button>
-                        </Card.Footer>
                     </Card>
                     <Card border="dark" bg="primary" text="white" className="text-center">
                         <blockquote className="blockquote mb-0 card-body">

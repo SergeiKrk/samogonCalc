@@ -3,6 +3,8 @@ import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
 import OtborGolovCalc from "../Components/Calcs/OtborGolovCalc/OtborGolovCalc";
+import DisqusBlock from "../Components/Header/DisqusBlock";
+import React from "react";
 
 const OtborGolov = (props) => {
   return (
@@ -20,6 +22,7 @@ const OtborGolov = (props) => {
             calculateHeadsData={props.calculateHeadsData}
             updateAllDataHeads={props.updateAllDataHeads}
             addCalculateHeads={props.addCalculateHeads} />
+        <DisqusBlock />
         <Footer />
     </div>
   );
