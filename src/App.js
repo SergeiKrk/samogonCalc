@@ -21,7 +21,7 @@ import Vodka from './Pages/Vodka';
 import SpirtaTemper from './Pages/SpirtaTemper';
 import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
-import state, {updateAllDataFractional} from "./redux/state";
+import store from "./redux/state";
 
 const App = (props) => {
 //   
@@ -30,30 +30,30 @@ const App = (props) => {
       <Router>
         <NavbarMenu/>
           <Switch>
-              <Route exact path="/" render={ () => <Home calcsData={state.calcPage.calcsData} /> }/>
+              <Route exact path="/" render={ () => <Home calcsData={store.getState().calcPage.calcsData} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona
-                  newInitVol={state.calcPage.valInitVol}
-                  newInitFortr={state.calcPage.valInitFortr}
-                  newNecessFortr={state.calcPage.valNecessFortr}
-                  addDilutionWaterData={state.calcPage.addDilutionWaterData}
+                  newInitVol={store.getState().calcPage.valInitVol}
+                  newInitFortr={store.getState().calcPage.valInitFortr}
+                  newNecessFortr={store.getState().calcPage.valNecessFortr}
+                  addDilutionWaterData={store.getState().calcPage.addDilutionWaterData}
                   addCalculateDilute={props.addCalculateDilute}
                   updateAllDataDilute={props.updateAllDataDilute}
               /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov
-                  calculateHeadsData={state.calcPage.calculateHeadsData}
-                  alcoholVol={state.calcPage.alcoholVol}
-                  alcoholFortr={state.calcPage.alcoholFortr}
-                  partHeadVol={state.calcPage.partHeadVol}
+                  calculateHeadsData={store.getState().calcPage.calculateHeadsData}
+                  alcoholVol={store.getState().calcPage.alcoholVol}
+                  alcoholFortr={store.getState().calcPage.alcoholFortr}
+                  partHeadVol={store.getState().calcPage.partHeadVol}
                   addCalculateHeads={props.addCalculateHeads}
                   updateAllDataHeads={props.updateAllDataHeads}
               /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka
-                  calculateFractionalData={state.calcPage.calculateFractionalData}
-                  alcoholVol={state.calcPage.alcoholVol}
-                  alcoholFortr={state.calcPage.alcoholFortr}
-                  distillingFortr={state.calcPage.distillingFortr}
-                  partHeadVol={state.calcPage.partHeadVol}
-                  partTailVol={state.calcPage.partTailVol}
+                  calculateFractionalData={store.getState().calcPage.calculateFractionalData}
+                  alcoholVol={store.getState().calcPage.alcoholVol}
+                  alcoholFortr={store.getState().calcPage.alcoholFortr}
+                  distillingFortr={store.getState().calcPage.distillingFortr}
+                  partHeadVol={store.getState().calcPage.partHeadVol}
+                  partTailVol={store.getState().calcPage.partTailVol}
                   addCalculateFractional={props.addCalculateFractional}
                   updateAllDataFractional={props.updateAllDataFractional}
               /> }/>

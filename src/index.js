@@ -1,14 +1,6 @@
 import React from 'react'
 import reportWebVitals from './reportWebVitals'
-import state, {
-    subscribe,
-    addCalculateDilute,
-    addCalculateHeads,
-    addCalculateFractional,
-    updateAllDataDilute,
-    updateAllDataHeads,
-    updateAllDataFractional
-} from "./redux/state";
+import store from "./redux/state";
 import ReactDOM from 'react-dom'
 import App from './App'
 
@@ -16,22 +8,22 @@ let rerenderEntireDom = () => {
     ReactDOM.render(
         <React.StrictMode>
             <App
-                state={state}
-                addCalculateDilute={addCalculateDilute}
-                addCalculateHeads={addCalculateHeads}
-                addCalculateFractional={addCalculateFractional}
-                updateAllDataDilute={updateAllDataDilute}
-                updateAllDataHeads={updateAllDataHeads}
-                updateAllDataFractional={updateAllDataFractional}
+                state={store.getState()}
+                addCalculateDilute={store.addCalculateDilute.bind(store)}
+                addCalculateHeads={store.addCalculateHeads.bind(store)}
+                addCalculateFractional={store.addCalculateFractional.bind(store)}
+                updateAllDataDilute={store.updateAllDataDilute.bind(store)}
+                updateAllDataHeads={store.updateAllDataHeads.bind(store)}
+                updateAllDataFractional={store.updateAllDataFractional.bind(store)}
             />
         </React.StrictMode>,
         document.getElementById('root')
     );
 }
 
-rerenderEntireDom(state);
+rerenderEntireDom(store.getState());
 
-subscribe(rerenderEntireDom);
+store.subscribe(rerenderEntireDom);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
