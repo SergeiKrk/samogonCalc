@@ -38,12 +38,17 @@ let store = {
         }
 
     },
-    getState() {
-        return this._state
-    },
     _callSubscriber() {
         console.log('State is changed')
     },
+
+    getState() {
+        return this._state
+    },
+    subscribe (observer) {
+        this._callSubscriber = observer;
+    },
+
     addCalculateDilute (initWater,reqVol) {
 
         let newCalculateDilute = {
@@ -91,9 +96,6 @@ let store = {
         this._state.calcPage.partTailVol = partTailVol;
         this._callSubscriber();
     },
-    subscribe (observer) {
-        this._callSubscriber = observer;
-    }
 }
 
 export default store;
