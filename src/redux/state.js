@@ -49,53 +49,48 @@ let store = {
         this._callSubscriber = observer;
     },
 
-    addCalculateDilute (initWater,reqVol) {
-
-        let newCalculateDilute = {
-            addwater: initWater, afterDelution: reqVol
+    dispatch(action) {
+        if(action.type === 'ADD-CALCULATE-DILUTE') {
+            let newCalculateDilute = {
+                addwater: action.initWater, afterDelution: action.reqVol
+            }
+            this._state.calcPage.addDilutionWaterData.splice(0);
+            this._state.calcPage.addDilutionWaterData.push(newCalculateDilute);
+            this._callSubscriber();
+        } else if (action.type === 'UPDATE-ALL-DATA-DILUTE') {
+            this._state.calcPage.valInitVol = action.valInitVol;
+            this._state.calcPage.valInitFortr = action.valInitFortr;
+            this._state.calcPage.valNecessFortr = action.valNecessFortr;
+            this._callSubscriber();
+        } else if (action.type === 'ADD-CALCULATE-HEADS') {
+            let newCalculateHeads = {
+                volOutHeads: action.outHeads, volAbsAlcohol: action.absAlcohol
+            }
+            this._state.calcPage.calculateHeadsData.splice(0);
+            this._state.calcPage.calculateHeadsData.push(newCalculateHeads);
+            this._callSubscriber();
+        } else if (action.type === 'UPDATE-ALL-DATA-HEADS') {
+            this._state.calcPage.alcoholVol = action.alcoholVol;
+            this._state.calcPage.alcoholFortr = action.alcoholFortr;
+            this._state.calcPage.partHeadVol = action.partHeadVol;
+            this._callSubscriber();
+        } else if (action.type === 'ADD-CALCULATE-FRACTIONAL') {
+            let newCalculateFraction = {
+                volAbsAlcohol: action.absAlcohol, reqVol: action.reqVol, volOutHeads: action.outHeads, volOutTails: action.outTails, distillingFortr: action.distillingFortr
+            }
+            this._state.calcPage.calculateFractionalData.splice(0);
+            this._state.calcPage.calculateFractionalData.push(newCalculateFraction);
+            this._callSubscriber();
+        } else if (action.type === 'UPDATE-ALL-DATA-FRACTIONAL') {
+            this._state.calcPage.alcoholVol = action.alcoholVol;
+            this._state.calcPage.alcoholFortr = action.alcoholFortr;
+            this._state.calcPage.distillingFortr = action.distillingFortr;
+            this._state.calcPage.partHeadVol = action.partHeadVol;
+            this._state.calcPage.partTailVol = action.partTailVol;
+            this._callSubscriber();
         }
-        this._state.calcPage.addDilutionWaterData.splice(0);
-        this._state.calcPage.addDilutionWaterData.push(newCalculateDilute);
-        this._callSubscriber();
-    },
-    updateAllDataDilute (valInitVol,valInitFortr,valNecessFortr) {
+    }
 
-        this._state.calcPage.valInitVol = valInitVol;
-        this._state.calcPage.valInitFortr = valInitFortr;
-        this._state.calcPage.valNecessFortr = valNecessFortr;
-        this._callSubscriber();
-    },
-    addCalculateHeads (absAlcohol,outHeads) {
-
-        let newCalculateHeads = {
-            volOutHeads: outHeads, volAbsAlcohol: absAlcohol
-        }
-        this._state.calcPage.calculateHeadsData.splice(0);
-        this._state.calcPage.calculateHeadsData.push(newCalculateHeads);
-        this._callSubscriber();
-    },
-    updateAllDataHeads (alcoholVol,alcoholFortr,partHeadVol) {
-        this._state.calcPage.alcoholVol = alcoholVol;
-        this._state.calcPage.alcoholFortr = alcoholFortr;
-        this._state.calcPage.partHeadVol = partHeadVol;
-        this._callSubscriber();
-    },
-    addCalculateFractional (absAlcohol, reqVol, outHeads, outTails, distillingFortr) {
-        let newCalculateFraction = {
-            volAbsAlcohol: absAlcohol, reqVol: reqVol, volOutHeads: outHeads, volOutTails: outTails, distillingFortr: distillingFortr
-        }
-        this._state.calcPage.calculateFractionalData.splice(0);
-        this._state.calcPage.calculateFractionalData.push(newCalculateFraction);
-        this._callSubscriber();
-    },
-    updateAllDataFractional (alcoholVol, alcoholFortr, distillingFortr, partHeadVol, partTailVol) {
-        this._state.calcPage.alcoholVol = alcoholVol;
-        this._state.calcPage.alcoholFortr = alcoholFortr;
-        this._state.calcPage.distillingFortr = distillingFortr;
-        this._state.calcPage.partHeadVol = partHeadVol;
-        this._state.calcPage.partTailVol = partTailVol;
-        this._callSubscriber();
-    },
 }
 
 export default store;

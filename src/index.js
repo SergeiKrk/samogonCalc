@@ -9,12 +9,7 @@ let rerenderEntireDom = () => {
         <React.StrictMode>
             <App
                 state={store.getState()}
-                addCalculateDilute={store.addCalculateDilute.bind(store)}
-                addCalculateHeads={store.addCalculateHeads.bind(store)}
-                addCalculateFractional={store.addCalculateFractional.bind(store)}
-                updateAllDataDilute={store.updateAllDataDilute.bind(store)}
-                updateAllDataHeads={store.updateAllDataHeads.bind(store)}
-                updateAllDataFractional={store.updateAllDataFractional.bind(store)}
+                dispatch={store.dispatch.bind(store)}
             />
         </React.StrictMode>,
         document.getElementById('root')

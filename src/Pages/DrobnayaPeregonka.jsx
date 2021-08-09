@@ -25,9 +25,8 @@ const DrobnayaPeregonka = (props) => {
              distillingFortr={props.distillingFortr}
              partHeadVol={props.partHeadVol}
              partTailVol={props.partTailVol}
-             addCalculateFractional={props.addCalculateFractional}
              calculateFractionalData={props.calculateFractionalData}
-             updateAllDataFractional={props.updateAllDataFractional}
+             dispatch={props.dispatch}
          />
         <DisqusBlock />
         <Footer />

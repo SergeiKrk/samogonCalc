@@ -20,8 +20,7 @@ const OtborGolov = (props) => {
             newInitFortr={props.valInitFortr}
             newNecessFortr={props.valNecessFortr}
             calculateHeadsData={props.calculateHeadsData}
-            updateAllDataHeads={props.updateAllDataHeads}
-            addCalculateHeads={props.addCalculateHeads} />
+            dispatch={props.dispatch} />
         <DisqusBlock />
         <Footer />
     </div>

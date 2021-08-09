@@ -21,8 +21,7 @@ const RazbavleniyaSamogona = (props) => {
           newInitFortr={props.valInitFortr}
           newNecessFortr={props.valNecessFortr}
           addDilutionWaterData={props.addDilutionWaterData}
-          addCalculateDilute={props.addCalculateDilute}
-          updateAllDataDilute={props.updateAllDataDilute}
+          dispatch={props.dispatch}
       />
         <DisqusBlock />
       <Footer />

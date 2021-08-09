@@ -36,16 +36,14 @@ const App = (props) => {
                   newInitFortr={store.getState().calcPage.valInitFortr}
                   newNecessFortr={store.getState().calcPage.valNecessFortr}
                   addDilutionWaterData={store.getState().calcPage.addDilutionWaterData}
-                  addCalculateDilute={props.addCalculateDilute}
-                  updateAllDataDilute={props.updateAllDataDilute}
+                  dispatch={props.dispatch}
               /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov
                   calculateHeadsData={store.getState().calcPage.calculateHeadsData}
                   alcoholVol={store.getState().calcPage.alcoholVol}
                   alcoholFortr={store.getState().calcPage.alcoholFortr}
                   partHeadVol={store.getState().calcPage.partHeadVol}
-                  addCalculateHeads={props.addCalculateHeads}
-                  updateAllDataHeads={props.updateAllDataHeads}
+                  dispatch={props.dispatch}
               /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka
                   calculateFractionalData={store.getState().calcPage.calculateFractionalData}
@@ -54,8 +52,7 @@ const App = (props) => {
                   distillingFortr={store.getState().calcPage.distillingFortr}
                   partHeadVol={store.getState().calcPage.partHeadVol}
                   partTailVol={store.getState().calcPage.partTailVol}
-                  addCalculateFractional={props.addCalculateFractional}
-                  updateAllDataFractional={props.updateAllDataFractional}
+                  dispatch={props.dispatch}
               /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" render={ () => <PosleVtoroj /> }/>
