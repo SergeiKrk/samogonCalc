@@ -93,6 +93,62 @@ let store = {
 
 }
 
+export const addCalculateHeadsActionCreator = (absAlcohol,outHeads) => {
+    return {
+        type: 'ADD-CALCULATE-HEADS',
+        absAlcohol: absAlcohol,
+        outHeads: outHeads
+    }
+}
+
+export const updateAllDataHeadsActionCreator = (alcoholVol,alcoholFortr,partHeadVol) => {
+    return {
+        type: 'UPDATE-ALL-DATA-HEADS',
+        alcoholVol: alcoholVol,
+        alcoholFortr: alcoholFortr,
+        partHeadVol: partHeadVol
+    }
+}
+
+export const addCalculateFractionalActionCreator = (absAlcohol,reqVol,outHeads,outTails,distillingFortr) => {
+    return {
+        type: 'ADD-CALCULATE-FRACTIONAL',
+        absAlcohol: absAlcohol,
+        reqVol: reqVol,
+        outHeads: outHeads,
+        outTails: outTails,
+        distillingFortr: distillingFortr
+    }
+}
+
+export const updateAllDataFractionalActionCreator = (alcoholVol,alcoholFortr,distillingFortr,partHeadVol,partTailVol) => {
+    return {
+        type: 'UPDATE-ALL-DATA-FRACTIONAL',
+        alcoholVol: alcoholVol,
+        alcoholFortr: alcoholFortr,
+        distillingFortr: distillingFortr,
+        partHeadVol: partHeadVol,
+        partTailVol: partTailVol
+    }
+}
+
+export const updateAllDataDiluteActionCreator = (valInitVol,valInitFortr,valNecessFortr) => {
+    return {
+        type: 'UPDATE-ALL-DATA-DILUTE',
+        valInitVol: valInitVol,
+        valInitFortr: valInitFortr,
+        valNecessFor: valNecessFortr
+    }
+}
+
+export const addCalculateDilute = (initWater,reqVol) => {
+    return {
+        type: 'ADD-CALCULATE-DILUTE',
+        initWater: initWater,
+        reqVol: reqVol
+    }
+}
+
 export default store;
 
 window.store = store;

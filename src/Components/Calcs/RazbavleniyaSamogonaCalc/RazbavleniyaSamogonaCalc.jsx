@@ -5,6 +5,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlock from "./ResultBlock";
+import {addCalculateDilute, updateAllDataDiluteActionCreator} from "../../../redux/state";
 
 const RazbavleniyaSamogonaCalc = (props) => {
 
@@ -22,18 +23,8 @@ const RazbavleniyaSamogonaCalc = (props) => {
         let initWater = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol)).toFixed(2);
         let reqVol = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr)).toFixed(2);
 
-        props.dispatch({
-            type: 'UPDATE-ALL-DATA-DILUTE',
-            valInitVol: valInitVol,
-            valInitFortr: valInitFortr,
-            valNecessFor: valNecessFortr
-        });
-
-        if (valInitVol && valInitFortr && valNecessFortr) props.dispatch({
-            type: 'ADD-CALCULATE-DILUTE',
-            initWater: initWater,
-            reqVol: reqVol
-        });
+        props.dispatch(updateAllDataDiluteActionCreator(valInitVol,valInitFortr,valNecessFortr));
+        if (valInitVol && valInitFortr && valNecessFortr) props.dispatch(addCalculateDilute(initWater,reqVol));
     }
 
     return (

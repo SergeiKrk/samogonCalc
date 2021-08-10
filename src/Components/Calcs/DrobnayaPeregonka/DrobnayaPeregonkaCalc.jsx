@@ -5,6 +5,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlockDrobn from "./ResultBlockDrobn";
+import {addCalculateFractionalActionCreator, updateAllDataFractionalActionCreator} from "../../../redux/state";
 
 const DrobnayaPeregonkaCalc = (props) => {
 
@@ -15,6 +16,7 @@ const DrobnayaPeregonkaCalc = (props) => {
     let partTail = React.createRef();
 
     let allValuesOnChange = () => {
+
         let alcoholVol = rawAlcoholVol.current.value;
         let alcoholFortr = rawAlcoholFortr.current.value;
         let distillingFortr = afterDistillingFortr.current.value;
@@ -26,20 +28,8 @@ const DrobnayaPeregonkaCalc = (props) => {
         let outHeads = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partHeadVol) / 10000 ).toFixed(2);
         let outTails = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partTailVol) / 10000 ).toFixed(2);
 
-        if(alcoholVol && alcoholFortr && distillingFortr) props.dispatch({
-            type: 'ADD-CALCULATE-FRACTIONAL',
-            absAlcohol: absAlcohol,
-            reqVol: reqVol,
-            outHeads: outHeads,
-            outTails: outTails,
-            distillingFortr: distillingFortr});
-
-        props.dispatch({type: 'UPDATE-ALL-DATA-FRACTIONAL',
-            alcoholVol: alcoholVol,
-            alcoholFortr: alcoholFortr,
-            distillingFortr: distillingFortr,
-            partHeadVol: partHeadVol,
-            partTailVol: partTailVol});
+        if(alcoholVol && alcoholFortr && distillingFortr) props.dispatch(addCalculateFractionalActionCreator(absAlcohol,reqVol,outHeads,outTails,distillingFortr));
+        props.dispatch(updateAllDataFractionalActionCreator(alcoholVol,alcoholFortr,distillingFortr,partHeadVol,partTailVol));
     }
 
     let addCalculateFractionalElements = props.calculateFractionalData.map(c => <ResultBlockDrobn volAbsAlcohol={c.volAbsAlcohol} reqVol={c.reqVol} volOutHeads={c.volOutHeads} volOutTails={c.volOutTails} distillingFortr={c.distillingFortr} />)
