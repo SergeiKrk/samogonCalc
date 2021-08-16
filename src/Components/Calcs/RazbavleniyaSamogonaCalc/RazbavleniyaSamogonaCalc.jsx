@@ -5,7 +5,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlock from "./ResultBlock";
-import {addCalculateDilute, updateAllDataDiluteActionCreator} from "../../../redux/state";
+import {addCalculateDilute, updateAllDataDiluteActionCreator} from "../../../redux/calcs-reducer";
 
 const RazbavleniyaSamogonaCalc = (props) => {
 

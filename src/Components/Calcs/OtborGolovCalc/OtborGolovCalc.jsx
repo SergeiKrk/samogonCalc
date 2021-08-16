@@ -5,7 +5,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlockHeads from "./ResultBlockHeads"
-import {addCalculateHeadsActionCreator, updateAllDataHeadsActionCreator} from "../../../redux/state";
+import {addCalculateHeadsActionCreator, updateAllDataHeadsActionCreator} from "../../../redux/calcs-reducer";
 
 const OtborGolovCalc = (props) => {
 

@@ -5,7 +5,7 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlockDrobn from "./ResultBlockDrobn";
-import {addCalculateFractionalActionCreator, updateAllDataFractionalActionCreator} from "../../../redux/state";
+import {addCalculateFractionalActionCreator, updateAllDataFractionalActionCreator} from "../../../redux/calcs-reducer";
 
 const DrobnayaPeregonkaCalc = (props) => {
 
