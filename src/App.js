@@ -21,7 +21,7 @@ import Vodka from './Pages/Vodka';
 import SpirtaTemper from './Pages/SpirtaTemper';
 import ZamenyGlyukozoj from './Pages/ZamenyGlyukozoj';
 import About from './Pages/About';
-import store from "./redux/state";
+import store from "./redux/redux-store";
 
 const App = (props) => {
 //   
