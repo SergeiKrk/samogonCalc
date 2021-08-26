@@ -2,9 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
-import RazbavleniyaSamogonaCalc from "../Components/Calcs/RazbavleniyaSamogonaCalc/RazbavleniyaSamogonaCalc";
 import DisqusBlock from "../Components/Header/DisqusBlock";
 import React from "react";
+import RazbavleniyaSamogonaCalcContainer
+    from "../Components/Calcs/RazbavleniyaSamogonaCalc/RazbavleniyaSamogonaCalcContainer";
 
 const RazbavleniyaSamogona = (props) => {
   return (
@@ -16,13 +17,7 @@ const RazbavleniyaSamogona = (props) => {
           Description='Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'
       />
         <br/>
-      <RazbavleniyaSamogonaCalc
-          newInitVol={props.valInitVol}
-          newInitFortr={props.valInitFortr}
-          newNecessFortr={props.valNecessFortr}
-          addDilutionWaterData={props.addDilutionWaterData}
-          dispatch={props.dispatch}
-      />
+      <RazbavleniyaSamogonaCalcContainer store={props.store} />
         <DisqusBlock />
       <Footer />
     </div>

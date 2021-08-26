@@ -5,7 +5,6 @@ import CardGroup from 'react-bootstrap/CardGroup'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import ResultBlock from "./ResultBlock";
-import {addCalculateDilute, updateAllDataDiluteActionCreator} from "../../../redux/calcs-reducer";
 
 const RazbavleniyaSamogonaCalc = (props) => {
 
@@ -23,8 +22,8 @@ const RazbavleniyaSamogonaCalc = (props) => {
         let initWater = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr) - Number.parseInt(valInitVol)).toFixed(2);
         let reqVol = (Number.parseInt(valInitVol) * Number.parseInt(valInitFortr) / Number.parseInt(valNecessFortr)).toFixed(2);
 
-        props.dispatch(updateAllDataDiluteActionCreator(valInitVol,valInitFortr,valNecessFortr));
-        if (valInitVol && valInitFortr && valNecessFortr) props.dispatch(addCalculateDilute(initWater,reqVol));
+        props.updateAllDataDilute(valInitVol,valInitFortr,valNecessFortr);
+        if (valInitVol && valInitFortr && valNecessFortr) props.addCalculateDil(initWater,reqVol);
     }
 
     return (

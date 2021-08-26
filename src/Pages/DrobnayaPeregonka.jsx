@@ -6,6 +6,7 @@ import DisqusBlock from "../Components/Header/DisqusBlock";
 import React from "react";
 import {Helmet} from "react-helmet";
 import DrobnayaPeregonkaCalc from "../Components/Calcs/DrobnayaPeregonka/DrobnayaPeregonkaCalc";
+import DrobnayaPeregonkaCalcContainer from "../Components/Calcs/DrobnayaPeregonka/DrobnayaPeregonkaCalcContainer";
 
 const DrobnayaPeregonka = (props) => {
   return (
@@ -19,6 +20,15 @@ const DrobnayaPeregonka = (props) => {
         Title='Калькулятор дробной перегонки спирта-сырца'
         Description='Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!'
       />
+         {/*<DrobnayaPeregonkaCalcContainer
+             alcoholVol={props.alcoholVol}
+             alcoholFortr={props.alcoholFortr}
+             distillingFortr={props.distillingFortr}
+             partHeadVol={props.partHeadVol}
+             partTailVol={props.partTailVol}
+             calculateFractionalData={props.calculateFractionalData}
+             dispatch={props.dispatch}
+         />*/}
          <DrobnayaPeregonkaCalc
              alcoholVol={props.alcoholVol}
              alcoholFortr={props.alcoholFortr}

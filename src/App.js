@@ -31,13 +31,7 @@ const App = (props) => {
         <NavbarMenu/>
           <Switch>
               <Route exact path="/" render={ () => <Home calcsData={store.getState().calcPage.calcsData} /> }/>
-              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona
-                  newInitVol={store.getState().calcPage.valInitVol}
-                  newInitFortr={store.getState().calcPage.valInitFortr}
-                  newNecessFortr={store.getState().calcPage.valNecessFortr}
-                  addDilutionWaterData={store.getState().calcPage.addDilutionWaterData}
-                  dispatch={props.dispatch}
-              /> }/>
+              <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona store={store} /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov
                   calculateHeadsData={store.getState().calcPage.calculateHeadsData}
                   alcoholVol={store.getState().calcPage.alcoholVol}

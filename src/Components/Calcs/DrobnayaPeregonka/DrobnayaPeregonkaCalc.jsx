@@ -36,92 +36,92 @@ const DrobnayaPeregonkaCalc = (props) => {
 
     return (
 
-            <div className="container">
-                <p>
-                    Чтобы разбавить дистиллят до нужной крепости, воспользуйтесь калькулятором разбавления самогона водой. В онлайн режиме он поможет подобрать пропорции воды и самогона. Нужно лишь вписать в программу 3 параметра: первоначальный объем, крепость самогона и требуемую крепость. Калькулятор мгновенно произведет нужные расчеты и выдаст результат. Например: у вас есть 5 литров сортировки крепостью 62%, вам нужно разбавить ее до 40%. Заполнив 3 поля в онлайн калькуляторы, мы видим результат: необходимо долить 2,75 литров воды. Важный момент — результаты будут правильными, если температура всех жидкостей 20°С.
-                </p>
-                <CardGroup>
-                    <Card border="dark">
-                        <Card.Body>
-                            <Card.Title>Введите данные для разбавления спирта (самогона) водой</Card.Title>
-                            <Card.Text>
-                                <Form.Group>
-                                    <br/>
-                                    <Form.Row>
-                                        <Form.Label column="sm" lg={6}>
-                                            Объем спирта-сырца:
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control ref={rawAlcoholVol} onChange={allValuesOnChange} value={props.alcoholVol} type="text" placeholder="начальный объем, литров" />
-                                        </Col>
-                                    </Form.Row>
-                                    <br />
-                                    <Form.Row>
-                                        <Form.Label column="sm" lg={6}>
-                                            Крепость спирта-сырца:
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control ref={rawAlcoholFortr} onChange={allValuesOnChange} value={props.alcoholFortr} type="text" placeholder="начальная крепость, градусов" />
-                                        </Col>
-                                    </Form.Row>
-                                    <br />
-                                    <Form.Row>
-                                        <Form.Label column="sm" lg={6}>
-                                            Нужная крепость после перегона:
-                                        </Form.Label>
-                                        <Col>
-                                            <Form.Control ref={afterDistillingFortr} onChange={allValuesOnChange} value={props.distillingFortr} type="text" placeholder="требуемая крепость, градусов" />
-                                        </Col>
-                                    </Form.Row>
-                                    <br />
-                                    <Form.Row>
-                                        <Form.Label column="sm" lg={6}>
-                                            Доля «Голов»:
-                                        </Form.Label>
-                                        <Col>
-                                            <select ref={partHead} onChange={allValuesOnChange} value={props.partHeadVol} className="form-control">
-                                                <option value="10">10% от общего объёма</option>
-                                                <option value="11">11% от общего объёма</option>
-                                                <option value="12">12% от общего объёма</option>
-                                                <option value="13">13% от общего объёма</option>
-                                                <option value="14">14% от общего объёма</option>
-                                                <option value="15">15% от общего объёма</option>
-                                            </select>
-                                        </Col>
-                                    </Form.Row>
-                                    <br />
-                                    <Form.Row>
-                                        <Form.Label column="sm" lg={6}>
-                                            Доля «Хвостов»:
-                                        </Form.Label>
-                                        <Col>
-                                            <select ref={partTail} onChange={allValuesOnChange} value={props.partTailVol} className="form-control">
-                                                <option value="10">10% от общего объёма</option>
-                                                <option value="11">11% от общего объёма</option>
-                                                <option value="12">12% от общего объёма</option>
-                                                <option value="13">13% от общего объёма</option>
-                                                <option value="14">14% от общего объёма</option>
-                                                <option value="15">15% от общего объёма</option>
-                                                <option value="16">16% от общего объёма</option>
-                                                <option value="17">17% от общего объёма</option>
-                                                <option value="18">18% от общего объёма</option>
-                                                <option value="19">19% от общего объёма</option>
-                                                <option value="20">20% от общего объёма</option>
-                                            </select>
-                                        </Col>
-                                    </Form.Row>
-                                </Form.Group>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    <Card border="dark" bg="primary" text="white" className="text-center">
-                        <blockquote className="blockquote mb-0 card-body">
-                            {addCalculateFractionalElements}
-                        </blockquote>
-                    </Card>
-                </CardGroup>
-                <br/>
-            </div>
+        <div className="container">
+            <p>
+                Чтобы разбавить дистиллят до нужной крепости, воспользуйтесь калькулятором разбавления самогона водой. В онлайн режиме он поможет подобрать пропорции воды и самогона. Нужно лишь вписать в программу 3 параметра: первоначальный объем, крепость самогона и требуемую крепость. Калькулятор мгновенно произведет нужные расчеты и выдаст результат. Например: у вас есть 5 литров сортировки крепостью 62%, вам нужно разбавить ее до 40%. Заполнив 3 поля в онлайн калькуляторы, мы видим результат: необходимо долить 2,75 литров воды. Важный момент — результаты будут правильными, если температура всех жидкостей 20°С.
+            </p>
+            <CardGroup>
+                <Card border="dark">
+                    <Card.Body>
+                        <Card.Title>Введите данные для разбавления спирта (самогона) водой</Card.Title>
+                        <Card.Text>
+                            <Form.Group>
+                                <br/>
+                                <Form.Row>
+                                    <Form.Label column="sm" lg={6}>
+                                        Объем спирта-сырца:
+                                    </Form.Label>
+                                    <Col>
+                                        <Form.Control ref={rawAlcoholVol} onChange={allValuesOnChange} value={props.alcoholVol} type="text" placeholder="начальный объем, литров" />
+                                    </Col>
+                                </Form.Row>
+                                <br />
+                                <Form.Row>
+                                    <Form.Label column="sm" lg={6}>
+                                        Крепость спирта-сырца:
+                                    </Form.Label>
+                                    <Col>
+                                        <Form.Control ref={rawAlcoholFortr} onChange={allValuesOnChange} value={props.alcoholFortr} type="text" placeholder="начальная крепость, градусов" />
+                                    </Col>
+                                </Form.Row>
+                                <br />
+                                <Form.Row>
+                                    <Form.Label column="sm" lg={6}>
+                                        Нужная крепость после перегона:
+                                    </Form.Label>
+                                    <Col>
+                                        <Form.Control ref={afterDistillingFortr} onChange={allValuesOnChange} value={props.distillingFortr} type="text" placeholder="требуемая крепость, градусов" />
+                                    </Col>
+                                </Form.Row>
+                                <br />
+                                <Form.Row>
+                                    <Form.Label column="sm" lg={6}>
+                                        Доля «Голов»:
+                                    </Form.Label>
+                                    <Col>
+                                        <select ref={partHead} onChange={allValuesOnChange} value={props.partHeadVol} className="form-control">
+                                            <option value="10">10% от общего объёма</option>
+                                            <option value="11">11% от общего объёма</option>
+                                            <option value="12">12% от общего объёма</option>
+                                            <option value="13">13% от общего объёма</option>
+                                            <option value="14">14% от общего объёма</option>
+                                            <option value="15">15% от общего объёма</option>
+                                        </select>
+                                    </Col>
+                                </Form.Row>
+                                <br />
+                                <Form.Row>
+                                    <Form.Label column="sm" lg={6}>
+                                        Доля «Хвостов»:
+                                    </Form.Label>
+                                    <Col>
+                                        <select ref={partTail} onChange={allValuesOnChange} value={props.partTailVol} className="form-control">
+                                            <option value="10">10% от общего объёма</option>
+                                            <option value="11">11% от общего объёма</option>
+                                            <option value="12">12% от общего объёма</option>
+                                            <option value="13">13% от общего объёма</option>
+                                            <option value="14">14% от общего объёма</option>
+                                            <option value="15">15% от общего объёма</option>
+                                            <option value="16">16% от общего объёма</option>
+                                            <option value="17">17% от общего объёма</option>
+                                            <option value="18">18% от общего объёма</option>
+                                            <option value="19">19% от общего объёма</option>
+                                            <option value="20">20% от общего объёма</option>
+                                        </select>
+                                    </Col>
+                                </Form.Row>
+                            </Form.Group>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+                <Card border="dark" bg="primary" text="white" className="text-center">
+                    <blockquote className="blockquote mb-0 card-body">
+                        {addCalculateFractionalElements}
+                    </blockquote>
+                </Card>
+            </CardGroup>
+            <br/>
+        </div>
     );
 }
 
