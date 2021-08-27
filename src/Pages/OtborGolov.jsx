@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../css/styles.css'
 import HeaderBlock from '../Components/Header/HeaderBlock'
 import Footer from '../Components/Footer/Footer'
-import OtborGolovCalc from "../Components/Calcs/OtborGolovCalc/OtborGolovCalc";
+import OtborGolovCalcContainer from "../Components/Calcs/OtborGolovCalc/OtborGolovCalcContainer";
 import DisqusBlock from "../Components/Header/DisqusBlock";
 import React from "react";
 
@@ -15,12 +15,7 @@ const OtborGolov = (props) => {
         Title='Калькулятор отбор голов'
         Description='Рассчитает объем чистого спирта в полученном дистилляте и объем вредных «голов» в спирте первой перегонки.'
       />
-        <OtborGolovCalc
-            newInitVol={props.valInitVol}
-            newInitFortr={props.valInitFortr}
-            newNecessFortr={props.valNecessFortr}
-            calculateHeadsData={props.calculateHeadsData}
-            dispatch={props.dispatch} />
+        <OtborGolovCalcContainer store={props.store} />
         <DisqusBlock />
         <Footer />
     </div>

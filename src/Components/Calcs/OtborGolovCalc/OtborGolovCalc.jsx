@@ -22,8 +22,8 @@ const OtborGolovCalc = (props) => {
         let absAlcohol = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) / 100 ).toFixed(2);
         let outHeads = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partHeadVol) / 10000 ).toFixed(2);
 
-        if(alcoholVol && alcoholFortr && partHeadVol) props.dispatch(addCalculateHeadsActionCreator(absAlcohol,outHeads));
-        props.dispatch(updateAllDataHeadsActionCreator(alcoholVol,alcoholFortr,partHeadVol));
+        if(alcoholVol && alcoholFortr && partHeadVol) props.addCalculateHeads(absAlcohol,outHeads);
+        props.updateAllDataHeads(alcoholVol,alcoholFortr,partHeadVol);
     }
 
     let addCalculateHeadsElements = props.calculateHeadsData.map(c => <ResultBlockHeads volOutHeads={c.volOutHeads} volAbsAlcohol={c.volAbsAlcohol}  />)

@@ -10,14 +10,14 @@ const RazbavleniyaSamogonaCalcContainer = (props) => {
     let updateAllDataDilute = (valInitVol,valInitFortr,valNecessFortr) => {
         props.store.dispatch(updateAllDataDiluteActionCreator(valInitVol,valInitFortr,valNecessFortr));
     }
-    let addCalculateDil = (initWater,reqVol) => {
+    let addCalculateDiluteStpd = (initWater,reqVol) => {
         props.store.dispatch(addCalculateDilute(initWater,reqVol));
     }
 
     return (
         <RazbavleniyaSamogonaCalc
             updateAllDataDilute={updateAllDataDilute}
-            addCalculateDil={addCalculateDil}
+            addCalculateDiluteStpd={addCalculateDiluteStpd}
             newInitVol={state.calcPage.valInitVol}
             newInitFortr={state.calcPage.valInitFortr}
             newNecessFortr={state.calcPage.valNecessFortr}

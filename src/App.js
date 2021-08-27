@@ -32,13 +32,7 @@ const App = (props) => {
           <Switch>
               <Route exact path="/" render={ () => <Home calcsData={store.getState().calcPage.calcsData} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona store={store} /> }/>
-              <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov
-                  calculateHeadsData={store.getState().calcPage.calculateHeadsData}
-                  alcoholVol={store.getState().calcPage.alcoholVol}
-                  alcoholFortr={store.getState().calcPage.alcoholFortr}
-                  partHeadVol={store.getState().calcPage.partHeadVol}
-                  dispatch={props.dispatch}
-              /> }/>
+              <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov store={store} /> }/>
               <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka
                   calculateFractionalData={store.getState().calcPage.calculateFractionalData}
                   alcoholVol={store.getState().calcPage.alcoholVol}
