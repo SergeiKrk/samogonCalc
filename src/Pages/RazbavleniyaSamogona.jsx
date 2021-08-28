@@ -17,7 +17,7 @@ const RazbavleniyaSamogona = (props) => {
           Description='Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'
       />
         <br/>
-      <RazbavleniyaSamogonaCalcContainer store={props.store} />
+        <RazbavleniyaSamogonaCalcContainer store={props.store} />
         <DisqusBlock />
       <Footer />
     </div>

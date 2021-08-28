@@ -7,7 +7,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavbarMenu from './Components/Header/NavbarMenu'
-import Home from './Pages/Home'
+import Home from './Pages/Home/Home'
 import AbsolyutnijSpirt from './Pages/AbsolyutnijSpirt'
 import DrobnayaPeregonka from './Pages/DrobnayaPeregonka';
 import RazbavleniyaSamogona from './Pages/RazbavleniyaSamogona';
@@ -30,18 +30,10 @@ const App = (props) => {
       <Router>
         <NavbarMenu/>
           <Switch>
-              <Route exact path="/" render={ () => <Home calcsData={store.getState().calcPage.calcsData} /> }/>
+              <Route exact path="/" render={ () => <Home  store={store} /> }/>
               <Route path="/kalkulyator-razbavleniya-samogona-vodoj" render={ () => <RazbavleniyaSamogona store={store} /> }/>
               <Route path="/kalkulyator-otbor-golov" render={ () => <OtborGolov store={store} /> }/>
-              <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka
-                  calculateFractionalData={store.getState().calcPage.calculateFractionalData}
-                  alcoholVol={store.getState().calcPage.alcoholVol}
-                  alcoholFortr={store.getState().calcPage.alcoholFortr}
-                  distillingFortr={store.getState().calcPage.distillingFortr}
-                  partHeadVol={store.getState().calcPage.partHeadVol}
-                  partTailVol={store.getState().calcPage.partTailVol}
-                  dispatch={props.dispatch}
-              /> }/>
+              <Route path="/kalkulyator-drobnoj-peregonki" render={ () => <DrobnayaPeregonka store={store}/> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki" render={ () => <PoslePervoj /> }/>
               <Route path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona" render={ () => <PosleVtoroj /> }/>
               <Route path="/kalkulyator-absolyutnogo-spirta" render={ () => <AbsolyutnijSpirt /> }/>

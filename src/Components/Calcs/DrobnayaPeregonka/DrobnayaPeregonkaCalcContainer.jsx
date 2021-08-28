@@ -1,4 +1,3 @@
-/*
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {addCalculateFractionalActionCreator, updateAllDataFractionalActionCreator} from "../../../redux/calcs-reducer";
@@ -6,20 +5,28 @@ import DrobnayaPeregonkaCalc from "./DrobnayaPeregonkaCalc";
 
 const DrobnayaPeregonkaCalcContainer = (props) => {
 
-    let allValuesOnChange = (alcoholFortr,alcoholVol,partHeadVol,distillingFortr,partTailVol) => {
+    let state = props.store.getState();
 
-        let absAlcohol = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) / 100 ).toFixed(2);
-        let reqVol = (Number.parseInt(alcoholVol) * Number.parseInt(alcoholFortr) / Number.parseInt(distillingFortr)).toFixed(2);
-        let outHeads = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partHeadVol) / 10000 ).toFixed(2);
-        let outTails = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partTailVol) / 10000 ).toFixed(2);
+    let addCalculateFractional = (absAlcohol,reqVol,outHeads,outTails,distillingFortr) => {
+        props.store.dispatch(addCalculateFractionalActionCreator(absAlcohol,reqVol,outHeads,outTails,distillingFortr));
+    }
 
-         if(alcoholVol && alcoholFortr && distillingFortr) props.dispatch(addCalculateFractionalActionCreator(absAlcohol,reqVol,outHeads,outTails,distillingFortr));
-         props.dispatch(updateAllDataFractionalActionCreator(alcoholVol,alcoholFortr,distillingFortr,partHeadVol,partTailVol));
+    let updateAllDataFractional = (alcoholVol,alcoholFortr,distillingFortr,partHeadVol,partTailVol) => {
+        props.store.dispatch(updateAllDataFractionalActionCreator(alcoholVol,alcoholFortr,distillingFortr,partHeadVol,partTailVol));
     }
 
     return (
-        <DrobnayaPeregonkaCalc addCalculateFractional={allValuesOnChange} updateAllDataFractional={updateAllDataFractional}/>
+        <DrobnayaPeregonkaCalc
+            addCalculateFractional={addCalculateFractional}
+            updateAllDataFractional={updateAllDataFractional}
+            calculateFractionalData={state.calcPage.calculateFractionalData}
+            alcoholVol={state.calcPage.alcoholVol}
+            alcoholFortr={state.calcPage.alcoholFortr}
+            distillingFortr={state.calcPage.distillingFortr}
+            partHeadVol={state.calcPage.partHeadVol}
+            partTailVol={state.calcPage.partTailVol}
+        />
     );
 }
 
-export default DrobnayaPeregonkaCalcContainer;*/
+export default DrobnayaPeregonkaCalcContainer;

@@ -28,8 +28,8 @@ const DrobnayaPeregonkaCalc = (props) => {
         let outHeads = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partHeadVol) / 10000 ).toFixed(2);
         let outTails = (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol) * Number.parseInt(partTailVol) / 10000 ).toFixed(2);
 
-        if(alcoholVol && alcoholFortr && distillingFortr) props.dispatch(addCalculateFractionalActionCreator(absAlcohol,reqVol,outHeads,outTails,distillingFortr));
-        props.dispatch(updateAllDataFractionalActionCreator(alcoholVol,alcoholFortr,distillingFortr,partHeadVol,partTailVol));
+        if(alcoholVol && alcoholFortr && distillingFortr) props.addCalculateFractional(absAlcohol,reqVol,outHeads,outTails,distillingFortr);
+        props.updateAllDataFractional(alcoholVol,alcoholFortr,distillingFortr,partHeadVol,partTailVol);
     }
 
     let addCalculateFractionalElements = props.calculateFractionalData.map(c => <ResultBlockDrobn volAbsAlcohol={c.volAbsAlcohol} reqVol={c.reqVol} volOutHeads={c.volOutHeads} volOutTails={c.volOutTails} distillingFortr={c.distillingFortr} />)
