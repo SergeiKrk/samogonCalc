@@ -37,44 +37,63 @@ let initialState = {
 
 const calcsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD-CALCULATE-DILUTE':
+        case 'ADD-CALCULATE-DILUTE': {
             let newCalculateDilute = {
                 addwater: action.initWater, afterDelution: action.reqVol
-            }
+            };
+            let stateCopy = {...state};
             state.addDilutionWaterData.splice(0);
-            state.addDilutionWaterData.push(newCalculateDilute);
-            return  state;
-        case 'UPDATE-ALL-DATA-DILUTE':
-            state.valInitVol = action.valInitVol;
-            state.valInitFortr = action.valInitFortr;
-            state.valNecessFortr = action.valNecessFortr;
-            return  state;
-        case 'ADD-CALCULATE-HEADS':
+            stateCopy.addDilutionWaterData = [...state.addDilutionWaterData];
+            stateCopy.addDilutionWaterData.push(newCalculateDilute);
+            return stateCopy;
+        }
+        case 'UPDATE-ALL-DATA-DILUTE': {
+            let stateCopy = {...state};
+            stateCopy.valInitVol = action.valInitVol;
+            stateCopy.valInitFortr = action.valInitFortr;
+            stateCopy.valNecessFortr = action.valNecessFortr;
+            return stateCopy;
+        }
+        case 'ADD-CALCULATE-HEADS': {
             let newCalculateHeads = {
                 volOutHeads: action.outHeads, volAbsAlcohol: action.absAlcohol
-            }
-            state.calculateHeadsData.splice(0);
-            state.calculateHeadsData.push(newCalculateHeads);
-            return  state;
-        case 'UPDATE-ALL-DATA-HEADS':
-            state.alcoholVol = action.alcoholVol;
-            state.alcoholFortr = action.alcoholFortr;
-            state.partHeadVol = action.partHeadVol;
-            return  state;
-        case 'ADD-CALCULATE-FRACTIONAL':
+            };
+            let stateCopy = {...state};
+            stateCopy.calculateHeadsData = [...state.calculateHeadsData];
+            stateCopy.calculateHeadsData.splice(0);
+            stateCopy.calculateHeadsData.push(newCalculateHeads);
+            return stateCopy;
+        }
+        case 'UPDATE-ALL-DATA-HEADS': {
+            let stateCopy = {...state};
+            stateCopy.alcoholVol = action.alcoholVol;
+            stateCopy.alcoholFortr = action.alcoholFortr;
+            stateCopy.partHeadVol = action.partHeadVol;
+            return stateCopy;
+        }
+        case 'ADD-CALCULATE-FRACTIONAL': {
             let newCalculateFraction = {
-                volAbsAlcohol: action.absAlcohol, reqVol: action.reqVol, volOutHeads: action.outHeads, volOutTails: action.outTails, distillingFortr: action.distillingFortr
-            }
-            state.calculateFractionalData.splice(0);
-            state.calculateFractionalData.push(newCalculateFraction);
-            return  state;
-        case 'UPDATE-ALL-DATA-FRACTIONAL':
-            state.alcoholVol = action.alcoholVol;
-            state.alcoholFortr = action.alcoholFortr;
-            state.distillingFortr = action.distillingFortr;
-            state.partHeadVol = action.partHeadVol;
-            state.partTailVol = action.partTailVol;
-            return  state;
+                volAbsAlcohol: action.absAlcohol,
+                reqVol: action.reqVol,
+                volOutHeads: action.outHeads,
+                volOutTails: action.outTails,
+                distillingFortr: action.distillingFortr
+            };
+            let stateCopy = {...state};
+            stateCopy.calculateFractionalData = [state.calculateFractionalData];
+            stateCopy.calculateFractionalData.splice(0);
+            stateCopy.calculateFractionalData.push(newCalculateFraction);
+            return stateCopy;
+        }
+        case 'UPDATE-ALL-DATA-FRACTIONAL': {
+            let stateCopy = {...state};
+            stateCopy.alcoholVol = action.alcoholVol;
+            stateCopy.alcoholFortr = action.alcoholFortr;
+            stateCopy.distillingFortr = action.distillingFortr;
+            stateCopy.partHeadVol = action.partHeadVol;
+            stateCopy.partTailVol = action.partTailVol;
+            return stateCopy;
+        }
         default:
             return  state;
     }
