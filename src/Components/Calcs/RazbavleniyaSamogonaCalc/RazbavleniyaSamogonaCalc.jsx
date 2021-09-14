@@ -13,7 +13,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
     let InitFortr = React.createRef();
     let NecessFortr = React.createRef();
 
-    let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlock addwater={ca.addwater} afterDelution={ca.afterDelution}  />)
+    let addDilutionWaterElements = props.addDilutionWaterData.map(ca => <ResultBlock addwater={ca.addwater} afterDelution={ca.afterDelution} />)
 
     let allValuesOnChange = () => {
         let valInitVol = InitVol.current.value;

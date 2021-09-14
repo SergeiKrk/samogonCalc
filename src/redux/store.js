@@ -4,16 +4,16 @@ let store = {
     _state: {
         calcPage: {
             addDilutionWaterData: [
-                {addwater: 0, afterDelution: 0}
+                {id=0, addwater: 0, afterDelution: 0}
             ],
             calculateHeadsData: [
-                {volOutHeads: 0, volAbsAlcohol: 0}
+                {id=0, volOutHeads: 0, volAbsAlcohol: 0}
             ],
             calculateTailsData: [
-                {volOutHeads: 0, volAbsAlcohol: 0}
+                {id=0, volOutHeads: 0, volAbsAlcohol: 0}
             ],
             calculateFractionalData: [
-                {volAbsAlcohol: 0, reqVol: 0, volOutHeads: 0, volOutTails: 0, distillingFortr: 0}
+                {id=0, volAbsAlcohol: 0, reqVol: 0, volOutHeads: 0, volOutTails: 0, distillingFortr: 0}
             ],
             calcsData: [
                 {id: 1, href: 'kalkulyator-razbavleniya-samogona-vodoj', img: 'https://samogoncalc.ru/img/kalkulyator-razbavleniya-samogona-vodoj.png', title:'Калькулятор разбавления самогона водой', description: 'Необходимо смешать самогон с водой? Я помогу смешать в нужных пропорциях'},

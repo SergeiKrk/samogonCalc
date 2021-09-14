@@ -42,18 +42,18 @@ const calcsReducer = (state = initialState, action) => {
                 addwater: action.initWater, afterDelution: action.reqVol
             };
             let stateCopy = {...state};
-            state.addDilutionWaterData.splice(0);
+            stateCopy.addDilutionWaterData.splice(0);
             stateCopy.addDilutionWaterData = [...state.addDilutionWaterData];
             stateCopy.addDilutionWaterData.push(newCalculateDilute);
             return stateCopy;
         }
-        case 'UPDATE-ALL-DATA-DILUTE': {
-            let stateCopy = {...state};
-            stateCopy.valInitVol = action.valInitVol;
-            stateCopy.valInitFortr = action.valInitFortr;
-            stateCopy.valNecessFortr = action.valNecessFortr;
-            return stateCopy;
-        }
+        case 'UPDATE-ALL-DATA-DILUTE':
+            return {
+                ...state,
+                valInitVol: action.valInitVol,
+                valInitFortr: action.valInitFortr,
+                valNecessFortr: action.valNecessFortr
+            };
         case 'ADD-CALCULATE-HEADS': {
             let newCalculateHeads = {
                 volOutHeads: action.outHeads, volAbsAlcohol: action.absAlcohol
@@ -64,13 +64,13 @@ const calcsReducer = (state = initialState, action) => {
             stateCopy.calculateHeadsData.push(newCalculateHeads);
             return stateCopy;
         }
-        case 'UPDATE-ALL-DATA-HEADS': {
-            let stateCopy = {...state};
-            stateCopy.alcoholVol = action.alcoholVol;
-            stateCopy.alcoholFortr = action.alcoholFortr;
-            stateCopy.partHeadVol = action.partHeadVol;
-            return stateCopy;
-        }
+        case 'UPDATE-ALL-DATA-HEADS':
+            return {
+                ...state,
+                alcoholVol: action.alcoholVol,
+                alcoholFortr: action.alcoholFortr,
+                partHeadVol: action.partHeadVol
+            };
         case 'ADD-CALCULATE-FRACTIONAL': {
             let newCalculateFraction = {
                 volAbsAlcohol: action.absAlcohol,
@@ -85,15 +85,15 @@ const calcsReducer = (state = initialState, action) => {
             stateCopy.calculateFractionalData.push(newCalculateFraction);
             return stateCopy;
         }
-        case 'UPDATE-ALL-DATA-FRACTIONAL': {
-            let stateCopy = {...state};
-            stateCopy.alcoholVol = action.alcoholVol;
-            stateCopy.alcoholFortr = action.alcoholFortr;
-            stateCopy.distillingFortr = action.distillingFortr;
-            stateCopy.partHeadVol = action.partHeadVol;
-            stateCopy.partTailVol = action.partTailVol;
-            return stateCopy;
-        }
+        case 'UPDATE-ALL-DATA-FRACTIONAL':
+            return {
+                ...state,
+                alcoholVol: action.alcoholVol,
+                alcoholFortr: action.alcoholFortr,
+                distillingFortr: action.distillingFortr,
+                partHeadVol: action.partHeadVol,
+                partTailVol: action.partTailVol
+            };
         default:
             return  state;
     }
