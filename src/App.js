@@ -45,7 +45,7 @@ const App = (props) => {
           />
           <Route
             path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona"
-            render={() => <PosleVtoroj />}
+            render={() => <PosleVtoroj store={store} />}
           />
           <Route
             path="/kalkulyator-absolyutnogo-spirta"

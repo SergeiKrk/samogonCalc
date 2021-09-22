@@ -4,7 +4,7 @@ import {
   addCalculateFractionalActionCreator,
   updateAllDataFractionalActionCreator,
 } from "../../../redux/calcs-reducer";
-import DrobnayaPeregonkaCalc from "./DrobnayaPeregonkaCalc";
+import PosleVtorojCalc from "./PosleVtorojCalc";
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
@@ -57,9 +57,9 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-const DrobnayaPeregonkaCalcContainer = connect(
+const PosleVtorojCalcContainer = connect(
   mapStateToProps,
   mapDispatchToProps
-)(DrobnayaPeregonkaCalc);
+)(PosleVtorojCalc);
 
-export default DrobnayaPeregonkaCalcContainer;
+export default PosleVtorojCalcContainer;

@@ -3,7 +3,7 @@ import s from "../Calc.module.css";
 
 /*volAbsAlcohol: 0, volOutHeads: 0, volOutTails: 0, distillingFortr: 0*/
 
-const ResultBlockDrobn = (props) => {
+const ResultBlockPosleVtoroj = (props) => {
   return (
     <p>
       Абсолютного спирта на выходе:
@@ -19,7 +19,7 @@ const ResultBlockDrobn = (props) => {
       <p className={s.sought}>
         <span>{props.volOutTails}</span> л.
       </p>
-      Объем продукта крепостью {props.distillingFortr}° на выходе:
+      Объем тела крепостью {props.distillingFortr}° на выходе:
       <p className={s.sought}>
         <span>{props.reqVol}</span> л.
       </p>
@@ -31,4 +31,4 @@ const ResultBlockDrobn = (props) => {
   );
 };
 
-export default ResultBlockDrobn;
+export default ResultBlockPosleVtoroj;
