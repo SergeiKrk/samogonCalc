@@ -20,26 +20,15 @@ const PosleVtorojCalc = (props) => {
     let partHeadVol = partHead.current.value;
     let partTailVol = partTail.current.value;
 
-    let absAlcohol = (
-      (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol)) /
-      100
-    ).toFixed(2);
-
-    let outHeads = (
-      (Number.parseInt(alcoholFortr) *
-        Number.parseInt(alcoholVol) *
-        Number.parseInt(partHeadVol)) /
-      10000
-    ).toFixed(2);
-    let outTails = (
-      (Number.parseInt(alcoholFortr) *
-        Number.parseInt(alcoholVol) *
-        Number.parseInt(partTailVol)) /
-      10000
-    ).toFixed(2);
+    let absAlcohol = ((alcoholFortr * alcoholVol) / 100).toFixed(2);
+    let outHeads = ((alcoholFortr * alcoholVol * partHeadVol) / 10000).toFixed(
+      2
+    );
+    let outTails = ((alcoholFortr * alcoholVol * partTailVol) / 10000).toFixed(
+      2
+    );
     let reqVol = (
-      (Number.parseInt(alcoholVol) * Number.parseInt(alcoholFortr)) /
-        Number.parseInt(distillingFortr) -
+      (alcoholVol * alcoholFortr) / distillingFortr -
       outHeads -
       outTails
     ).toFixed(2);

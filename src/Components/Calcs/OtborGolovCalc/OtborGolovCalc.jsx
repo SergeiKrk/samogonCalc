@@ -20,16 +20,10 @@ const OtborGolovCalc = (props) => {
     let alcoholFortr = InitFortr.current.value;
     let partHeadVol = partHead.current.value;
 
-    let absAlcohol = (
-      (Number.parseInt(alcoholFortr) * Number.parseInt(alcoholVol)) /
-      100
-    ).toFixed(2);
-    let outHeads = (
-      (Number.parseInt(alcoholFortr) *
-        Number.parseInt(alcoholVol) *
-        Number.parseInt(partHeadVol)) /
-      10000
-    ).toFixed(2);
+    let absAlcohol = ((alcoholFortr * alcoholVol) / 100).toFixed(2);
+    let outHeads = ((alcoholFortr * alcoholVol * partHeadVol) / 10000).toFixed(
+      2
+    );
 
     if (alcoholVol && alcoholFortr && partHeadVol)
       props.addCalculateHeads(absAlcohol, outHeads);

@@ -27,7 +27,7 @@ const NavbarMenu = () => {
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-drobnoj-peregonki">
                   <NavDropdown.Item>
-                    Калькулятор дробной перегонки
+                    ⭐️ Калькулятор дробной перегонки
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki">
