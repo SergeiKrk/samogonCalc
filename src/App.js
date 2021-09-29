@@ -49,7 +49,7 @@ const App = (props) => {
           />
           <Route
             path="/kalkulyator-absolyutnogo-spirta"
-            render={() => <AbsolyutnijSpirt />}
+            render={() => <AbsolyutnijSpirt store={store} />}
           />
           <Route
             path="/kalkulyator-smeshivaniya-spirtov"
