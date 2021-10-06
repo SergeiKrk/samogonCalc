@@ -5,3 +5,7 @@
 .explanation {
   font-size: 14px;
 }
+.entryField {
+  width: 85%;
+  display: inline-block;
+}

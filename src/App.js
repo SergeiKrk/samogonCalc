@@ -53,7 +53,7 @@ const App = (props) => {
           />
           <Route
             path="/kalkulyator-smeshivaniya-spirtov"
-            render={() => <SmeshSpirt />}
+            render={() => <SmeshSpirt store={store} />}
           />
           <Route
             path="/kalkulyator-sebestoimosti-samogona"
