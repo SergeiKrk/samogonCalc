@@ -75,105 +75,125 @@ const SmeshSpirtCalc = (props) => {
             <Card.Text>
               <Form.Group>
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Объем 1-ой жидкости:
                   </Form.Label>
-                  <Col>
+                  <div sm={4} md={4}>
                     <Form.Control
                       ref={firstVolume}
                       onChange={allValuesOnChange}
                       value={props.firstVol}
                       type="text"
                       placeholder="объем, литров"
-                      className={s.entryField}
-                    />{" "}
+                    />
+                  </div>
+                  <div className={`${s.p10} text-left`} sm={2} md={2}>
                     , л.
-                  </Col>
+                  </div>
                 </Form.Row>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Крепость 1-ой жидкости:
                   </Form.Label>
-                  <Col>
+                  <div sm={4} md={4}>
                     <Form.Control
                       ref={firstStrength}
                       onChange={allValuesOnChange}
                       value={props.firstStr}
                       type="text"
                       placeholder="градусов"
-                      className={s.entryField}
-                    />{" "}
-                    , °
-                  </Col>
+                    />
+                  </div>
+                  <div className={`${s.p10} text-left`}>, °</div>
                 </Form.Row>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Температура 1-ой жидкости:
                   </Form.Label>
-                  <Col>
+                  <div column="sm" lg={6}>
                     <Form.Control
                       ref={firstTemperature}
                       onChange={allValuesOnChange}
                       value={props.firstTemp}
                       type="text"
                       placeholder="объем, литров"
-                      className={s.entryField}
-                    />{" "}
-                    , °C.
-                  </Col>
+                    />
+                  </div>
+                  <div className={`${s.p10} text-left`}>, °C.</div>
                 </Form.Row>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Объем 2-ой жидкости:
                   </Form.Label>
-                  <Col>
+                  <div>
                     <Form.Control
                       ref={secondVolume}
                       onChange={allValuesOnChange}
                       value={props.secondVol}
                       type="text"
                       placeholder="объем, литров"
-                      className={s.entryField}
-                    />{" "}
-                    , л.
-                  </Col>
+                    />
+                  </div>
+                  <div className={`${s.p10} text-left`}>, л.</div>
                 </Form.Row>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Крепость 2-ой жидкости:
                   </Form.Label>
-                  <Col>
+                  <div>
                     <Form.Control
                       ref={secondStrength}
                       onChange={allValuesOnChange}
                       value={props.secondStr}
                       type="text"
                       placeholder="крепость, градусов"
-                      className={s.entryField}
-                    />{" "}
-                    , °
-                  </Col>
+                    />
+                  </div>
+                  <div className={`${s.p10} text-left`}>, °</div>
                 </Form.Row>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Температура 2-ой жидкости:
                   </Form.Label>
-                  <Col>
+                  <div>
                     <Form.Control
                       ref={secondTemperature}
                       onChange={allValuesOnChange}
                       value={props.secondTemp}
                       type="text"
                       placeholder="крепость, градусов"
-                      className={s.entryField}
-                    />{" "}
-                    , °C.
-                  </Col>
+                    />
+                  </div>
+                  <div className={`${s.p10} text-left`}>, °C.</div>
                 </Form.Row>
               </Form.Group>
             </Card.Text>

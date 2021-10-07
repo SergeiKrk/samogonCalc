@@ -4,6 +4,7 @@ import s from "../Calc.module.css";
 const ResultBlockSmeshSpirt = (props) => {
   return (
     <>
+      <br />
       <p>Крепость смешанного алкоголя:</p>
       <p className={s.sought}>
         <span> {props.volMixedStrength} </span> °
@@ -13,9 +14,8 @@ const ResultBlockSmeshSpirt = (props) => {
         <span> {props.volMixedVolume} </span> л.
       </p>
       <br />
-      <br />
       <div className={s.explanation}>
-        Результаты рассчетов представлены с поправкой на температуру смешиваемых
+        Результаты расчетов представлены с поправкой на температуру смешиваемых
         жидкостей.
       </div>
     </>
