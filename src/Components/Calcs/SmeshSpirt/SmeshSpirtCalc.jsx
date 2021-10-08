@@ -137,6 +137,7 @@ const SmeshSpirtCalc = (props) => {
                     , °C.
                   </Col>
                 </Form.Row>
+                <br />
                 <Form.Row>
                   <Form.Label
                     className={`${s.p10} text-right`}
