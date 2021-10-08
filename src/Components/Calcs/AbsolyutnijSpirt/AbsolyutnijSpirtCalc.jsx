@@ -5,6 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import ResultBlockAbsolyutnijSpirt from "./ResultBlockAbsolyutnijSpirt";
+import s from "../Calc.module.css";
 
 const AbsolyutnijSpirtCalc = (props) => {
   let InitVol = React.createRef();
@@ -44,11 +45,16 @@ const AbsolyutnijSpirtCalc = (props) => {
             </Card.Title>
             <Card.Text>
               <Form.Group>
+                <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Объем спирта-сырца (самогона):
                   </Form.Label>
-                  <Col>
+                  <Col xs={9} md={4}>
                     <Form.Control
                       ref={InitVol}
                       onChange={allValuesOnChange}
@@ -57,13 +63,19 @@ const AbsolyutnijSpirtCalc = (props) => {
                       placeholder="объем, литров"
                     />
                   </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , л.
+                  </Col>
                 </Form.Row>
-                <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Крепость спирта-сырца (самогона):
                   </Form.Label>
-                  <Col>
+                  <Col xs={9} md={4}>
                     <Form.Control
                       ref={InitFortr}
                       onChange={allValuesOnChange}
@@ -71,6 +83,9 @@ const AbsolyutnijSpirtCalc = (props) => {
                       type="text"
                       placeholder="крепость, градусов"
                     />
+                  </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °
                   </Col>
                 </Form.Row>
               </Form.Group>

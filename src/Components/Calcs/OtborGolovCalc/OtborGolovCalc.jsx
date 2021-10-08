@@ -5,10 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import ResultBlockHeads from "./ResultBlockHeads";
-import {
-  addCalculateHeadsActionCreator,
-  updateAllDataHeadsActionCreator,
-} from "../../../redux/calcs-reducer";
+import s from "../Calc.module.css";
 
 const OtborGolovCalc = (props) => {
   let InitVol = React.createRef();
@@ -50,6 +47,98 @@ const OtborGolovCalc = (props) => {
         результат: необходимо долить 2,75 литров воды. Важный момент —
         результаты будут правильными, если температура всех жидкостей 20°С.
       </p>
+
+      <CardGroup>
+        <Card border="dark">
+          <Card.Body>
+            <Card.Title>
+              Введите данные для отбора "Голов" (легких ядовитых фракций,
+              которые выходять при дистилляции первыми)
+            </Card.Title>
+            <Card.Text>
+              <Form.Group>
+                <br />
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    Объем разбавляемого спирта-сырца:
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={InitVol}
+                      onChange={allValuesOnChange}
+                      value={props.alcoholVol}
+                      type="text"
+                      placeholder="объем, литров"
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , л.
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    Крепость разбавляемого самогона:
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={InitFortr}
+                      onChange={allValuesOnChange}
+                      value={props.alcoholFortr}
+                      type="text"
+                      placeholder="крепость, градусов"
+                    />
+                  </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °
+                  </Col>
+                </Form.Row>
+                <br />
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    Доля «Голов»:
+                  </Form.Label>
+                  <Col xs={4} md={2}>
+                    <select
+                      ref={partHead}
+                      onChange={allValuesOnChange}
+                      value={props.partHeadVol}
+                      className="form-control"
+                    >
+                      <option value="10">10%</option>
+                      <option value="11">11%</option>
+                      <option value="12">12%</option>
+                      <option value="13">13%</option>
+                      <option value="14">14%</option>
+                      <option value="15">15%</option>
+                    </select>
+                  </Col>
+                  <Col xs={8} md={4} className={`${s.p10} text-left`}>
+                    от общего объёма
+                  </Col>
+                </Form.Row>
+              </Form.Group>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card border="dark" bg="primary" text="white" className="text-center">
+          <blockquote className="blockquote mb-0 card-body">
+            {addCalculateHeadsElements}
+          </blockquote>
+        </Card>
+      </CardGroup>
+      <br />
 
       <h2>Ключи "Калькулятор отбора голов"</h2>
 
@@ -95,77 +184,6 @@ const OtborGolovCalc = (props) => {
       <p>калькулятор самогонщика онлайн выход тела головы 11 0</p>
       <p>калькулятор самогонщика выход тела головы хвостов 11 0</p>
       <p>как отобрать голову калькулятор самогонщика 8 0</p>
-
-      <CardGroup>
-        <Card border="dark">
-          <Card.Body>
-            <Card.Title>
-              Введите данные для отбора "Голов" (легких ядовитых фракций,
-              которые выходять при дистилляции первыми)
-            </Card.Title>
-            <Card.Text>
-              <Form.Group>
-                <Form.Row>
-                  <Form.Label column="sm" lg={6}>
-                    Объем разбавляемого спирта-сырца:
-                  </Form.Label>
-                  <Col>
-                    <Form.Control
-                      ref={InitVol}
-                      onChange={allValuesOnChange}
-                      value={props.alcoholVol}
-                      type="text"
-                      placeholder="объем, литров"
-                    />
-                  </Col>
-                </Form.Row>
-                <br />
-                <Form.Row>
-                  <Form.Label column="sm" lg={6}>
-                    Крепость разбавляемого самогона:
-                  </Form.Label>
-                  <Col>
-                    <Form.Control
-                      ref={InitFortr}
-                      onChange={allValuesOnChange}
-                      value={props.alcoholFortr}
-                      type="text"
-                      placeholder="крепость, градусов"
-                    />
-                  </Col>
-                </Form.Row>
-                <br />
-                <Form.Row>
-                  <Form.Label column="sm" lg={6}>
-                    Доля «Голов»:
-                  </Form.Label>
-                  <Col>
-                    <select
-                      ref={partHead}
-                      onChange={allValuesOnChange}
-                      value={props.partHeadVol}
-                      className="form-control"
-                    >
-                      <option value="10">10% от общего объёма</option>
-                      <option value="11">11% от общего объёма</option>
-                      <option value="12">12% от общего объёма</option>
-                      <option value="13">13% от общего объёма</option>
-                      <option value="14">14% от общего объёма</option>
-                      <option value="15">15% от общего объёма</option>
-                    </select>
-                  </Col>
-                </Form.Row>
-              </Form.Group>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card border="dark" bg="primary" text="white" className="text-center">
-          <blockquote className="blockquote mb-0 card-body">
-            {addCalculateHeadsElements}
-          </blockquote>
-        </Card>
-      </CardGroup>
-      <br />
     </div>
   );
 };

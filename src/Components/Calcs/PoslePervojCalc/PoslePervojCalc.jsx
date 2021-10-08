@@ -5,6 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import PoslePervojResultBlock from "./PoslePervojResultBlock";
+import s from "../Calc.module.css";
 
 const PoslePervojCalc = (props) => {
   /*Разбавление самогона водой*/
@@ -50,10 +51,14 @@ const PoslePervojCalc = (props) => {
               <Form.Group>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Объем разбавляемого самогона:
                   </Form.Label>
-                  <Col>
+                  <Col xs={9} md={4}>
                     <Form.Control
                       ref={InitVol}
                       onChange={allValuesOnChange}
@@ -62,13 +67,19 @@ const PoslePervojCalc = (props) => {
                       placeholder="начальный объем, литров"
                     />
                   </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , л.
+                  </Col>
                 </Form.Row>
-                <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Крепость разбавляемого самогона:
                   </Form.Label>
-                  <Col>
+                  <Col xs={9} md={4}>
                     <Form.Control
                       ref={InitFortr}
                       onChange={allValuesOnChange}
@@ -77,25 +88,34 @@ const PoslePervojCalc = (props) => {
                       placeholder="начальная крепость, градусов"
                     />
                   </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °
+                  </Col>
                 </Form.Row>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Крепость, которую хотите получить:
                   </Form.Label>
-                  <Col>
-                    {/* <Form.Control ref={NecessFortr} onChange={allValuesOnChange} value={props.valNecessFortr} type="text" placeholder="требуемая крепость, градусов" /> */}
+                  <Col xs={4} md={2}>
                     <select
                       ref={NecessFortr}
                       onChange={allValuesOnChange}
                       value={props.valNecessFortr}
                       className="form-control"
                     >
-                      <option value="20">20% от общего объёма</option>
-                      <option value="10">10% от общего объёма</option>
-                      <option value="15">15% от общего объёма</option>
-                      <option value="25">25% от общего объёма</option>
+                      <option value="20">20%</option>
+                      <option value="10">10%</option>
+                      <option value="15">15%</option>
+                      <option value="25">25%</option>
                     </select>
+                  </Col>
+                  <Col xs={8} md={4} className={`${s.p10} text-left`}>
+                    от общего объёма
                   </Col>
                 </Form.Row>
               </Form.Group>

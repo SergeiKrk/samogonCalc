@@ -5,6 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import ResultBlock from "./ResultBlock";
+import s from "../Calc.module.css";
 
 const RazbavleniyaSamogonaCalc = (props) => {
   /*Разбавление самогона водой*/
@@ -44,6 +45,82 @@ const RazbavleniyaSamogonaCalc = (props) => {
         результат: необходимо долить 2,75 литров воды. Важный момент —
         результаты будут правильными, если температура всех жидкостей 20°С.
       </p>
+
+      <CardGroup>
+        <Card border="dark">
+          <Card.Body>
+            <Card.Title>
+              Введите данные для разбавления спирта (самогона) водой
+            </Card.Title>
+            <Card.Text>
+              <Form.Group>
+                <br />
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    Объем разбавляемого самогона:
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={InitVol}
+                      onChange={allValuesOnChange}
+                      value={props.valInitVol}
+                      type="text"
+                      placeholder="начальный объем, литров"
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , л.
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label column="sm" lg={6}>
+                    Крепость разбавляемого самогона:
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={InitFortr}
+                      onChange={allValuesOnChange}
+                      value={props.valInitFortr}
+                      type="text"
+                      placeholder="начальная крепость, градусов"
+                    />
+                  </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label column="sm" lg={6}>
+                    Крепость, которую хотите получить:
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={NecessFortr}
+                      onChange={allValuesOnChange}
+                      value={props.valNecessFortr}
+                      type="text"
+                      placeholder="требуемая крепость, градусов"
+                    />
+                  </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °
+                  </Col>
+                </Form.Row>
+              </Form.Group>
+            </Card.Text>
+          </Card.Body>
+        </Card>
+        <Card border="dark" bg="primary" text="white" className="text-center">
+          <blockquote className="blockquote mb-0 card-body">
+            {addDilutionWaterElements}
+          </blockquote>
+        </Card>
+      </CardGroup>
+      <br />
       <h2>Ключи "калькулятор самогонщика разбавление самогона водой"</h2>
       <p>калькулятор самогонщика разбавление самогона водой 5166 2712</p>
       <p>калькулятор разбавления спирта водой 3929 2078</p>
@@ -134,71 +211,6 @@ const RazbavleniyaSamogonaCalc = (props) => {
       <p>онлайн калькулятор самогонщика разбавка водой 6 10</p>
       <p>разбавление спирта водой правило калькулятор 13 10</p>
       <p>алкогольный калькулятор для разбавления спирта водой 11 10</p>
-
-      <CardGroup>
-        <Card border="dark">
-          <Card.Body>
-            <Card.Title>
-              Введите данные для разбавления спирта (самогона) водой
-            </Card.Title>
-            <Card.Text>
-              <Form.Group>
-                <br />
-                <Form.Row>
-                  <Form.Label column="sm" lg={6}>
-                    Объем разбавляемого самогона:
-                  </Form.Label>
-                  <Col>
-                    <Form.Control
-                      ref={InitVol}
-                      onChange={allValuesOnChange}
-                      value={props.valInitVol}
-                      type="text"
-                      placeholder="начальный объем, литров"
-                    />
-                  </Col>
-                </Form.Row>
-                <br />
-                <Form.Row>
-                  <Form.Label column="sm" lg={6}>
-                    Крепость разбавляемого самогона:
-                  </Form.Label>
-                  <Col>
-                    <Form.Control
-                      ref={InitFortr}
-                      onChange={allValuesOnChange}
-                      value={props.valInitFortr}
-                      type="text"
-                      placeholder="начальная крепость, градусов"
-                    />
-                  </Col>
-                </Form.Row>
-                <br />
-                <Form.Row>
-                  <Form.Label column="sm" lg={6}>
-                    Крепость, которую хотите получить:
-                  </Form.Label>
-                  <Col>
-                    <Form.Control
-                      ref={NecessFortr}
-                      onChange={allValuesOnChange}
-                      value={props.valNecessFortr}
-                      type="text"
-                      placeholder="требуемая крепость, градусов"
-                    />
-                  </Col>
-                </Form.Row>
-              </Form.Group>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        <Card border="dark" bg="primary" text="white" className="text-center">
-          <blockquote className="blockquote mb-0 card-body">
-            {addDilutionWaterElements}
-          </blockquote>
-        </Card>
-      </CardGroup>
-      <br />
       <h2>Ключи "таблица разведения самогона водой"</h2>
       <p>Фраза База " "</p>
       <p>таблица разбавления самогона водой калькулятор 452 176</p>

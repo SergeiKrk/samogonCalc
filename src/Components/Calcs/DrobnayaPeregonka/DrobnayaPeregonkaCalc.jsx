@@ -5,6 +5,7 @@ import CardGroup from "react-bootstrap/CardGroup";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import ResultBlockDrobn from "./ResultBlockDrobn";
+import s from "../Calc.module.css";
 
 const DrobnayaPeregonkaCalc = (props) => {
   let rawAlcoholVol = React.createRef();
@@ -142,10 +143,14 @@ const DrobnayaPeregonkaCalc = (props) => {
               <Form.Group>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Объем спирта-сырца:
                   </Form.Label>
-                  <Col>
+                  <Col xs={9} md={4}>
                     <Form.Control
                       ref={rawAlcoholVol}
                       onChange={allValuesOnChange}
@@ -154,13 +159,19 @@ const DrobnayaPeregonkaCalc = (props) => {
                       placeholder="начальный объем, литров"
                     />
                   </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , л.
+                  </Col>
                 </Form.Row>
-                <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Крепость спирта-сырца:
                   </Form.Label>
-                  <Col>
+                  <Col xs={9} md={4}>
                     <Form.Control
                       ref={rawAlcoholFortr}
                       onChange={allValuesOnChange}
@@ -169,13 +180,19 @@ const DrobnayaPeregonkaCalc = (props) => {
                       placeholder="начальная крепость, градусов"
                     />
                   </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °
+                  </Col>
                 </Form.Row>
-                <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Нужная крепость после перегона:
                   </Form.Label>
-                  <Col>
+                  <Col xs={9} md={4}>
                     <Form.Control
                       ref={afterDistillingFortr}
                       onChange={allValuesOnChange}
@@ -184,52 +201,68 @@ const DrobnayaPeregonkaCalc = (props) => {
                       placeholder="требуемая крепость, градусов"
                     />
                   </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °
+                  </Col>
                 </Form.Row>
                 <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Доля «Голов»:
                   </Form.Label>
-                  <Col>
+                  <Col xs={4} md={2}>
                     <select
                       ref={partHead}
                       onChange={allValuesOnChange}
                       value={props.partHeadVol}
                       className="form-control"
                     >
-                      <option value="10">10% от общего объёма</option>
-                      <option value="11">11% от общего объёма</option>
-                      <option value="12">12% от общего объёма</option>
-                      <option value="13">13% от общего объёма</option>
-                      <option value="14">14% от общего объёма</option>
-                      <option value="15">15% от общего объёма</option>
+                      <option value="10">10%</option>
+                      <option value="11">11%</option>
+                      <option value="12">12%</option>
+                      <option value="13">13%</option>
+                      <option value="14">14%</option>
+                      <option value="15">15%</option>
                     </select>
                   </Col>
+                  <Col xs={8} md={4} className={`${s.p10} text-left`}>
+                    от общего объёма
+                  </Col>
                 </Form.Row>
-                <br />
                 <Form.Row>
-                  <Form.Label column="sm" lg={6}>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
                     Доля «Хвостов»:
                   </Form.Label>
-                  <Col>
+                  <Col xs={4} md={2}>
                     <select
                       ref={partTail}
                       onChange={allValuesOnChange}
                       value={props.partTailVol}
                       className="form-control"
                     >
-                      <option value="10">10% от общего объёма</option>
-                      <option value="11">11% от общего объёма</option>
-                      <option value="12">12% от общего объёма</option>
-                      <option value="13">13% от общего объёма</option>
-                      <option value="14">14% от общего объёма</option>
-                      <option value="15">15% от общего объёма</option>
-                      <option value="16">16% от общего объёма</option>
-                      <option value="17">17% от общего объёма</option>
-                      <option value="18">18% от общего объёма</option>
-                      <option value="19">19% от общего объёма</option>
-                      <option value="20">20% от общего объёма</option>
+                      <option value="10">10%</option>
+                      <option value="11">11%</option>
+                      <option value="12">12%</option>
+                      <option value="13">13%</option>
+                      <option value="14">14%</option>
+                      <option value="15">15%</option>
+                      <option value="16">16%</option>
+                      <option value="17">17%</option>
+                      <option value="18">18%</option>
+                      <option value="19">19%</option>
+                      <option value="20">20%</option>
                     </select>
+                  </Col>
+                  <Col xs={8} md={4} className={`${s.p10} text-left`}>
+                    от общего объёма
                   </Col>
                 </Form.Row>
               </Form.Group>

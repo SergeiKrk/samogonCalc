@@ -5,7 +5,7 @@ import s from "../Calc.module.css";
 
 const ResultBlockDrobn = (props) => {
   return (
-    <p>
+    <>
       Абсолютного спирта на выходе:
       <br />
       <p className={s.sought}>
@@ -23,11 +23,11 @@ const ResultBlockDrobn = (props) => {
       <p className={s.sought}>
         <span>{props.reqVol}</span> л.
       </p>
-      <div className={s.explanation}>
+      <p className={s.explanation}>
         Результаты рассчета актуальны, если температура получаемой жидкости
         равна 20°С
-      </div>
-    </p>
+      </p>
+    </>
   );
 };
 

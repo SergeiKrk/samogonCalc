@@ -4,10 +4,10 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
-import ResultBlockSmeshSpirt from "./ResultBlockSmeshSpirt";
+import ResultBlockSebestoimost from "./ResultBlockSebestoimost";
 import s from "../Calc.module.css";
 
-const SmeshSpirtCalc = (props) => {
+const SebestoimostCalc = (props) => {
   let firstVolume = React.createRef();
   let firstStrength = React.createRef();
   let firstTemperature = React.createRef();
@@ -39,8 +39,8 @@ const SmeshSpirtCalc = (props) => {
       secondStr &&
       secondTemp
     )
-      props.addCalculateMixedStrength(mixedStrength, mixedVolume);
-    props.updateAllDataMixedStrength(
+      props.addCalculateSebestoimost(mixedStrength, mixedVolume);
+    props.updateAllDataSebestoimost(
       firstVol,
       firstStr,
       firstTemp,
@@ -50,9 +50,9 @@ const SmeshSpirtCalc = (props) => {
     );
   };
 
-  let addCalculateMixedStrengthElements = props.calculateMixedStrengthData.map(
+  let addCalculateSebestoimostElements = props.calculateMixedStrengthData.map(
     (c) => (
-      <ResultBlockSmeshSpirt
+      <ResultBlockSebestoimost
         volMixedStrength={c.volMixedStrength}
         volMixedVolume={c.volMixedVolume}
       />
@@ -70,10 +70,11 @@ const SmeshSpirtCalc = (props) => {
         <Card border="dark">
           <Card.Body>
             <Card.Title>
-              Введите данные для расчета абсолютного спирта
+              Введите данные для расчета себестоимости дистиллята (самогона)
             </Card.Title>
             <Card.Text>
               <Form.Group>
+                <br />
                 <Form.Row>
                   <Form.Label
                     className={`${s.p10} text-right`}
@@ -91,7 +92,7 @@ const SmeshSpirtCalc = (props) => {
                       placeholder="объем, литров"
                     />
                   </Col>
-                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
                     , л.
                   </Col>
                 </Form.Row>
@@ -137,6 +138,7 @@ const SmeshSpirtCalc = (props) => {
                     , °C.
                   </Col>
                 </Form.Row>
+                <br />
                 <Form.Row>
                   <Form.Label
                     className={`${s.p10} text-right`}
@@ -205,9 +207,9 @@ const SmeshSpirtCalc = (props) => {
           </Card.Body>
         </Card>
         <Card border="dark" bg="primary" text="white" className="text-center">
-          <blockquote className="blockquote mb-0 card-body">
-            {addCalculateMixedStrengthElements}
-          </blockquote>
+          <div className="blockquote mb-0 card-body">
+            {addCalculateSebestoimostElements}
+          </div>
         </Card>
       </CardGroup>
       <br />
@@ -215,4 +217,4 @@ const SmeshSpirtCalc = (props) => {
   );
 };
 
-export default SmeshSpirtCalc;
+export default SebestoimostCalc;
