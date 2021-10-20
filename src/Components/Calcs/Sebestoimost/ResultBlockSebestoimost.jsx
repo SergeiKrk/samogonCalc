@@ -3,20 +3,20 @@ import s from "../Calc.module.css";
 
 const ResultBlockSebestoimost = (props) => {
   return (
-    <>
-      <p>Крепость смешанного алкоголя:</p>
+    <div key={props.id}>
+      <p>Цена за 0.5 готового напитка:</p>
       <p className={s.sought}>
-        <span> {props.volMixedStrength} </span> °
+        <span> {props.volCostHalfLiter} </span> руб.
       </p>
-      <p>Объем смешанного алкоголя:</p>
+      <p>Цена за 1 литр готового напитка:</p>
       <p className={s.sought}>
-        <span> {props.volMixedVolume} </span> л.
+        <span> {props.volCostLiter} </span> руб.
       </p>
-      <p className={s.explanation}>
-        Результаты расчетов представлены с поправкой на температуру смешиваемых
-        жидкостей.
+      <p>Объем готового напитка:</p>
+      <p className={s.sought}>
+        <span> {props.volDrink} </span> л.
       </p>
-    </>
+    </div>
   );
 };
 

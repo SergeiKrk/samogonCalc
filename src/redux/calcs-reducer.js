@@ -11,7 +11,12 @@ let initialState = {
       distillingFortr: 0,
     },
   ],
-  calculateMixedStrengthData: [{ volMixedStrength: 0, volMixedVolume: 0 }],
+  calculateMixedStrengthData: [
+    { id: 0, volMixedStrength: 0, volMixedVolume: 0 },
+  ],
+  calculateSebestoimostData: [
+    { id: 0, volCostLiter: 0, volCostHalfLiter: 0, volDrink: 0 },
+  ],
   calcsData: [
     {
       id: 1,
@@ -124,6 +129,13 @@ let initialState = {
   secondVol: "",
   secondStr: "",
   secondTemp: "20",
+  materialCost: "",
+  materialMass: "",
+  yeastCost: "",
+  bentoniteCost: "0",
+  coalCost: "0",
+  wgeCostCost: "50",
+  volumeDrinkCost: "",
 };
 
 const calcsReducer = (state = initialState, action) => {
@@ -169,6 +181,31 @@ const calcsReducer = (state = initialState, action) => {
         secondStr: action.secondStr,
         secondTemp: action.secondTemp,
       };
+    case "ADD-CALCULATE-SEBESTOIMOST": {
+      let newCalculateSebestoimost = {
+        volCostLiter: action.costLiter,
+        volCostHalfLiter: action.costHalfLiter,
+        volDrink: action.volumeDrink,
+      };
+      let stateCopy = { ...state };
+      stateCopy.calculateSebestoimostData.splice(0);
+      stateCopy.calculateSebestoimostData = [
+        ...state.calculateSebestoimostData,
+      ];
+      stateCopy.calculateSebestoimostData.push(newCalculateSebestoimost);
+      return stateCopy;
+    }
+    case "UPDATE-ALL-DATA-SEBESTOIMOST":
+      return {
+        ...state,
+        materialCost: action.materialCost,
+        materialMass: action.materialMass,
+        yeastCost: action.yeastCost,
+        bentoniteCost: action.bentoniteCost,
+        coalCost: action.coalCost,
+        wgeCostCost: action.wgeCostCost,
+        volumeDrinkCost: action.volumeDrinkCost,
+      };
     case "ADD-CALCULATE-HEADS": {
       let newCalculateHeads = {
         volOutHeads: action.outHeads,
@@ -213,6 +250,40 @@ const calcsReducer = (state = initialState, action) => {
     default:
       return state;
   }
+};
+
+export const addCalculateSebestoimostActionCreator = (
+  costLiter,
+  costHalfLiter,
+  volumeDrink
+) => {
+  return {
+    type: "ADD-CALCULATE-SEBESTOIMOST",
+    costLiter: costLiter,
+    costHalfLiter: costHalfLiter,
+    volumeDrink: volumeDrink,
+  };
+};
+
+export const updateAllDataSebestoimostActionCreator = (
+  materialCost,
+  materialMass,
+  yeastCost,
+  bentoniteCost,
+  coalCost,
+  wgeCostCost,
+  volumeDrinkCost
+) => {
+  return {
+    type: "UPDATE-ALL-DATA-SEBESTOIMOST",
+    materialCost: materialCost,
+    materialMass: materialMass,
+    yeastCost: yeastCost,
+    bentoniteCost: bentoniteCost,
+    coalCost: coalCost,
+    wgeCostCost: wgeCostCost,
+    volumeDrinkCost: volumeDrinkCost,
+  };
 };
 
 export const addCalculateMixedStrengthActionCreator = (

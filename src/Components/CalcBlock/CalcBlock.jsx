@@ -7,7 +7,7 @@ import DisqusBlock from "../Header/DisqusBlock";
 const CalcBlock = (props) => {
   let calcsElements = props.calcsData.map((calc) => (
     <CalcCard
-      id={calc.id}
+      key={calc.id}
       Href={calc.href}
       Img={calc.img}
       Title={calc.title}

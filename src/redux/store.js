@@ -124,6 +124,7 @@ let store = {
       partHeadVol: "",
       distillingFortr: "",
       partTailVol: "",
+      wgeCostCost: "50",
     },
   },
   _callSubscriber() {

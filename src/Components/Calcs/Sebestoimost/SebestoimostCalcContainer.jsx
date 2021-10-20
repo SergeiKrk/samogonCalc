@@ -1,46 +1,53 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
-  addCalculateMixedStrengthActionCreator,
-  updateAllDataMixedStrengthActionCreator,
+  addCalculateSebestoimostActionCreator,
+  updateAllDataSebestoimostActionCreator,
 } from "../../../redux/calcs-reducer";
 import SebestoimostCalc from "./SebestoimostCalc";
 import { connect } from "react-redux";
 
 const mapStateToProps = (state) => {
   return {
-    calculateMixedStrengthData: state.calcPage.calculateMixedStrengthData,
-    firstVol: state.calcPage.firstVol,
-    firstStr: state.calcPage.firstStr,
-    firstTemp: state.calcPage.firstTemp,
-    secondVol: state.calcPage.secondVol,
-    secondStr: state.calcPage.secondStr,
-    secondTemp: state.calcPage.secondTemp,
+    materialCost: state.calcPage.materialCost,
+    materialMass: state.calcPage.materialMass,
+    yeastCost: state.calcPage.yeastCost,
+    bentoniteCost: state.calcPage.bentoniteCost,
+    coalCost: state.calcPage.coalCost,
+    wgeCostCost: state.calcPage.wgeCostCost,
+    volumeDrinkCost: state.calcPage.volumeDrinkCost,
+    calculateSebestoimostData: state.calcPage.calculateSebestoimostData,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    addCalculateMixedStrength: (mixedStrength, mixedVolume) => {
+    addCalculateSebestoimost: (costLiter, costHalfLiter, volumeDrink) => {
       dispatch(
-        addCalculateMixedStrengthActionCreator(mixedStrength, mixedVolume)
+        addCalculateSebestoimostActionCreator(
+          costLiter,
+          costHalfLiter,
+          volumeDrink
+        )
       );
     },
-    updateAllDataMixedStrength: (
-      firstVol,
-      firstStr,
-      firstTemp,
-      secondVol,
-      secondStr,
-      secondTemp
+    updateAllDataSebestoimost: (
+      materialCost,
+      materialMass,
+      yeastCost,
+      bentoniteCost,
+      coalCost,
+      wgeCostCost,
+      volumeDrinkCost
     ) => {
       dispatch(
-        updateAllDataMixedStrengthActionCreator(
-          firstVol,
-          firstStr,
-          firstTemp,
-          secondVol,
-          secondStr,
-          secondTemp
+        updateAllDataSebestoimostActionCreator(
+          materialCost,
+          materialMass,
+          yeastCost,
+          bentoniteCost,
+          coalCost,
+          wgeCostCost,
+          volumeDrinkCost
         )
       );
     },
