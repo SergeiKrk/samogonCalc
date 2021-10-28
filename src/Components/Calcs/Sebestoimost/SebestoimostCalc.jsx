@@ -1,16 +1,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Tab, Tooltip, Button } from "react-bootstrap";
+import { Tooltip } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
-import Tabs from "react-bootstrap/Tabs";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import ResultBlockSebestoimost from "./ResultBlockSebestoimost";
 import s from "../Calc.module.css";
 
 const SebestoimostCalc = (props) => {
+  // for the allValuesOnChange function
   let materialCostRef = React.createRef();
   let materialMassRef = React.createRef();
   let yeastCostRef = React.createRef();
@@ -64,19 +64,50 @@ const SebestoimostCalc = (props) => {
     )
   );
 
-  const renderTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      цена 1 кг. сахара, муки, зерна или другого сырья на котором вы ставили
+  const materialMassOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Общая масса сахара, муки, зерна или другого сырья на котором вы ставили
       брагу
     </Tooltip>
   );
-  debugger;
+  const yeastCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Стоимость того количества дрожжей, которое вы потратили на затор
+    </Tooltip>
+  );
+  const bentoniteCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Стоимость того количества бентонита, которое вы потратили на брагу
+    </Tooltip>
+  );
+  const coalCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Стоимость того количества угля, которое вы потратили при изготовлении
+      самогона
+    </Tooltip>
+  );
+  const wgeCostCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Стоимость того количества воды и газа (или электричества), которое вы
+      потратили при изготовлении самогона
+    </Tooltip>
+  );
+  const volumeDrinkOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Сколько самогона (дистиллята) получилось в итоге
+    </Tooltip>
+  );
+
+  const materialCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 цена 1 кг. сахара, муки, зерна или другого сырья на котором вы ставили
+      брагу
+    </Tooltip>
+  );
+
   return (
     <div className="container">
-      <p>
-        Тут про абсолютный спирт результаты будут правильными, если температура
-        всех жидкостей 20°С.
-      </p>
+      <h2>Рассчитайте стоимость уже готового напитка</h2>
 
       <CardGroup>
         <Card border="dark">
@@ -85,217 +116,200 @@ const SebestoimostCalc = (props) => {
               Введите данные для расчета себестоимости дистиллята (самогона)
             </Card.Title>
             <Card.Text>
-              <Tabs
-                defaultActiveKey="direct"
-                id="uncontrolled-tab-example"
-                className="mb-3"
-              >
-                <Tab
-                  eventKey="direct"
-                  title="Стоимость уже готового продукта 👈"
-                >
-                  <Form.Group>
-                    <br />
-                    <Form.Row>
-                      <Form.Label
-                        className={`${s.p10} text-right`}
-                        column="sm"
-                        lg={6}
-                      >
-                        <OverlayTrigger
-                          placement="top"
-                          delay={{ show: 250, hide: 400 }}
-                          overlay={renderTooltip}
-                        >
-                          <span variant="success">Цена сырья за 1 кг.:</span>
-                        </OverlayTrigger>
-                      </Form.Label>
-                      <Col xs={9} md={4}>
-                        <Form.Control
-                          ref={materialCostRef}
-                          onChange={allValuesOnChange}
-                          value={props.materialCost}
-                          type="text"
-                          placeholder="цена за 1 кг."
-                        />
-                      </Col>
-                      <Col className={`${s.p10} text-left`} xs={3} md={2}>
-                        , руб.
-                      </Col>
-                    </Form.Row>
-                    <Form.Row>
-                      <Form.Label
-                        className={`${s.p10} text-right`}
-                        column="sm"
-                        lg={6}
-                      >
-                        <OverlayTrigger
-                          placement="top"
-                          delay={{ show: 250, hide: 400 }}
-                          overlay={renderTooltip}
-                        >
-                          <span variant="success">Масса сырья:</span>
-                        </OverlayTrigger>
-                      </Form.Label>
-                      <Col xs={9} md={4}>
-                        <Form.Control
-                          ref={materialMassRef}
-                          onChange={allValuesOnChange}
-                          value={props.materialMass}
-                          type="text"
-                          placeholder="масса, кг."
-                        />
-                      </Col>
-                      <Col className={`${s.p10} text-left`} xs={3} md={2}>
-                        , кг.
-                      </Col>
-                    </Form.Row>
-                    <br />
-                    <Form.Row>
-                      <Form.Label
-                        className={`${s.p10} text-right`}
-                        column="sm"
-                        lg={6}
-                      >
-                        <OverlayTrigger
-                          placement="top"
-                          delay={{ show: 250, hide: 400 }}
-                          overlay={renderTooltip}
-                        >
-                          <span variant="success">Стоимость дрожжей:</span>
-                        </OverlayTrigger>
-                      </Form.Label>
-                      <Col xs={9} md={4}>
-                        <Form.Control
-                          ref={yeastCostRef}
-                          onChange={allValuesOnChange}
-                          value={props.yeastCost}
-                          type="text"
-                          placeholder="цена, руб."
-                        />
-                      </Col>
-                      <Col className={`${s.p10} text-left`} xs={3} md={2}>
-                        , руб.
-                      </Col>
-                    </Form.Row>
-                    <Form.Row>
-                      <Form.Label
-                        className={`${s.p10} text-right`}
-                        column="sm"
-                        lg={6}
-                      >
-                        <OverlayTrigger
-                          placement="top"
-                          delay={{ show: 250, hide: 400 }}
-                          overlay={renderTooltip}
-                        >
-                          <span variant="success">Стоимость бентонита:</span>
-                        </OverlayTrigger>
-                      </Form.Label>
-                      <Col xs={9} md={4}>
-                        <Form.Control
-                          ref={bentoniteCostRef}
-                          onChange={allValuesOnChange}
-                          value={props.bentoniteCost}
-                          type="text"
-                          placeholder="стоимость, руб."
-                        />
-                      </Col>
-                      <Col className={`${s.p10} text-left`} xs={3} md={2}>
-                        , руб.
-                      </Col>
-                    </Form.Row>
-                    <Form.Row>
-                      <Form.Label
-                        className={`${s.p10} text-right`}
-                        column="sm"
-                        lg={6}
-                      >
-                        <OverlayTrigger
-                          placement="top"
-                          delay={{ show: 250, hide: 400 }}
-                          overlay={renderTooltip}
-                        >
-                          <span variant="success">Стоимость угля:</span>
-                        </OverlayTrigger>
-                      </Form.Label>
-                      <Col xs={9} md={4}>
-                        <Form.Control
-                          ref={coalCostRef}
-                          onChange={allValuesOnChange}
-                          value={props.coalCost}
-                          type="text"
-                          placeholder="стоимость, руб."
-                        />
-                      </Col>
-                      <Col className={`${s.p10} text-left`} xs={3} md={2}>
-                        , руб.
-                      </Col>
-                    </Form.Row>
-                    <br />
-                    <Form.Row>
-                      <Form.Label
-                        className={`${s.p10} text-right`}
-                        column="sm"
-                        lg={6}
-                      >
-                        <OverlayTrigger
-                          placement="top"
-                          delay={{ show: 250, hide: 400 }}
-                          overlay={renderTooltip}
-                        >
-                          <span variant="success">
-                            Вода, газ / электричество:
-                          </span>
-                        </OverlayTrigger>
-                      </Form.Label>
-                      <Col xs={9} md={4}>
-                        <Form.Control
-                          ref={wgeCostRef}
-                          onChange={allValuesOnChange}
-                          value={props.wgeCostCost}
-                          type="text"
-                          placeholder="стоимость, руб."
-                        />
-                      </Col>
-                      <Col className={`${s.p10} text-left`} xs={3} md={2}>
-                        , руб.
-                      </Col>
-                    </Form.Row>
-                    <br />
-                    <Form.Row>
-                      <Form.Label
-                        className={`${s.p10} text-right`}
-                        column="sm"
-                        lg={6}
-                      >
-                        <OverlayTrigger
-                          placement="top"
-                          delay={{ show: 250, hide: 400 }}
-                          overlay={renderTooltip}
-                        >
-                          <span variant="success">Объем готового напитка:</span>
-                        </OverlayTrigger>
-                      </Form.Label>
-                      <Col xs={9} md={4}>
-                        <Form.Control
-                          ref={volumeDrinkRef}
-                          onChange={allValuesOnChange}
-                          value={props.volumeDrink}
-                          type="text"
-                          placeholder="Объем напитка, л."
-                        />
-                      </Col>
-                      <Col className={`${s.p10} text-left`} xs={3} md={2}>
-                        , л.
-                      </Col>
-                    </Form.Row>
-                  </Form.Group>
-                </Tab>
-                <Tab eventKey="before" title="👉 Примерный расчет">
-                  222
-                </Tab>
-              </Tabs>
+              <Form.Group>
+                <br />
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={materialCostOverlay}
+                    >
+                      <span variant="success">Цена сырья за 1 кг.:</span>
+                    </OverlayTrigger>
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={materialCostRef}
+                      onChange={allValuesOnChange}
+                      value={props.materialCost}
+                      type="text"
+                      placeholder="цена за 1 кг."
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , руб.
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={materialMassOverlay}
+                    >
+                      <span variant="success">Масса сырья:</span>
+                    </OverlayTrigger>
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={materialMassRef}
+                      onChange={allValuesOnChange}
+                      value={props.materialMass}
+                      type="text"
+                      placeholder="масса, кг."
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , кг.
+                  </Col>
+                </Form.Row>
+                <br />
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={yeastCostOverlay}
+                    >
+                      <span variant="success">Стоимость дрожжей:</span>
+                    </OverlayTrigger>
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={yeastCostRef}
+                      onChange={allValuesOnChange}
+                      value={props.yeastCost}
+                      type="text"
+                      placeholder="цена, руб."
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , руб.
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={bentoniteCostOverlay}
+                    >
+                      <span variant="success">Стоимость бентонита:</span>
+                    </OverlayTrigger>
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={bentoniteCostRef}
+                      onChange={allValuesOnChange}
+                      value={props.bentoniteCost}
+                      type="text"
+                      placeholder="стоимость, руб."
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , руб.
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={coalCostOverlay}
+                    >
+                      <span variant="success">Стоимость угля:</span>
+                    </OverlayTrigger>
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={coalCostRef}
+                      onChange={allValuesOnChange}
+                      value={props.coalCost}
+                      type="text"
+                      placeholder="стоимость, руб."
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , руб.
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={wgeCostCostOverlay}
+                    >
+                      <span variant="success">Вода, газ / электричество:</span>
+                    </OverlayTrigger>
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={wgeCostRef}
+                      onChange={allValuesOnChange}
+                      value={props.wgeCostCost}
+                      type="text"
+                      placeholder="стоимость, руб."
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , руб.
+                  </Col>
+                </Form.Row>
+                <br />
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    <OverlayTrigger
+                      placement="top"
+                      delay={{ show: 250, hide: 400 }}
+                      overlay={volumeDrinkOverlay}
+                    >
+                      <span variant="success">Объем готового напитка:</span>
+                    </OverlayTrigger>
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={volumeDrinkRef}
+                      onChange={allValuesOnChange}
+                      value={props.volumeDrink}
+                      type="text"
+                      placeholder="Объем напитка, л."
+                    />
+                  </Col>
+                  <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                    , л.
+                  </Col>
+                </Form.Row>
+              </Form.Group>
             </Card.Text>
           </Card.Body>
         </Card>

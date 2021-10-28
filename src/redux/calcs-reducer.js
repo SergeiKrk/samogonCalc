@@ -15,7 +15,20 @@ let initialState = {
     { id: 0, volMixedStrength: 0, volMixedVolume: 0 },
   ],
   calculateSebestoimostData: [
-    { id: 0, volCostLiter: 0, volCostHalfLiter: 0, volDrink: 0 },
+    {
+      id: 0,
+      volCostLiter: 0,
+      volCostHalfLiter: 0,
+      volDrink: 0,
+    },
+  ],
+  calculateSebestoimApproxData: [
+    {
+      id: 0,
+      volCostLiterApprox: 0,
+      volCostHalfLiterApprox: 0,
+      volDrinkApprox: 0,
+    },
   ],
   calcsData: [
     {
@@ -84,6 +97,14 @@ let initialState = {
     },
     {
       id: 9,
+      href: "primernaya-stoimost-samogona",
+      img: "https://samogoncalc.ru/img/primernaya-stoimost-samogona.png",
+      title: "Калькулятор примерной стоимости самогона",
+      description:
+        "Расчитает примерную себестоимость и объем самогона даже если вы еще не ставили брагу и не перегоняли дистиллят.",
+    },
+    {
+      id: 10,
       href: "kalkulyator-saharnoj-bragi",
       img: "https://samogoncalc.ru/img/kalkulyator-saharnoj-bragi.png",
       title: "Калькулятор сахарной браги",
@@ -91,7 +112,7 @@ let initialState = {
         "Вычисляет крепость браги и оптимальные пропорции сахара и воды для браги.",
     },
     {
-      id: 10,
+      id: 11,
       href: "kalkulyator-vodki-iz-spirta",
       img: "https://samogoncalc.ru/img/kalkulyator-vodki-iz-spirta.png",
       title: "Калькулятор водки из спирта",
@@ -99,7 +120,7 @@ let initialState = {
         "Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла.",
     },
     {
-      id: 11,
+      id: 12,
       href: "kalkulyator-spirta-ot-temperatury",
       img: "https://samogoncalc.ru/img/kalkulyator-spirta-ot-temperatury.png",
       title: "Калькулятор спирта от температуры",
@@ -107,7 +128,7 @@ let initialState = {
         "Рассчитает реальную крепость самогона при температуре больше или меньше 20 °C.",
     },
     {
-      id: 12,
+      id: 13,
       href: "kalkulyator-zameny-sahara-glyukozoj",
       img: "https://samogoncalc.ru/img/kalkulyator-zameny-sahara-glyukozoj.png",
       title: "Калькулятор замены сахара глюкозой",
@@ -136,6 +157,14 @@ let initialState = {
   coalCost: "0",
   wgeCostCost: "50",
   volumeDrinkCost: "",
+  rawMaterials: "",
+  massMaterials: "",
+  costMaterials: "",
+  wge: "50",
+  bentoniteCoal: "0",
+  efficiency: "90",
+  heads: "",
+  tails: "",
 };
 
 const calcsReducer = (state = initialState, action) => {
@@ -195,6 +224,20 @@ const calcsReducer = (state = initialState, action) => {
       stateCopy.calculateSebestoimostData.push(newCalculateSebestoimost);
       return stateCopy;
     }
+    case "ADD-CALCULATE-SEBESTOIM-APPROX": {
+      let newCalculateSebestoimApprox = {
+        volCostLiterApprox: action.costLiterApprox,
+        volCostHalfLiterApprox: action.costHalfLiterApprox,
+        volDrinkApprox: action.volumeDrinkApprox,
+      };
+      let stateCopy = { ...state };
+      stateCopy.calculateSebestoimApproxData.splice(0);
+      stateCopy.calculateSebestoimApproxData = [
+        ...state.calculateSebestoimApproxData,
+      ];
+      stateCopy.calculateSebestoimApproxData.push(newCalculateSebestoimApprox);
+      return stateCopy;
+    }
     case "UPDATE-ALL-DATA-SEBESTOIMOST":
       return {
         ...state,
@@ -205,6 +248,18 @@ const calcsReducer = (state = initialState, action) => {
         coalCost: action.coalCost,
         wgeCostCost: action.wgeCostCost,
         volumeDrinkCost: action.volumeDrinkCost,
+      };
+    case "UPDATE-ALL-DATA-SEBESTOIM-APPROX":
+      return {
+        ...state,
+        rawMaterials: action.rawMaterials,
+        massMaterials: action.massMaterials,
+        costMaterials: action.costMaterials,
+        wge: action.wge,
+        bentoniteCoal: action.bentoniteCoal,
+        efficiency: action.efficiency,
+        heads: action.heads,
+        tails: action.tails,
       };
     case "ADD-CALCULATE-HEADS": {
       let newCalculateHeads = {
@@ -264,6 +319,18 @@ export const addCalculateSebestoimostActionCreator = (
     volumeDrink: volumeDrink,
   };
 };
+export const addCalculateSebestoimApproxActionCreator = (
+  costLiterApprox,
+  costHalfLiterApprox,
+  volumeDrinkApprox
+) => {
+  return {
+    type: "ADD-CALCULATE-SEBESTOIM-APPROX",
+    costLiterApprox: costLiterApprox,
+    costHalfLiterApprox: costHalfLiterApprox,
+    volumeDrinkApprox: volumeDrinkApprox,
+  };
+};
 
 export const updateAllDataSebestoimostActionCreator = (
   materialCost,
@@ -283,6 +350,29 @@ export const updateAllDataSebestoimostActionCreator = (
     coalCost: coalCost,
     wgeCostCost: wgeCostCost,
     volumeDrinkCost: volumeDrinkCost,
+  };
+};
+
+export const updateAllDataSebestoimApproxActionCreator = (
+  rawMaterials,
+  massMaterials,
+  costMaterials,
+  wge,
+  bentoniteCoal,
+  efficiency,
+  heads,
+  tails
+) => {
+  return {
+    type: "UPDATE-ALL-DATA-SEBESTOIM-APPROX",
+    rawMaterials: rawMaterials,
+    massMaterials: massMaterials,
+    costMaterials: costMaterials,
+    wge: wge,
+    bentoniteCoal: bentoniteCoal,
+    efficiency: efficiency,
+    heads: heads,
+    tails: tails,
   };
 };
 

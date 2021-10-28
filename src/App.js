@@ -12,6 +12,7 @@ import PoslePervoj from "./Pages/PoslePervoj";
 import PosleVtoroj from "./Pages/PosleVtoroj";
 import SmeshSpirt from "./Pages/SmeshSpirt";
 import SebestoimSamogona from "./Pages/SebestoimSamogona";
+import SebestoimApprox from "./Pages/SebestoimApprox";
 import SaharBragi from "./Pages/SaharBragi";
 import Vodka from "./Pages/Vodka";
 import SpirtaTemper from "./Pages/SpirtaTemper";
@@ -58,6 +59,10 @@ const App = (props) => {
           <Route
             path="/kalkulyator-sebestoimosti-samogona"
             render={() => <SebestoimSamogona store={store} />}
+          />
+          <Route
+            path="/primernaya-stoimost-samogona"
+            render={() => <SebestoimApprox store={store} />}
           />
           <Route
             path="/kalkulyator-saharnoj-bragi"
