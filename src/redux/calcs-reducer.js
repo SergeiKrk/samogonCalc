@@ -27,7 +27,8 @@ let initialState = {
       id: 0,
       volCostLiterApprox: 0,
       volCostHalfLiterApprox: 0,
-      volDrinkApprox: 0,
+      volAbsAlcoholApprox: 0,
+      volReqVol: 0,
     },
   ],
   calcsData: [
@@ -162,7 +163,7 @@ let initialState = {
   costMaterials: "",
   wge: "50",
   bentoniteCoal: "0",
-  efficiency: "90",
+  efficiency: "80",
   heads: "",
   tails: "",
 };
@@ -228,7 +229,8 @@ const calcsReducer = (state = initialState, action) => {
       let newCalculateSebestoimApprox = {
         volCostLiterApprox: action.costLiterApprox,
         volCostHalfLiterApprox: action.costHalfLiterApprox,
-        volDrinkApprox: action.volumeDrinkApprox,
+        volAbsAlcoholApprox: action.volumeAbsAlcoholApprox,
+        volReqVol: action.reqVolApprox,
       };
       let stateCopy = { ...state };
       stateCopy.calculateSebestoimApproxData.splice(0);
@@ -255,6 +257,7 @@ const calcsReducer = (state = initialState, action) => {
         rawMaterials: action.rawMaterials,
         massMaterials: action.massMaterials,
         costMaterials: action.costMaterials,
+        yeastCost: action.yeastCost,
         wge: action.wge,
         bentoniteCoal: action.bentoniteCoal,
         efficiency: action.efficiency,
@@ -322,13 +325,15 @@ export const addCalculateSebestoimostActionCreator = (
 export const addCalculateSebestoimApproxActionCreator = (
   costLiterApprox,
   costHalfLiterApprox,
-  volumeDrinkApprox
+  volumeAbsAlcoholApprox,
+  reqVolApprox
 ) => {
   return {
     type: "ADD-CALCULATE-SEBESTOIM-APPROX",
     costLiterApprox: costLiterApprox,
     costHalfLiterApprox: costHalfLiterApprox,
-    volumeDrinkApprox: volumeDrinkApprox,
+    volumeAbsAlcoholApprox: volumeAbsAlcoholApprox,
+    reqVolApprox: reqVolApprox,
   };
 };
 
@@ -357,6 +362,7 @@ export const updateAllDataSebestoimApproxActionCreator = (
   rawMaterials,
   massMaterials,
   costMaterials,
+  yeastCost,
   wge,
   bentoniteCoal,
   efficiency,
@@ -368,6 +374,7 @@ export const updateAllDataSebestoimApproxActionCreator = (
     rawMaterials: rawMaterials,
     massMaterials: massMaterials,
     costMaterials: costMaterials,
+    yeastCost: yeastCost,
     wge: wge,
     bentoniteCoal: bentoniteCoal,
     efficiency: efficiency,

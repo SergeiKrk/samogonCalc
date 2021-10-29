@@ -52,7 +52,12 @@ const NavbarMenu = () => {
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-sebestoimosti-samogona">
                   <NavDropdown.Item>
-                    Калькулятор себестоимости самогона
+                    💰 Калькулятор себестоимости самогона
+                  </NavDropdown.Item>
+                </LinkContainer>
+                <LinkContainer to="/primernaya-stoimost-samogona">
+                  <NavDropdown.Item>
+                    💰 Калькулятор примерной стоимости самогона
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-saharnoj-bragi">

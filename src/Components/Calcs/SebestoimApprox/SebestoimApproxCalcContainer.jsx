@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
     rawMaterials: state.calcPage.rawMaterials,
     massMaterials: state.calcPage.massMaterials,
     costMaterials: state.calcPage.costMaterials,
+    yeastCost: state.calcPage.yeastCost,
     wge: state.calcPage.wge,
     bentoniteCoal: state.calcPage.bentoniteCoal,
     efficiency: state.calcPage.efficiency,
@@ -22,16 +23,18 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    addCalculateSebestoimost: (
+    addCalculateSebestoimApprox: (
       costLiterApprox,
       costHalfLiterApprox,
-      volumeDrinkAprox
+      volumeAbsAlcoholApprox,
+      reqVolApprox
     ) => {
       dispatch(
         addCalculateSebestoimApproxActionCreator(
           costLiterApprox,
           costHalfLiterApprox,
-          volumeDrinkAprox
+          volumeAbsAlcoholApprox,
+          reqVolApprox
         )
       );
     },
@@ -39,6 +42,7 @@ const mapDispatchToProps = (dispatch) => {
       rawMaterials,
       massMaterials,
       costMaterials,
+      yeastCostApprox,
       wge,
       bentoniteCoal,
       efficiency,
@@ -50,6 +54,7 @@ const mapDispatchToProps = (dispatch) => {
           rawMaterials,
           massMaterials,
           costMaterials,
+          yeastCostApprox,
           wge,
           bentoniteCoal,
           efficiency,

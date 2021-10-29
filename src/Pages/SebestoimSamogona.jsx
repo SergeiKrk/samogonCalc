@@ -11,7 +11,7 @@ const SebestoimSamogona = (props) => {
         Href="kalkulyator-sebestoimosti-samogona"
         Img="https://samogoncalc.ru/img/kalkulyator-sebestoimosti-samogona.png"
         Title="Калькулятор себестоимости самогона"
-        Description="Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла."
+        Description="Я помогу оценить стоимость самогона, если Ваш дистиллят уже готов и вы хотите посчитать его себестоимость, но не знаете как или просто хотите усорить процесс рассчета."
       />
       <SebestoimostCalcContainer store={props.store} />
       <Footer />

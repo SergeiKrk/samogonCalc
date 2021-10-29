@@ -10,49 +10,62 @@ import ResultBlockSebestoimApprox from "./ResultBlockSebestoimApprox";
 import s from "../Calc.module.css";
 
 const SebestoimApproxCalc = (props) => {
-  // for the allValuesOnChangeTwo function
+  // for the allValuesOnChange function
   let rawMaterialsRef = React.createRef();
   let massMaterialsRef = React.createRef();
   let costMaterialsRef = React.createRef();
+  let yeastCostRef = React.createRef();
   let wgeRef = React.createRef();
   let bentoniteCoalRef = React.createRef();
   let efficiencyRef = React.createRef();
   let headsRef = React.createRef();
   let tailsRef = React.createRef();
 
-  let allValuesOnChangeTwo = () => {
+  let allValuesOnChange = () => {
     let rawMaterials = rawMaterialsRef.current.value;
     let massMaterials = massMaterialsRef.current.value;
     let costMaterials = costMaterialsRef.current.value;
+    let yeastCost = yeastCostRef.current.value;
     let wge = wgeRef.current.value;
     let bentoniteCoal = bentoniteCoalRef.current.value;
     let efficiency = efficiencyRef.current.value;
     let heads = headsRef.current.value;
     let tails = tailsRef.current.value;
 
+    // Объем абсолютного спирта
+    let volumeAbsAlcoholApprox = (
+      (Number(rawMaterials) * Number(massMaterials) * Number(efficiency)) /
+      100
+    ).toFixed(2);
+
+    // Объем алкоголя питейной крепости
+    let reqVolApprox = (
+      (volumeAbsAlcoholApprox * (1 - (Number(heads) + Number(tails)))) /
+      0.4
+    ).toFixed(2);
+
+    // Стоимость алкоголя крепостью 40
     let costLiterApprox = (
-      ((Number(costMaterials) * Number(massMaterials) +
+      (Number(costMaterials * massMaterials) +
         Number(wge) +
-        Number(bentoniteCoal) +
-        Number(efficiency)) *
-        (Number(heads) + Number(tails))) /
-      (Number(rawMaterials) * Number(massMaterials))
+        Number(yeastCost) +
+        Number(bentoniteCoal)) /
+      reqVolApprox
     ).toFixed(2);
     let costHalfLiterApprox = (costLiterApprox / 2).toFixed(2);
-    let volumeDrinkApprox = (
-      Number(rawMaterials) * Number(massMaterials)
-    ).toFixed(2);
 
     if (rawMaterials && massMaterials && costMaterials)
       props.addCalculateSebestoimApprox(
         costLiterApprox,
         costHalfLiterApprox,
-        volumeDrinkApprox
+        volumeAbsAlcoholApprox,
+        reqVolApprox
       );
     props.updateAllDataSebestoimApprox(
       rawMaterials,
       massMaterials,
       costMaterials,
+      yeastCost,
       wge,
       bentoniteCoal,
       efficiency,
@@ -67,17 +80,52 @@ const SebestoimApproxCalc = (props) => {
         key={c.id}
         volCostLiterApprox={c.volCostLiterApprox}
         volCostHalfLiterApprox={c.volCostHalfLiterApprox}
-        volDrinkApprox={c.volDrinkApprox}
+        volAbsAlcoholApprox={c.volAbsAlcoholApprox}
+        volReqVol={c.volReqVol}
       />
     ));
 
-  const renderTooltip = (props) => (
-    <Tooltip id="button-tooltip" {...props}>
-      цена 1 кг. сахара, муки, зерна или другого сырья на котором вы ставили
+  const materialMassOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Общая масса сахара, муки, зерна или другого сырья на котором вы ставили
       брагу
     </Tooltip>
   );
-
+  const costMaterialsOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Стоимость сырья (сахара, муки, зерна или др.) за 1 кг. на котором вы
+      хотите ставить брагу
+    </Tooltip>
+  );
+  const rawMaterialsOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Выберите из списка то сырьё, из которого хотите сделать брагу для
+      самогона
+    </Tooltip>
+  );
+  const yeastCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Стоимость того количества дрожжей, которое вы потратите на затор
+    </Tooltip>
+  );
+  const bentoniteCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Стоимость того количества бентонита и угля, которое вы потратите на
+      изготовление браги и бистиллята
+    </Tooltip>
+  );
+  const efficiencyOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Эффективность вашего самогонного аппарата, измеряется в процентах от
+      абсолютного значения
+    </Tooltip>
+  );
+  const wgeCostCostOverlay = (props) => (
+    <Tooltip {...props}>
+      👇 Примерная стоимость того количества воды и газа (или электричества),
+      которое вы потратите при изготовлении самогона
+    </Tooltip>
+  );
   return (
     <div className="container">
       <br />
@@ -96,17 +144,23 @@ const SebestoimApproxCalc = (props) => {
             <Card.Text>
               <br />
               <Form.Row>
-                <Form.Label
-                  className={`${s.p10} text-right`}
-                  column="sm"
-                  lg={6}
+                <OverlayTrigger
+                  placement="top"
+                  delay={{ show: 250, hide: 400 }}
+                  overlay={rawMaterialsOverlay}
                 >
-                  rawMaterials Сырье для самогона (дистиллята):
-                </Form.Label>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    Сырье для самогона (дистиллята):
+                  </Form.Label>
+                </OverlayTrigger>
                 <Col xs={6} md={6}>
                   <select
                     ref={rawMaterialsRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.rawMaterials}
                     className="form-control"
                   >
@@ -130,15 +184,15 @@ const SebestoimApproxCalc = (props) => {
                   <OverlayTrigger
                     placement="top"
                     delay={{ show: 250, hide: 400 }}
-                    overlay={renderTooltip}
+                    overlay={materialMassOverlay}
                   >
-                    <span variant="success">(massMaterials) Масса сырья:</span>
+                    <span variant="success">Масса сырья:</span>
                   </OverlayTrigger>
                 </Form.Label>
                 <Col xs={9} md={5}>
                   <Form.Control
                     ref={massMaterialsRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.massMaterials}
                     type="text"
                     placeholder="масса, кг."
@@ -157,17 +211,15 @@ const SebestoimApproxCalc = (props) => {
                   <OverlayTrigger
                     placement="top"
                     delay={{ show: 250, hide: 400 }}
-                    overlay={renderTooltip}
+                    overlay={costMaterialsOverlay}
                   >
-                    <span variant="success">
-                      costMaterials Стоимость сырья за 1 кг.:
-                    </span>
+                    <span variant="success">Стоимость сырья за 1 кг.:</span>
                   </OverlayTrigger>
                 </Form.Label>
                 <Col xs={9} md={5}>
                   <Form.Control
                     ref={costMaterialsRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.costMaterials}
                     type="text"
                     placeholder="стоимость, руб."
@@ -175,6 +227,33 @@ const SebestoimApproxCalc = (props) => {
                 </Col>
                 <Col className={`${s.p10} text-left`} xs={3} md={1}>
                   , ₽.
+                </Col>
+              </Form.Row>
+              <Form.Row>
+                <Form.Label
+                  className={`${s.p10} text-right`}
+                  column="sm"
+                  lg={6}
+                >
+                  <OverlayTrigger
+                    placement="top"
+                    delay={{ show: 250, hide: 400 }}
+                    overlay={yeastCostOverlay}
+                  >
+                    <span variant="success">Стоимость дрожжей:</span>
+                  </OverlayTrigger>
+                </Form.Label>
+                <Col xs={9} md={4}>
+                  <Form.Control
+                    ref={yeastCostRef}
+                    onChange={allValuesOnChange}
+                    value={props.yeastCost}
+                    type="text"
+                    placeholder="цена, руб."
+                  />
+                </Col>
+                <Col className={`${s.p10} text-left`} xs={3} md={2}>
+                  , руб.
                 </Col>
               </Form.Row>
               <br />
@@ -187,17 +266,15 @@ const SebestoimApproxCalc = (props) => {
                   <OverlayTrigger
                     placement="top"
                     delay={{ show: 250, hide: 400 }}
-                    overlay={renderTooltip}
+                    overlay={wgeCostCostOverlay}
                   >
-                    <span variant="success">
-                      wge Вода, газ / электричество:
-                    </span>
+                    <span variant="success">Вода, газ / электричество:</span>
                   </OverlayTrigger>
                 </Form.Label>
                 <Col xs={9} md={5}>
                   <Form.Control
                     ref={wgeRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.wge}
                     type="text"
                     placeholder="стоимость, руб."
@@ -216,17 +293,15 @@ const SebestoimApproxCalc = (props) => {
                   <OverlayTrigger
                     placement="top"
                     delay={{ show: 250, hide: 400 }}
-                    overlay={renderTooltip}
+                    overlay={bentoniteCostOverlay}
                   >
-                    <span variant="success">
-                      bentoniteCoal Стоимость бентонита / угля:
-                    </span>
+                    <span variant="success">Стоимость бентонита / угля:</span>
                   </OverlayTrigger>
                 </Form.Label>
                 <Col xs={9} md={5}>
                   <Form.Control
                     ref={bentoniteCoalRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.bentoniteCoal}
                     type="text"
                     placeholder="стоимость, руб."
@@ -246,17 +321,15 @@ const SebestoimApproxCalc = (props) => {
                   <OverlayTrigger
                     placement="top"
                     delay={{ show: 250, hide: 400 }}
-                    overlay={renderTooltip}
+                    overlay={efficiencyOverlay}
                   >
-                    <span variant="success">
-                      efficiency КПД самогонного аппарата:
-                    </span>
+                    <span variant="success">КПД самогонного аппарата:</span>
                   </OverlayTrigger>
                 </Form.Label>
                 <Col xs={9} md={5}>
                   <Form.Control
                     ref={efficiencyRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.efficiency}
                     type="text"
                     placeholder="КПД, %"
@@ -273,16 +346,16 @@ const SebestoimApproxCalc = (props) => {
                   column="sm"
                   lg={6}
                 >
-                  heads Доля «Голов»:
+                  Доля «Голов»:
                 </Form.Label>
                 <Col xs={4} md={2}>
                   <select
                     ref={headsRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.heads}
                     className="form-control"
                   >
-                    <option value="0.10">10%</option>
+                    <option value="0.1">10%</option>
                     <option value="0.11">11%</option>
                     <option value="0.12">12%</option>
                     <option value="0.13">13%</option>
@@ -300,16 +373,16 @@ const SebestoimApproxCalc = (props) => {
                   column="sm"
                   lg={6}
                 >
-                  tails Доля «Хвостов»:
+                  Доля «Хвостов»:
                 </Form.Label>
                 <Col xs={4} md={2}>
                   <select
                     ref={tailsRef}
-                    onChange={allValuesOnChangeTwo}
+                    onChange={allValuesOnChange}
                     value={props.tails}
                     className="form-control"
                   >
-                    <option value="0.20">20%</option>
+                    <option value="0.2">20%</option>
                     <option value="0.10">10%</option>
                     <option value="0.15">15%</option>
                     <option value="0.25">25%</option>
