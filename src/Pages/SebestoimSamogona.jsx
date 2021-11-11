@@ -3,6 +3,7 @@ import "../css/styles.css";
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import SebestoimostCalcContainer from "../Components/Calcs/Sebestoimost/SebestoimostCalcContainer";
+import SebestoimApproxCalcContainer from "../Components/Calcs/SebestoimApprox/SebestoimApproxCalcContainer";
 
 const SebestoimSamogona = (props) => {
   return (
@@ -14,6 +15,8 @@ const SebestoimSamogona = (props) => {
         Description="Я помогу оценить стоимость самогона, если Ваш дистиллят уже готов и вы хотите посчитать его себестоимость, но не знаете как или просто хотите усорить процесс рассчета."
       />
       <SebestoimostCalcContainer store={props.store} />
+      <br />
+      <SebestoimApproxCalcContainer store={props.store} />
       <Footer />
     </div>
   );

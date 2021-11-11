@@ -31,6 +31,14 @@ let initialState = {
       volReqVol: 0,
     },
   ],
+  calculateBragaData: [
+    {
+      id: 0,
+      volAlcoholStrength: 0,
+      volRawAlcohol: 0,
+      volWaterVolume: 0,
+    },
+  ],
   calcsData: [
     {
       id: 1,
@@ -240,6 +248,18 @@ const calcsReducer = (state = initialState, action) => {
       stateCopy.calculateSebestoimApproxData.push(newCalculateSebestoimApprox);
       return stateCopy;
     }
+    case "ADD-CALCULATE-BRAGA": {
+      let newCalculateBraga = {
+        volRawAlcohol: action.rawAlcohol,
+        volWaterVolume: action.waterVolume,
+        volAlcoholStrength: action.alcoholStrength,
+      };
+      let stateCopy = { ...state };
+      stateCopy.calculateBragaData.splice(0);
+      stateCopy.calculateBragaData = [...state.calculateBragaData];
+      stateCopy.calculateBragaData.push(newCalculateBraga);
+      return stateCopy;
+    }
     case "UPDATE-ALL-DATA-SEBESTOIMOST":
       return {
         ...state,
@@ -263,6 +283,13 @@ const calcsReducer = (state = initialState, action) => {
         efficiency: action.efficiency,
         heads: action.heads,
         tails: action.tails,
+      };
+    case "UPDATE-ALL-DATA-BRAGA":
+      return {
+        ...state,
+        rawMaterials: action.rawMaterials,
+        massMaterials: action.massMaterials,
+        mashVolume: action.mashVolume,
       };
     case "ADD-CALCULATE-HEADS": {
       let newCalculateHeads = {
@@ -336,6 +363,18 @@ export const addCalculateSebestoimApproxActionCreator = (
     reqVolApprox: reqVolApprox,
   };
 };
+export const addCalculateBragaActionCreator = (
+  rawAlcohol,
+  waterVolume,
+  alcoholStrength
+) => {
+  return {
+    type: "ADD-CALCULATE-BRAGA",
+    rawAlcohol: rawAlcohol,
+    waterVolume: waterVolume,
+    alcoholStrength: alcoholStrength,
+  };
+};
 
 export const updateAllDataSebestoimostActionCreator = (
   materialCost,
@@ -380,6 +419,19 @@ export const updateAllDataSebestoimApproxActionCreator = (
     efficiency: efficiency,
     heads: heads,
     tails: tails,
+  };
+};
+
+export const updateAllDataBragaActionCreator = (
+  rawMaterials,
+  massMaterials,
+  mashVolume
+) => {
+  return {
+    type: "UPDATE-ALL-DATA-BRAGA",
+    rawMaterials: rawMaterials,
+    massMaterials: massMaterials,
+    mashVolume: mashVolume,
   };
 };
 

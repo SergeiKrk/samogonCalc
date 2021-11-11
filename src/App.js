@@ -66,7 +66,7 @@ const App = (props) => {
           />
           <Route
             path="/kalkulyator-saharnoj-bragi"
-            render={() => <SaharBragi />}
+            render={() => <SaharBragi store={store} />}
           />
           <Route path="/kalkulyator-vodki-iz-spirta" render={() => <Vodka />} />
           <Route
