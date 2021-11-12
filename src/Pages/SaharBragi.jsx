@@ -10,8 +10,8 @@ const SaharBragi = (props) => {
       <HeaderBlock
         Href="kalkulyator-saharnoj-bragi"
         Img="https://samogoncalc.ru/img/kalkulyator-saharnoj-bragi.png"
-        Title="Калькулятор сахарной браги"
-        Description="Вычисляет крепость браги, потенциальный выход спирта цырца, а так же оптимальные пропорции сахара и воды."
+        Title="Калькулятор браги"
+        Description="Вычисляет крепость сахарной или зерновой браги, потенциальный выход спирта цырца, а так же необходимое количество воды для затора, исходя из количества сырья (сахара, зерна, муки или крупы)."
       />
 
       <BragaCalcContainer store={props.store} />
