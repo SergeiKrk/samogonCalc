@@ -67,7 +67,7 @@ const NavbarMenu = () => {
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-vodki-iz-spirta">
                   <NavDropdown.Item>
-                    Калькулятор водки из спирта
+                    [40°] Калькулятор водки из спирта
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-spirta-ot-temperatury">

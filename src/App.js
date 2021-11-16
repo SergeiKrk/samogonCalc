@@ -68,10 +68,13 @@ const App = (props) => {
             path="/kalkulyator-saharnoj-bragi"
             render={() => <SaharBragi store={store} />}
           />
-          <Route path="/kalkulyator-vodki-iz-spirta" render={() => <Vodka />} />
+          <Route
+            path="/kalkulyator-vodki-iz-spirta"
+            render={() => <Vodka store={store} />}
+          />
           <Route
             path="/kalkulyator-spirta-ot-temperatury"
-            render={() => <SpirtaTemper />}
+            render={() => <SpirtaTemper store={store} />}
           />
           <Route
             path="/kalkulyator-zameny-sahara-glyukozoj"

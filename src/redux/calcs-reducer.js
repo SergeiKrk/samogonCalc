@@ -39,6 +39,19 @@ let initialState = {
       volWaterVolume: 0,
     },
   ],
+  calculateVodkaData: [
+    {
+      id: 0,
+      volWaterVol: 0,
+      volMixedVolume: 0,
+    },
+  ],
+  calculateTemperatureData: [
+    {
+      id: 0,
+      volStrenghth: 0,
+    },
+  ],
   calcsData: [
     {
       id: 1,
@@ -260,6 +273,27 @@ const calcsReducer = (state = initialState, action) => {
       stateCopy.calculateBragaData.push(newCalculateBraga);
       return stateCopy;
     }
+    case "ADD-CALCULATE-VODKA": {
+      let newCalculateVodka = {
+        volWaterVol: action.waterVol,
+        volMixedVolume: action.mixedVolume,
+      };
+      let stateCopy = { ...state };
+      stateCopy.calculateVodkaData.splice(0);
+      stateCopy.calculateVodkaData = [...state.calculateVodkaData];
+      stateCopy.calculateVodkaData.push(newCalculateVodka);
+      return stateCopy;
+    }
+    case "ADD-CALCULATE-TEMPERATURE": {
+      let newCalculateTemperature = {
+        volStrenghth: action.Strenghth,
+      };
+      let stateCopy = { ...state };
+      stateCopy.calculateTemperatureData.splice(0);
+      stateCopy.calculateTemperatureData = [...state.calculateTemperatureData];
+      stateCopy.calculateTemperatureData.push(newCalculateTemperature);
+      return stateCopy;
+    }
     case "UPDATE-ALL-DATA-SEBESTOIMOST":
       return {
         ...state,
@@ -290,6 +324,20 @@ const calcsReducer = (state = initialState, action) => {
         rawMaterials: action.rawMaterials,
         massMaterials: action.massMaterials,
         mashVolume: action.mashVolume,
+      };
+    case "UPDATE-ALL-DATA-VODKA":
+      return {
+        ...state,
+        firstVol: action.firstVol,
+        firstStr: action.firstStr,
+        firstTemp: action.firstTemp,
+        secondTemp: action.secondTemp,
+      };
+    case "UPDATE-ALL-DATA-TEMPERATURE":
+      return {
+        ...state,
+        firstStr: action.firstStr,
+        firstTemp: action.firstTemp,
       };
     case "ADD-CALCULATE-HEADS": {
       let newCalculateHeads = {
@@ -363,18 +411,6 @@ export const addCalculateSebestoimApproxActionCreator = (
     reqVolApprox: reqVolApprox,
   };
 };
-export const addCalculateBragaActionCreator = (
-  rawAlcohol,
-  waterVolume,
-  alcoholStrength
-) => {
-  return {
-    type: "ADD-CALCULATE-BRAGA",
-    rawAlcohol: rawAlcohol,
-    waterVolume: waterVolume,
-    alcoholStrength: alcoholStrength,
-  };
-};
 
 export const updateAllDataSebestoimostActionCreator = (
   materialCost,
@@ -422,6 +458,18 @@ export const updateAllDataSebestoimApproxActionCreator = (
   };
 };
 
+export const addCalculateBragaActionCreator = (
+  rawAlcohol,
+  waterVolume,
+  alcoholStrength
+) => {
+  return {
+    type: "ADD-CALCULATE-BRAGA",
+    rawAlcohol: rawAlcohol,
+    waterVolume: waterVolume,
+    alcoholStrength: alcoholStrength,
+  };
+};
 export const updateAllDataBragaActionCreator = (
   rawMaterials,
   massMaterials,
@@ -432,6 +480,42 @@ export const updateAllDataBragaActionCreator = (
     rawMaterials: rawMaterials,
     massMaterials: massMaterials,
     mashVolume: mashVolume,
+  };
+};
+
+export const addCalculateVodkaActionCreator = (waterVol, mixedVolume) => {
+  return {
+    type: "ADD-CALCULATE-VODKA",
+    waterVol: waterVol,
+    mixedVolume: mixedVolume,
+  };
+};
+export const updateAllDataVodkaActionCreator = (
+  firstVol,
+  firstStr,
+  firstTemp,
+  secondTemp
+) => {
+  return {
+    type: "UPDATE-ALL-DATA-VODKA",
+    firstVol: firstVol,
+    firstStr: firstStr,
+    firstTemp: firstTemp,
+    secondTemp: secondTemp,
+  };
+};
+
+export const addCalculateTemperatureActionCreator = (Strenghth) => {
+  return {
+    type: "ADD-CALCULATE-TEMPERATURE",
+    Strenghth: Strenghth,
+  };
+};
+export const updateAllDataTemperatureActionCreator = (firstStr, firstTemp) => {
+  return {
+    type: "UPDATE-ALL-DATA-TEMPERATURE",
+    firstStr: firstStr,
+    firstTemp: firstTemp,
   };
 };
 
