@@ -52,6 +52,12 @@ let initialState = {
       volStrenghth: 0,
     },
   ],
+  calculateZamenaData: [
+    {
+      id: 0,
+      volGlucose: 0,
+    },
+  ],
   calcsData: [
     {
       id: 1,
@@ -187,6 +193,7 @@ let initialState = {
   efficiency: "80",
   heads: "",
   tails: "",
+  sugar: "",
 };
 
 const calcsReducer = (state = initialState, action) => {
@@ -338,6 +345,21 @@ const calcsReducer = (state = initialState, action) => {
         ...state,
         firstStr: action.firstStr,
         firstTemp: action.firstTemp,
+      };
+    case "ADD-CALCULATE-ZAMENA": {
+      let newCalculateZamena = {
+        volGlucose: action.glucose,
+      };
+      let stateCopy = { ...state };
+      stateCopy.calculateZamenaData.splice(0);
+      stateCopy.calculateZamenaData = [...state.calculateZamenaData];
+      stateCopy.calculateZamenaData.push(newCalculateZamena);
+      return stateCopy;
+    }
+    case "UPDATE-ALL-DATA-ZAMENA":
+      return {
+        ...state,
+        sugar: action.sugar,
       };
     case "ADD-CALCULATE-HEADS": {
       let newCalculateHeads = {
@@ -502,6 +524,19 @@ export const updateAllDataVodkaActionCreator = (
     firstStr: firstStr,
     firstTemp: firstTemp,
     secondTemp: secondTemp,
+  };
+};
+
+export const addCalculateZamenaActionCreator = (glucose) => {
+  return {
+    type: "ADD-CALCULATE-ZAMENA",
+    glucose: glucose,
+  };
+};
+export const updateAllDataZamenaActionCreator = (sugar) => {
+  return {
+    type: "UPDATE-ALL-DATA-ZAMENA",
+    sugar: sugar,
   };
 };
 
