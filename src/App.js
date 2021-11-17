@@ -78,7 +78,7 @@ const App = (props) => {
           />
           <Route
             path="/kalkulyator-zameny-sahara-glyukozoj"
-            render={() => <ZamenyGlyukozoj />}
+            render={() => <ZamenyGlyukozoj store={store} />}
           />
           <Route path="/about" render={() => <About />} />
         </Switch>
