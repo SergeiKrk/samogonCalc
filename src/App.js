@@ -18,6 +18,7 @@ import Vodka from "./Pages/Vodka";
 import SpirtaTemper from "./Pages/SpirtaTemper";
 import ZamenyGlyukozoj from "./Pages/ZamenyGlyukozoj";
 import About from "./Pages/About";
+import NoMatch404 from "./Pages/NoMatch404";
 import store from "./redux/redux-store";
 
 const App = (props) => {
@@ -81,6 +82,7 @@ const App = (props) => {
             render={() => <ZamenyGlyukozoj store={store} />}
           />
           <Route path="/about" render={() => <About />} />
+          <Route path="*" render={() => <NoMatch404 store={store} />} />
         </Switch>
       </Router>
     </div>
