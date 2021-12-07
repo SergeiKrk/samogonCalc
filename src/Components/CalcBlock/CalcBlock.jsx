@@ -2,7 +2,6 @@ import React from "react";
 import s from "./CalcBlock.module.css";
 import { FaStar } from "react-icons/fa";
 import CalcCard from "./CalcCard";
-import DisqusBlock from "../Header/DisqusBlock";
 
 const CalcBlock = (props) => {
   let calcsElements = props.calcsData.map((calc) => (
@@ -31,7 +30,6 @@ const CalcBlock = (props) => {
         </div>
         <div className="row justify-content-center">{calcsElements}</div>
       </div>
-      <DisqusBlock />
     </section>
   );
 };

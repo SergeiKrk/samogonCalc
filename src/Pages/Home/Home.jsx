@@ -1,9 +1,13 @@
 import React from "react";
+import { withSuspense } from "../../hoc/withSuspense";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/styles.css";
 import HeaderBlockHome from "../../Components/Header/HeaderBlockHome";
 import Footer from "../../Components/Footer/Footer";
 import HomeContainer from "./HomeContainer";
+const DisqusBlock = React.lazy(() =>
+  import("../../Components/Header/DisqusBlock")
+);
 
 const Home = (props) => {
   return (
@@ -17,6 +21,7 @@ const Home = (props) => {
         }}
       />
       <HomeContainer store={props.store} />
+      {withSuspense(DisqusBlock)}
       <Footer />
     </>
   );
