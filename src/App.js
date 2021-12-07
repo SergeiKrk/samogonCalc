@@ -24,7 +24,7 @@ const Vodka = React.lazy(() => import("./Pages/Vodka"));
 const SpirtaTemper = React.lazy(() => import("./Pages/SpirtaTemper"));
 const ZamenyGlyukozoj = React.lazy(() => import("./Pages/ZamenyGlyukozoj"));
 const About = React.lazy(() => import("./Pages/About"));
-const NoMatch404 = React.lazy(() => import("./Pages/NoMatch404"));
+const NotFound404 = React.lazy(() => import("./Pages/NotFound404"));
 
 const App = (props) => {
   //
@@ -87,7 +87,7 @@ const App = (props) => {
             render={withSuspense(ZamenyGlyukozoj)}
           />
           <Route path="/about" render={withSuspense(About)} />
-          <Route path="*" render={withSuspense(NoMatch404)} />
+          <Route path="*" render={withSuspense(NotFound404)} />
         </Switch>
       </Router>
     </div>
