@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import logoImg from "../../assets/img/kalkulyator-samogonshchika.png";
 
 const Footer = () => {
   return (
@@ -9,13 +10,12 @@ const Footer = () => {
             <div className="col-lg-4 mb-5 mb-lg-0">
               <h4 className="text-uppercase mb-4">SamogonCalc</h4>
               <p className="lead mb-0">
-                - набор быстрых онлайн-калькулятороов для винокуров и
-                самогонщиков
+                - быстрые онлайн-калькуляторы для винокуров и самогонщиков
               </p>
             </div>
             <div className="col-lg-4 mb-5 mb-lg-0">
               <img
-                src="https://samogoncalc.ru/img/kalkulyator-samogonshchika.png"
+                src={logoImg}
                 width="150"
                 className="img-fluid"
                 alt="калькулятор самогонщика Samogoncalc"
