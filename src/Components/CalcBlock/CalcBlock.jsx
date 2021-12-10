@@ -15,7 +15,7 @@ const CalcBlock = (props) => {
   ));
 
   return (
-    <section className="page-section portfolio" id="portfolio">
+    <section className="page-section portfolio">
       <div className={s.FullContainer}>
         <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
           Полезные калькуляторы для винокуров и самогонщиков

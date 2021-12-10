@@ -17,7 +17,7 @@ const Footer = () => {
               <img
                 src={logoImg}
                 width="150"
-                className="img-fluid"
+                height="150"
                 alt="калькулятор самогонщика Samogoncalc"
               />
             </div>

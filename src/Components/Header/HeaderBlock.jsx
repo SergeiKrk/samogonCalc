@@ -1,7 +1,5 @@
-import React from "react";
-import { withSuspense } from "../../hoc/withSuspense";
+import React, { Suspense } from "react";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-
 const ShareButtonBlock = React.lazy(() => import("./ShareButtonBlock"));
 
 const HeaderBlock = (props) => {
@@ -20,7 +18,9 @@ const HeaderBlock = (props) => {
           <div className="divider-custom divider-light">
             <div className="divider-custom-line"></div>
             <div className="divider-custom-icon">
-              {withSuspense(ShareButtonBlock)}
+              <Suspense fallback={<div>Загрузка...</div>}>
+                <ShareButtonBlock />
+              </Suspense>
             </div>
             <div className="divider-custom-line"></div>
           </div>

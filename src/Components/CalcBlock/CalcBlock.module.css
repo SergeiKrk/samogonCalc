@@ -13,8 +13,11 @@
   font-size: 14px;
 }
 .dlockCard {
-  margin-bottom: 0px !important;
+  margin-bottom: 15px !important;
 }
 .iconCalc {
   font-size: 3em !important;
+}
+.initial {
+  text-align: initial;
 }

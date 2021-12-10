@@ -15,17 +15,11 @@ const CalcCard = (props) => {
               <FaCalculator />
             </div>
           </div>
-          <img
-            src={props.Img}
-            className={`${s.imgCard} img-fluid`}
-            alt={props.Title}
-          />
+          <img src={props.Img} alt={props.Title} width="200" height="200" />
         </Link>
       </div>
       <Link className="text-secondary" to={`${props.Href}`}>
-        <h3 className={`${s.titleCard} text-secondary text-center`}>
-          {props.Title}
-        </h3>
+        <h3 className={`${s.titleCard} text-center`}>{props.Title}</h3>
       </Link>
       <span className={`${s.descripyionCard} text-center`}>
         {props.Description}
