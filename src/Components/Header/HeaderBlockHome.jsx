@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+import HelmetSeoTags from "./HelmetSeoTags";
 const ShareButtonBlock = React.lazy(() => import("./ShareButtonBlock"));
 
 const HeaderBlockHome = (props) => {
@@ -31,6 +32,12 @@ const HeaderBlockHome = (props) => {
             {props.HeaderBlockHome.Description}
           </p>
         </div>
+        <HelmetSeoTags
+          titleSeo={props.HeaderBlockHome.titleSeo}
+          descriptionSeo={props.HeaderBlockHome.descriptionSeo}
+          urlSeo={props.HeaderBlockHome.urlSeo}
+          Img={props.HeaderBlockHome.Img}
+        />
       </header>
     </div>
   );

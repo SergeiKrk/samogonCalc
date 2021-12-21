@@ -1,13 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../css/styles.css";
-import {
-  FaStar,
-  FaCalculator,
-  FaRocket,
-  FaBolt,
-  FaGripHorizontal,
-} from "react-icons/fa";
+import { FaCalculator, FaRocket, FaBolt } from "react-icons/fa";
 import logoImg from "../../assets/img/kalkulyator-samogonshchika.png";
 import HeaderBlockHome from "../../Components/Header/HeaderBlockHome";
 import Footer from "../../Components/Footer/Footer";
@@ -23,6 +17,10 @@ const Home = (props) => {
           Title: "Калькулятор самогонщика",
           Description:
             "Калькулятор винокура и самогонщика: онлайн расчет всех важных параметров",
+          titleSeo: "Калькулятор Самогонщика: Онлайн расчет",
+          descriptionSeo:
+            "Точные алкогольные онлайн кальнуляторы помогут самогонщику рассчитать важные параметры спирта, дистиллята и браги.",
+          urlSeo: "https://samogoncalc.ru/",
         }}
       />
 
@@ -71,18 +69,29 @@ const Home = (props) => {
           </div>
 
           <div className="row">
-            <div className="col-lg-4 initial">
-              <FaRocket /> Загружаются заметно быстрее всех остальных
-              калькуляторов самогона конкурентов. Не нужно ждать пока страница
-              откроется, ведь это всех раздражает.
+            <div className="col-lg-6 initial">
+              <div className="divider-custom">
+                <div className="divider-custom-icon">
+                  <FaRocket />
+                </div>
+              </div>
+              <p>
+                Загружаются заметно быстрее всех остальных калькуляторов
+                самогона конкурентов. Не нужно ждать пока страница откроется,
+                ведь это всех раздражает.
+              </p>
             </div>
-            <div className="col-lg-4 initial">
-              <FaBolt /> Рассчет осуществляется сразу после ввода параметров в
-              калькулятор. Не нужно совершать лишнего действия и нажимать на
-              кнопту "Посчитать".
-            </div>
-            <div className="col-lg-4 initial">
-              <FaGripHorizontal /> Четкая и понятная структура сервиса.
+            <div className="col-lg-6 initial">
+              <div className="divider-custom">
+                <div className="divider-custom-icon">
+                  <FaBolt />
+                </div>
+              </div>
+              <p>
+                Расчет осуществляется сразу после ввода параметров в
+                калькулятор. Не нужно совершать лишнего действия и нажимать на
+                кнопку "Посчитать".
+              </p>
             </div>
           </div>
         </div>

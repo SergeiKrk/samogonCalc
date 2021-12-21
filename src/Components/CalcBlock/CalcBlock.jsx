@@ -1,4 +1,6 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import s from "./CalcBlock.module.css";
 import { FaStar } from "react-icons/fa";
 import CalcCard from "./CalcCard";
@@ -28,7 +30,9 @@ const CalcBlock = (props) => {
           </div>
           <div className="divider-custom-line"></div>
         </div>
-        <div className="row justify-content-center">{calcsElements}</div>
+        <Row xs={2} md={3} lg={4} xl={6} className="justify-content-center">
+          {calcsElements}
+        </Row>
       </div>
     </section>
   );
