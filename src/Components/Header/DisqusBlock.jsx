@@ -5,6 +5,7 @@ import { DiscussionEmbed } from "disqus-react";
 const DisqusBlock = () => {
   return (
     <Container>
+      <br />
       <h3 className="page-section-heading text-uppercase text-secondary">
         Вопросы и комментарии
       </h3>
@@ -17,6 +18,7 @@ const DisqusBlock = () => {
           language: "ru_ru",
         }}
       />
+      <br />
     </Container>
   );
 };

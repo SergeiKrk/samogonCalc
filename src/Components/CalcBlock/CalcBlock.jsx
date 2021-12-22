@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import s from "./CalcBlock.module.css";
 import { FaStar } from "react-icons/fa";
 import CalcCard from "./CalcCard";
@@ -17,23 +18,31 @@ const CalcBlock = (props) => {
   ));
 
   return (
-    <section className="page-section portfolio">
-      <div className={s.FullContainer}>
-        <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
-          Полезные калькуляторы для винокуров и самогонщиков
-        </h2>
-        <div className="divider-custom">
-          <div className="divider-custom-line"></div>
-          <div className="divider-custom-icon">
-            {" "}
-            <FaStar />{" "}
-          </div>
-          <div className="divider-custom-line"></div>
+    <section className={`page-section portfolio ${s.FullContainer}`}>
+      <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+        Полезные калькуляторы для винокуров и самогонщиков
+      </h2>
+      <div className="divider-custom">
+        <div className="divider-custom-line"></div>
+        <div className="divider-custom-icon">
+          {" "}
+          <FaStar />{" "}
         </div>
-        <Row xs={2} md={3} lg={4} xl={6} className="justify-content-center">
+        <div className="divider-custom-line"></div>
+      </div>
+
+      <Container fluid>
+        <Row
+          xs={2}
+          sm={3}
+          md={4}
+          lg={5}
+          xl={6}
+          className="justify-content-center"
+        >
           {calcsElements}
         </Row>
-      </div>
+      </Container>
     </section>
   );
 };

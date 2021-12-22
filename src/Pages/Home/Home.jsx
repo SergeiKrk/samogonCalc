@@ -23,11 +23,10 @@ const Home = (props) => {
           urlSeo: "https://samogoncalc.ru/",
         }}
       />
-
       <HomeContainer store={props.store} />
-      <section className="page-section text-white bg-primary mb-0">
+      <section className="page-section text-white bg-primary">
         <div className="container">
-          <h2 className="page-section-heading text-center text-uppercase text-white mb-0">
+          <h2 className="page-section-heading text-center text-uppercase text-white">
             Онлайн калькуляторы самогонщика
           </h2>
 
@@ -52,10 +51,9 @@ const Home = (props) => {
           </div>
         </div>
       </section>
-
-      <section className="page-section mb-0">
+      <section className="page-section">
         <div className="container">
-          <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
+          <h2 className="page-section-heading text-center text-uppercase text-secondary">
             Алкогольный калькулятор самогонщика: преимущества
           </h2>
 
@@ -64,8 +62,8 @@ const Home = (props) => {
           </div>
 
           <div className="lead divider-custom">
-            Ищите лучший калькулятор самогонщика? Возможно, вы его нашли. Наши
-            онлайн калькуляторы:
+            Ищите лучший калькулятор самогонщика? Возможно, вы его нашли. <br />
+            Наши онлайн калькуляторы:
           </div>
 
           <div className="row">
@@ -95,8 +93,8 @@ const Home = (props) => {
             </div>
           </div>
         </div>
-      </section>
-
+      </section>{" "}
+      <hr />
       <Suspense fallback={<div>Загрузка...</div>}>
         <DisqusBlock />
       </Suspense>
