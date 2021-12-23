@@ -19,66 +19,54 @@ const NavbarMenu = () => {
               >
                 <LinkContainer to="/kalkulyator-razbavleniya-samogona-vodoj">
                   <NavDropdown.Item>
-                    Калькулятор разбавления самогона водой
+                    Разбавления самогона водой
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-otbor-golov">
                   <NavDropdown.Item>Калькулятор отбор голов</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-drobnoj-peregonki">
-                  <NavDropdown.Item>
-                    ⭐️ Калькулятор дробной перегонки
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>⭐️ Дробная перегонка</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki">
                   <NavDropdown.Item>
-                    Калькулятор разбавления самогона (после I перегона)
+                    Разбавление самогона (после I перегона)
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona">
                   <NavDropdown.Item>
-                    Калькулятор разбавления самогона (после II перегона)
+                    Разбавление самогона (после II перегона)
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-absolyutnogo-spirta">
-                  <NavDropdown.Item>
-                    Калькулятор абсолютного спирта
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Расчет абсолютного спирта</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-smeshivaniya-spirtov">
-                  <NavDropdown.Item>
-                    Калькулятор смешивания спиртов
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Смешивание спиртов</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-sebestoimosti-samogona">
-                  <NavDropdown.Item>
-                    💰 Калькулятор себестоимости самогона
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>💰 Себестоимости самогона</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/primernaya-stoimost-samogona">
                   <NavDropdown.Item>
-                    💰 Калькулятор примерной стоимости самогона
+                    💰 Примерной расчет стоимости самогона
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-saharnoj-bragi">
-                  <NavDropdown.Item>
-                    Калькулятор сахарной браги
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Расчет сахарной браги</NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-vodki-iz-spirta">
                   <NavDropdown.Item>
-                    [40°] Калькулятор водки из спирта
+                    Калькулятор водки 40° из спирта
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-spirta-ot-temperatury">
                   <NavDropdown.Item>
-                    Калькулятор спирта от температуры
+                    Расчет спирта от температуры
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-zameny-sahara-glyukozoj">
-                  <NavDropdown.Item>
-                    Калькулятор замены сахара глюкозой
-                  </NavDropdown.Item>
+                  <NavDropdown.Item>Ззамены сахара декстрозой</NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>
             </Nav>
