@@ -37,10 +37,6 @@ const PoslePervojCalc = (props) => {
 
   return (
     <div className="container">
-      <p>
-        После первой перегонки необходимо разбавить дистиллят. Важный момент —
-        результаты будут правильными, если температура всех жидкостей 20°С.
-      </p>
       <CardGroup>
         <Card border="dark">
           <Card.Body>

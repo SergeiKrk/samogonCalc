@@ -3,17 +3,31 @@ import "../css/styles.css";
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import AbsolyutnijSpirtCalcContainer from "../Components/Calcs/AbsolyutnijSpirt/AbsolyutnijSpirtCalcContainer";
+import absSpirtImg from "../assets/img/kalkulyator-absolyutnogo-spirta.png";
 
 const AbsolyutnijSpirt = (props) => {
   return (
     <div>
       <HeaderBlock
-        Href="kalkulyator-absolyutnogo-spirta"
-        Img="https://samogoncalc.ru/img/kalkulyator-absolyutnogo-spirta.png"
-        Title="Калькулятор абсолютного спирта"
-        Description="Необходимо узнать, сколько абсолютного спирта в спирте сырце или в браге? Я помогу сделать расчет"
+        HeaderBlock={{
+          Img: `${absSpirtImg}`,
+          Title: "Калькулятор абсолютного спирта",
+          Description:
+            "Необходимо узнать, сколько абсолютного спирта в спирте сырце или в браге? Я помогу сделать расчет",
+          Href: "kalkulyator-absolyutnogo-spirta",
+          titleSeo: "",
+          descriptionSeo: "",
+          urlSeo: "https://samogoncalc.ru/kalkulyator-absolyutnogo-spirta/",
+        }}
       />
-      <AbsolyutnijSpirtCalcContainer store={props.store} />
+
+      <div className="container mt-5">
+        <p className="text-left mb-4">
+          Тут про абсолютный спирт результаты будут правильными, если
+          температура всех жидкостей 20°С.
+        </p>
+      </div>
+      <AbsolyutnijSpirtCalcContainer />
       <Footer />
     </div>
   );

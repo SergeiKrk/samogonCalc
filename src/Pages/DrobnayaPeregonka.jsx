@@ -1,5 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/styles.css";
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import React from "react";
@@ -9,12 +7,6 @@ import DrobnayaPeregonkaCalcContainer from "../Components/Calcs/DrobnayaPeregonk
 const DrobnayaPeregonka = (props) => {
   return (
     <div>
-      {/* <HeaderBlock
-        Href="kalkulyator-drobnoj-peregonki"
-        Img="https://samogoncalc.ru/img/kalkulyator-drobnoj-peregonki.png"
-        Title="Калькулятор дробной перегонки спирта-сырца"
-        Description="Хотите начать дробную перегонку? Я помогу отобрать головы и хвосты!"
-      /> */}
       <HeaderBlock
         HeaderBlock={{
           Img: `${drobnImg}`,
@@ -29,7 +21,7 @@ const DrobnayaPeregonka = (props) => {
           urlSeo: "https://samogoncalc.ru/kalkulyator-drobnoj-peregonki/",
         }}
       />
-      <div className="container">
+      <div className="container text-left">
         <br />
         <p>
           Нужно разбавить спирт или дистиллят до конкретной крепости? Наш
@@ -47,9 +39,7 @@ const DrobnayaPeregonka = (props) => {
         </p>
         <br />
       </div>
-      <DrobnayaPeregonkaCalcContainer store={props.store} />
-      <br />
-      <br />
+      <DrobnayaPeregonkaCalcContainer />
       <Footer />
     </div>
   );

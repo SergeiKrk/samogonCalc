@@ -32,11 +32,6 @@ const AbsolyutnijSpirtCalc = (props) => {
 
   return (
     <div className="container">
-      <p>
-        Тут про абсолютный спирт результаты будут правильными, если температура
-        всех жидкостей 20°С.
-      </p>
-
       <CardGroup>
         <Card border="dark">
           <Card.Body>

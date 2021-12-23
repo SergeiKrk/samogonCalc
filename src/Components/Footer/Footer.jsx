@@ -3,7 +3,7 @@ import logoImg from "../../assets/img/kalkulyator-samogonshchika.png";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-4">
       <footer className="footer text-center">
         <div className="container">
           <div className="row">

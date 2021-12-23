@@ -1,9 +1,6 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../css/styles.css";
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import OtborGolovCalcContainer from "../Components/Calcs/OtborGolovCalc/OtborGolovCalcContainer";
-import DisqusBlock from "../Components/Header/DisqusBlock";
 import React from "react";
 import otborGolovImg from "../assets/img/kalkulyator-otbor-golov.png";
 
@@ -23,9 +20,8 @@ const OtborGolov = (props) => {
           urlSeo: "https://samogoncalc.ru/kalkulyator-otbor-golov/",
         }}
       />
-      <div className="container">
-        <br />
-        <p>
+      <div className="container mt-5">
+        <p className="text-left mb-4">
           Чтобы разбавить дистиллят до нужной крепости, воспользуйтесь
           калькулятором разбавления самогона водой. В онлайн режиме он поможет
           подобрать пропорции воды и самогона. Нужно лишь вписать в программу 3
@@ -36,11 +32,8 @@ const OtborGolov = (props) => {
           видим результат: необходимо долить 2,75 литров воды. Важный момент —
           результаты будут правильными, если температура всех жидкостей 20°С.
         </p>
-        <br />
       </div>
-      <OtborGolovCalcContainer store={props.store} />
-      <br />
-      <br />
+      <OtborGolovCalcContainer />
       <Footer />
     </div>
   );

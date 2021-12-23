@@ -23,15 +23,7 @@ const ZamenaCalc = (props) => {
     <ResultBlockZamena key={c.id} volGlucose={c.volGlucose} />
   ));
   return (
-    <div className="container">
-      <p>
-        Вы хотите полоучить более качественный дистилят, чем получали раньше из
-        обычного сахара? У Вас есть глюкоза или декстроза, но вы не знаете
-        сколько глюкозы понадобится, чтобы выход спирта из браги был как с 1 кг
-        обычного сахара? Воспользуйтесь калькулятором ЗАМЕНЫ САХАРА ГЛЮКОЗОЙ,
-        чтобы узнать.
-      </p>
-
+    <div className="container  mb-5">
       <CardGroup>
         <Card border="dark">
           <Card.Body>
