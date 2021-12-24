@@ -76,7 +76,7 @@ const NavbarMenu = () => {
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-zameny-sahara-glyukozoj">
                   <NavDropdown.Item>
-                    <FaCalculator /> Ззамены сахара декстрозой
+                    <FaCalculator /> Замена сахара декстрозой
                   </NavDropdown.Item>
                 </LinkContainer>
               </NavDropdown>

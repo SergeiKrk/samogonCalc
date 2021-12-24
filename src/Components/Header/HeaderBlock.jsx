@@ -20,7 +20,11 @@ const HeaderBlock = (props) => {
             <div className="divider-custom-line"></div>
             <div className="divider-custom-icon">
               <Suspense fallback={<div>Загрузка...</div>}>
-                <ShareButtonBlock />
+                <ShareButtonBlock
+                  titleSeo={props.HeaderBlock.titleSeo}
+                  urlSeo={props.HeaderBlock.urlSeo}
+                  Img={props.HeaderBlock.Img}
+                />
               </Suspense>
             </div>
             <div className="divider-custom-line"></div>
