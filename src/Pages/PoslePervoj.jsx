@@ -12,10 +12,10 @@ const PoslePervoj = (props) => {
           Img: `${poslePervojImg}`,
           Title:
             "Калькулятор разбавления самогона водой (после первого перегона)",
-          Description: "Необходимо ",
+          Description: "Необходимо разбавить самогон после первой перегонки, чтобы подготовить его для второго перегона? Калькулятор поможет понизить крепость спирта-сырца для производства качественного дистиллята",
           Href: "razbavlenie-samogona-vodoj-posle-pervoj-peregonki",
-          titleSeo: "",
-          descriptionSeo: "",
+          titleSeo: "Калькулятор самогонщика: разбавление самогона водой после первой перегонки",
+          descriptionSeo: "Калькулятор подскажет, как разбавить самогон после первой перегонки для второго перегона до нужной крепости",
           urlSeo:
             "https://samogoncalc.ru/razbavlenie-samogona-vodoj-posle-pervoj-peregonki/",
         }}
