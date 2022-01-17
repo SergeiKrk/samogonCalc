@@ -10,12 +10,14 @@ const PoslePervoj = (props) => {
       <HeaderBlock
         HeaderBlock={{
           Img: `${poslePervojImg}`,
-          Title:
-            "Калькулятор разбавления самогона водой (после первого перегона)",
-          Description: "Необходимо ",
+          Title: "Разбавление самогона водой (после первого перегона)",
+          Description:
+            "Поможет подготовить спирт-сырец к дробной перегонке, расчитать пропорции и разбавить его до приемлемой крепости",
           Href: "razbavlenie-samogona-vodoj-posle-pervoj-peregonki",
-          titleSeo: "",
-          descriptionSeo: "",
+          titleSeo:
+            "Калькулятор самогонщика: Разбавление самогона водой после первой перегонки",
+          descriptionSeo:
+            "Калькулятор подскажет, как разбавить спирт-сырец (первый самогон) водой для второго перегона",
           urlSeo:
             "https://samogoncalc.ru/razbavlenie-samogona-vodoj-posle-pervoj-peregonki/",
         }}

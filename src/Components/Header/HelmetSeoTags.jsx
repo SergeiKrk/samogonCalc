@@ -13,7 +13,6 @@ const HelmetSeoTags = (props) => {
       <meta property="og:url" content={props.urlSeo} />
       <meta
         property="og:image"
-        // content={props.Img}
         content={`https://samogoncalc.ru${props.Img}`}
       />
       <meta property="og:site_name" content="SamogonCalc" />
