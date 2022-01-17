@@ -15,7 +15,6 @@ const RazbavleniyaSamogona = React.lazy(() =>
 );
 const OtborGolov = React.lazy(() => import("./Pages/OtborGolov"));
 const PoslePervoj = React.lazy(() => import("./Pages/PoslePervoj"));
-const PosleVtoroj = React.lazy(() => import("./Pages/PosleVtoroj"));
 const SmeshSpirt = React.lazy(() => import("./Pages/SmeshSpirt"));
 const SebestoimSamogona = React.lazy(() => import("./Pages/SebestoimSamogona"));
 const SebestoimApprox = React.lazy(() => import("./Pages/SebestoimApprox"));
@@ -49,10 +48,6 @@ const App = (props) => {
           <Route
             path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki"
             render={withSuspense(PoslePervoj)}
-          />
-          <Route
-            path="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona"
-            render={withSuspense(PosleVtoroj)}
           />
           <Route
             path="/kalkulyator-absolyutnogo-spirta"

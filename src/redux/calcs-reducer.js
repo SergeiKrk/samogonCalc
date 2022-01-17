@@ -107,14 +107,6 @@ let initialState = {
     },
     {
       id: 5,
-      href: "razbavlenie-samogona-vodoj-posle-vtorogo-peregona",
-      img: `${posleVtorogo}`,
-      title: "Калькулятор разбавления дистиллята (после второго перегона)",
-      description:
-        "Поможет смешать готовый дистиллят (самогон после второго перегона) с водой в нужных пропорциях",
-    },
-    {
-      id: 6,
       href: "kalkulyator-smeshivaniya-spirtov",
       img: `${smeshivaniyaSpirtov}`,
       title: "Калькулятор смешивания спиртов",
@@ -122,7 +114,7 @@ let initialState = {
         "Поможет узнайте сейчас какой градус будет после смешивания двух спиртосодержащих жидкостей",
     },
     {
-      id: 7,
+      id: 6,
       href: "kalkulyator-absolyutnogo-spirta",
       img: `${absolyutnogoSpirta}`,
       title: "Калькулятор абсолютного спирта",
@@ -130,7 +122,7 @@ let initialState = {
         "Рассчитает объем абсолютного (100°) спирта в полученном дистилляте или ректификате",
     },
     {
-      id: 8,
+      id: 7,
       href: "kalkulyator-sebestoimosti-samogona",
       img: `${sebestoimostiSamogona}`,
       title: "Калькулятор себестоимости самогона",
@@ -138,7 +130,7 @@ let initialState = {
         "Поможет рассчитать стоимость получившегося дистиллята исходя из затрат на сырье и ингредиенты",
     },
     {
-      id: 9,
+      id: 8,
       href: "primernaya-stoimost-samogona",
       img: `${stoimostSamogona}`,
       title: "Калькулятор примерной стоимости самогона",
@@ -146,7 +138,7 @@ let initialState = {
         "Рассчитает примерную себестоимость и объем самогона даже если вы еще не ставили брагу и не перегоняли дистиллят.",
     },
     {
-      id: 10,
+      id: 9,
       href: "kalkulyator-saharnoj-bragi",
       img: `${saharnojBragi}`,
       title: "Калькулятор сахарной браги",
@@ -154,7 +146,7 @@ let initialState = {
         "Поможет вычислить крепость браги и оптимальные пропорции сахара и воды для браги",
     },
     {
-      id: 11,
+      id: 10,
       href: "kalkulyator-vodki-iz-spirta",
       img: `${vodkiIzSpirta}`,
       title: "Калькулятор водки из спирта",
@@ -162,7 +154,7 @@ let initialState = {
         "Поможет разбавить спирт или дистиллят до водочной крепости в 40°",
     },
     {
-      id: 12,
+      id: 11,
       href: "kalkulyator-spirta-ot-temperatury",
       img: `${otTemperatury}`,
       title: "Калькулятор спирта от температуры",
@@ -170,7 +162,7 @@ let initialState = {
         "Рассчитает реальную крепость при любой температуре  дистиллята",
     },
     {
-      id: 13,
+      id: 12,
       href: "kalkulyator-zameny-sahara-glyukozoj",
       img: `${zamenySahara}`,
       title: "Калькулятор замены сахара декстрозой",
