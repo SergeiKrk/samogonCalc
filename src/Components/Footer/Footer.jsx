@@ -34,7 +34,7 @@ const Footer = () => {
       </footer>
       <div className="copyright py-4 text-center text-white">
         <div className="container">
-          <small>SamogonCalc.ru © 2021-2022</small>
+          <small>SamogonCalc.ru © 2021-2022 </small>
         </div>
       </div>
     </div>
