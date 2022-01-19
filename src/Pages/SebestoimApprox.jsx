@@ -9,12 +9,13 @@ const SebestoimApprox = (props) => {
       <HeaderBlock
         HeaderBlock={{
           Img: `${sebestoimostAprImg}`,
-          Title: "Калькулятор себестоимости самогона",
+          Title: "Расчет стоимости будущего самогона",
           Description:
-            "Бла бла бла Бла бла бла Бла бла бла Бла бла бла Бла бла бла ",
+            "Калькулятор поможет рассчитать пимерную стоимость сахарного или зернового дистиллята, исходя из массы и стоимости сырья",
           Href: "kalkulyator-sebestoimosti-samogona",
-          titleSeo: "",
-          descriptionSeo: "",
+          titleSeo: "Калькулятор стоимости самогона (сахарного / зернового)",
+          descriptionSeo:
+            "Калькулятор поможет рассчитать онлайн стоимость будущего сахарного или зернового дистиллята (самогона), исходя из массы и стоимости сырья",
           urlSeo: "https://samogoncalc.ru/kalkulyator-sebestoimosti-samogona/",
         }}
       />
