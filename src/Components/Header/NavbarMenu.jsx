@@ -36,11 +36,6 @@ const NavbarMenu = () => {
                     <FaCalculator /> Разбавление самогона (после I перегона)
                   </NavDropdown.Item>
                 </LinkContainer>
-                <LinkContainer to="/razbavlenie-samogona-vodoj-posle-vtorogo-peregona">
-                  <NavDropdown.Item>
-                    <FaCalculator /> Разбавление самогона (после II перегона)
-                  </NavDropdown.Item>
-                </LinkContainer>
                 <LinkContainer to="/kalkulyator-absolyutnogo-spirta">
                   <NavDropdown.Item>
                     <FaCalculator /> Расчет абсолютного спирта
@@ -61,7 +56,7 @@ const NavbarMenu = () => {
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-saharnoj-bragi">
                   <NavDropdown.Item>
-                    <FaCalculator /> Расчет сахарной браги
+                    <FaCalculator /> Расчет браги
                   </NavDropdown.Item>
                 </LinkContainer>
                 <LinkContainer to="/kalkulyator-vodki-iz-spirta">
