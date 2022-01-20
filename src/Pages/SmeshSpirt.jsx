@@ -9,12 +9,14 @@ const SmeshSpirt = (props) => {
       <HeaderBlock
         HeaderBlock={{
           Img: `${smeshSpirtaImg}`,
-          Title: "Калькулятор смешивания спиртов",
+          Title: "Смешивание спиртов или самогона",
           Description:
-            "Смешиваете две разных крепости? Узнайте сейчас какой градус будет на выходе!",
+            "Калькулятор смешивания спиртов разной крепости поможет узнать итоговую крепость по точной формуле",
           Href: "kalkulyator-smeshivaniya-spirtov",
-          titleSeo: "",
-          descriptionSeo: "",
+          titleSeo:
+            "Калькулятор смешивания спиртов (самогона / дистиллята) разной крепости",
+          descriptionSeo:
+            "Онлайн калькулятор смешивания спиртов (самогона) разной крепости поможет узнать итоговую крепость по точной формуле",
           urlSeo: "https://samogoncalc.ru/kalkulyator-smeshivaniya-spirtov/",
         }}
       />
