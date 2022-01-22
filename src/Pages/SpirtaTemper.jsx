@@ -9,12 +9,13 @@ const SpirtaTemper = (props) => {
       <HeaderBlock
         HeaderBlock={{
           Img: `${otTemperaturyImg}`,
-          Title: "Калькулятор спирта от температуры",
+          Title: "Коррекция спирта по температуре",
           Description:
-            "Рассчитает реальную крепость самогона при температуре больше или меньше 20 °C.",
+            "Рассчитает реальную крепость самогона (дистиллята) при температуре отличной от 20 °C.",
           Href: "kalkulyator-spirta-ot-temperatury",
-          titleSeo: "",
-          descriptionSeo: "",
+          titleSeo: "Калькулятор крепости самогона (спирта) от температуры",
+          descriptionSeo:
+            "Онлайн калькулятор поможет скорректировать крепость самогона в зависимости от температуры дистиллята",
           urlSeo: "https://samogoncalc.ru/kalkulyator-spirta-ot-temperatury/",
         }}
       />

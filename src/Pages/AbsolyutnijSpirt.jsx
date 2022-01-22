@@ -11,12 +11,13 @@ const AbsolyutnijSpirt = (props) => {
       <HeaderBlock
         HeaderBlock={{
           Img: `${absSpirtImg}`,
-          Title: "Калькулятор абсолютного спирта",
+          Title: "Расчет абсолютного и чистого спирта",
           Description:
             "Необходимо узнать, сколько абсолютного спирта в спирте сырце или в браге? Я помогу сделать расчет",
           Href: "kalkulyator-absolyutnogo-spirta",
-          titleSeo: "",
-          descriptionSeo: "",
+          titleSeo: "Калькулятор абсолютного и чистого спирта",
+          descriptionSeo:
+            "Онлайн калькулятор точно рассчитает объем абсолютного и чистого спирта в браге или спирте сырце",
           urlSeo: "https://samogoncalc.ru/kalkulyator-absolyutnogo-spirta/",
         }}
       />
