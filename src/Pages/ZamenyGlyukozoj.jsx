@@ -11,10 +11,11 @@ const ZamenyGlyukozoj = (props) => {
           Img: `${zamenaSaharaImg}`,
           Title: "Расчет замены сахара декстрозой (глюкозой)",
           Description:
-            "Определяет насколько меньше потребуется глюкозы, чтобы выход спирта из браги был как с 1 кг обычного сахара.",
+            "Определяет насколько меньше потребуется глюкозы, чтобы выход спирта из браги был как с 1 кг обычного сахара",
           Href: "kalkulyator-zameny-sahara-glyukozoj",
           titleSeo: "Калькулятор замены сахара глюкозой",
-          descriptionSeo: "",
+          descriptionSeo:
+            "Онлайн калькулятор рассчитает насколько меньше потребуется глюкозы, чтобы выход спирта из браги был как из сахара",
           urlSeo: "https://samogoncalc.ru/kalkulyator-zameny-sahara-glyukozoj/",
         }}
       />
