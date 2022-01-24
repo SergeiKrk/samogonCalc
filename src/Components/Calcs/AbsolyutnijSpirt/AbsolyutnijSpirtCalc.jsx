@@ -10,17 +10,23 @@ import s from "../Calc.module.css";
 const AbsolyutnijSpirtCalc = (props) => {
   let InitVol = React.createRef();
   let InitFortr = React.createRef();
+  let InitTemperature = React.createRef();
 
   let allValuesOnChange = () => {
     let alcoholVol = InitVol.current.value;
     let alcoholFortr = InitFortr.current.value;
+    let firstTemp = InitTemperature.current.value;
 
-    let absAlcohol = ((alcoholFortr * alcoholVol) / 100).toFixed(2);
-    let outHeads = ((alcoholFortr * alcoholVol) / 10000).toFixed(2);
+    let strenghth = (
+      Number(alcoholFortr) +
+      0.3 * (20 - Number(firstTemp))
+    ).toFixed(2);
+    let absAlcohol = ((strenghth * alcoholVol) / 100).toFixed(2);
+    let outHeads = ((strenghth * alcoholVol) / 10000).toFixed(2);
 
-    if (alcoholVol && alcoholFortr)
-      props.addCalculateHeads(absAlcohol, outHeads);
-    props.updateAllDataHeads(alcoholVol, alcoholFortr);
+    if (alcoholVol && alcoholFortr && firstTemp)
+      props.addCalculateHeads(absAlcohol, outHeads, strenghth);
+    props.updateAllDataHeads(alcoholVol, alcoholFortr, firstTemp);
   };
 
   let addCalculateHeadsElements = props.calculateHeadsData.map((c) => (
@@ -36,7 +42,7 @@ const AbsolyutnijSpirtCalc = (props) => {
         <Card border="dark">
           <Card.Body>
             <Card.Title>
-              Введите данные для расчета абсолютного спирта
+              Введите данные для расчета абсолютного и чистого спиртов
             </Card.Title>
             <Card.Text>
               <Form.Group>
@@ -47,7 +53,7 @@ const AbsolyutnijSpirtCalc = (props) => {
                     column="sm"
                     lg={6}
                   >
-                    Объем спирта-сырца (самогона):
+                    Объем самогона:
                   </Form.Label>
                   <Col xs={9} md={4}>
                     <Form.Control
@@ -68,7 +74,7 @@ const AbsolyutnijSpirtCalc = (props) => {
                     column="sm"
                     lg={6}
                   >
-                    Крепость спирта-сырца (самогона):
+                    Крепость самогона:
                   </Form.Label>
                   <Col xs={9} md={4}>
                     <Form.Control
@@ -81,6 +87,27 @@ const AbsolyutnijSpirtCalc = (props) => {
                   </Col>
                   <Col xs={3} md={2} className={`${s.p10} text-left`}>
                     , °
+                  </Col>
+                </Form.Row>
+                <Form.Row>
+                  <Form.Label
+                    className={`${s.p10} text-right`}
+                    column="sm"
+                    lg={6}
+                  >
+                    Температура самогона:
+                  </Form.Label>
+                  <Col xs={9} md={4}>
+                    <Form.Control
+                      ref={InitTemperature}
+                      onChange={allValuesOnChange}
+                      value={props.firstTemp}
+                      type="text"
+                      placeholder="температура, °C"
+                    />
+                  </Col>
+                  <Col xs={3} md={2} className={`${s.p10} text-left`}>
+                    , °C
                   </Col>
                 </Form.Row>
               </Form.Group>

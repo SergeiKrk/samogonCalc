@@ -383,6 +383,7 @@ const calcsReducer = (state = initialState, action) => {
         ...state,
         alcoholVol: action.alcoholVol,
         alcoholFortr: action.alcoholFortr,
+        firstTemp: action.firstTemp,
         partHeadVol: action.partHeadVol,
       };
     case "ADD-CALCULATE-FRACTIONAL": {

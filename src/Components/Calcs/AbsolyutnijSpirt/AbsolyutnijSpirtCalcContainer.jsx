@@ -11,16 +11,19 @@ const mapStateToProps = (state) => {
   return {
     alcoholVol: state.calcPage.alcoholVol,
     alcoholFortr: state.calcPage.alcoholFortr,
+    firstTemp: state.calcPage.firstTemp,
     calculateHeadsData: state.calcPage.calculateHeadsData,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
-    addCalculateHeads: (absAlcohol, outHeads) => {
-      dispatch(addCalculateHeadsActionCreator(absAlcohol, outHeads));
+    addCalculateHeads: (strenghth, absAlcohol, outHeads) => {
+      dispatch(addCalculateHeadsActionCreator(strenghth, absAlcohol, outHeads));
     },
-    updateAllDataHeads: (alcoholVol, alcoholFortr) => {
-      dispatch(updateAllDataHeadsActionCreator(alcoholVol, alcoholFortr));
+    updateAllDataHeads: (alcoholVol, alcoholFortr, firstTemp) => {
+      dispatch(
+        updateAllDataHeadsActionCreator(alcoholVol, alcoholFortr, firstTemp)
+      );
     },
   };
 };

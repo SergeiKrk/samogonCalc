@@ -10,8 +10,8 @@ const ResultBlockAbsolyutnijSpirt = (props) => {
         <span> {props.volAbsAlcohol} </span> л.
       </p>
       <p className={s.explanation}>
-        Результаты рассчета актуальны, если температура получаемой жидкости
-        равна 20°С
+        Результаты рассчета актуальны при заданной температуре, учтена поправка
+        на температуру
       </p>
     </>
   );
