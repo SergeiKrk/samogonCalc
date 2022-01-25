@@ -41,9 +41,6 @@ const AbsolyutnijSpirtCalc = (props) => {
       <CardGroup>
         <Card border="dark">
           <Card.Body>
-            <Card.Title>
-              Введите данные для расчета абсолютного и чистого спиртов
-            </Card.Title>
             <Card.Text>
               <Form.Group>
                 <br />
