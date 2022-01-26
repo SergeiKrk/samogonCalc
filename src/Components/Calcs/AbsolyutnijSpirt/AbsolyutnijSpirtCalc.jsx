@@ -33,6 +33,7 @@ const AbsolyutnijSpirtCalc = (props) => {
     <ResultBlockAbsolyutnijSpirt
       volOutHeads={c.volOutHeads}
       volAbsAlcohol={c.volAbsAlcohol}
+      volClearAlc={(c.volAbsAlcohol * 1.0351966873706).toFixed(2)}
     />
   ));
 

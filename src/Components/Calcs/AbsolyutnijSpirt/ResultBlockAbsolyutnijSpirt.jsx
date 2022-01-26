@@ -5,13 +5,15 @@ const ResultBlockAbsolyutnijSpirt = (props) => {
   return (
     <>
       Объем абсолютного спирта:
-      <br />
       <p className={s.sought}>
         <span> {props.volAbsAlcohol} </span> л.
       </p>
+      Объем Чистого спирта:
+      <p className={s.sought}>
+        <span> {props.volClearAlc} </span> л.
+      </p>
       <p className={s.explanation}>
-        Результаты рассчета актуальны при заданной температуре, учтена поправка
-        на температуру
+        В рассчетах учтена поправка на температуру
       </p>
     </>
   );
