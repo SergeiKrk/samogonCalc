@@ -104,10 +104,11 @@ const PoslePervojCalc = (props) => {
                       value={props.valNecessFortr}
                       className="form-control"
                     >
-                      <option value="20">20%</option>
-                      <option value="10">10%</option>
-                      <option value="15">15%</option>
-                      <option value="25">25%</option>
+                      <option value="20">20°</option>
+                      <option value="25">25°</option>
+                      <option value="30">30°</option>
+                      <option value="35">35°</option>
+                      <option value="40">40°</option>
                     </select>
                   </Col>
                   <Col xs={8} md={4} className={`${s.p10} text-left`}>
