@@ -64,9 +64,7 @@ const SmeshSpirtCalc = (props) => {
       <CardGroup>
         <Card border="dark">
           <Card.Body>
-            <Card.Title>
-              Введите данные для расчета абсолютного спирта
-            </Card.Title>
+            <Card.Title>Калькулятор смешивания алкоголя</Card.Title>
             <Card.Text>
               <Form.Group>
                 <Form.Row>
