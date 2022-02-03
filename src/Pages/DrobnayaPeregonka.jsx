@@ -3,6 +3,10 @@ import Footer from "../Components/Footer/Footer";
 import React from "react";
 import drobnImg from "../assets/img/kalkulyator-drobnoj-peregonki.png";
 import DrobnayaPeregonkaCalcContainer from "../Components/Calcs/DrobnayaPeregonka/DrobnayaPeregonkaCalcContainer";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
 const DrobnayaPeregonka = (props) => {
   return (
@@ -21,25 +25,25 @@ const DrobnayaPeregonka = (props) => {
           urlSeo: "https://samogoncalc.ru/kalkulyator-drobnoj-peregonki/",
         }}
       />
-      <div className="container text-left">
-        <br />
-        <p>
-          Нужно разбавить спирт или дистиллят до конкретной крепости? Наш
-          быстрый онлайн калькулятор разбавления самогона водой поможет.
-        </p>
-        <p>
-          В онлайн режиме он поможет подобрать пропорции воды и самогона. Нужно
-          лишь вписать в программу 3 параметра: первоначальный объем, крепость
-          самогона и требуемую крепость. Калькулятор мгновенно произведет нужные
-          расчеты и выдаст результат. Например: у вас есть 5 литров сортировки
-          крепостью 62%, вам нужно разбавить ее до 40%. Заполнив 3 поля в онлайн
-          калькуляторы, мы видим результат: необходимо долить 2,75 литров воды.
-          Важный момент — результаты будут правильными, если температура всех
-          жидкостей 20°С.
-        </p>
-        <br />
-      </div>
+      <Container>
+        <Row>
+          <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              Калькулятор дробной перегонки спирта-сырца поможет узнать объем
+              абсолютного спирта, отобрать «головы» и «хвосты», а так же объем
+              продукта заданной вами крепости.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <DrobnayaPeregonkaCalcContainer />
+      <Container>
+        <Row>
+          <Col className="text-left mt-3" md={{ span: 8, offset: 2 }}>
+            <p></p>
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </div>
   );
