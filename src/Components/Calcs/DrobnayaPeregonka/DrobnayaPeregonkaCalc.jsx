@@ -68,9 +68,7 @@ const DrobnayaPeregonkaCalc = (props) => {
       <CardGroup>
         <Card border="dark">
           <Card.Body>
-            <Card.Title>
-              Введите данные для разбавления спирта (самогона) водой
-            </Card.Title>
+            <Card.Title>Введите данные для второй перегонки</Card.Title>
             <Card.Text>
               <Form.Group>
                 <br />
