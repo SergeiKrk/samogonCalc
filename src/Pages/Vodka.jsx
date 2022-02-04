@@ -4,6 +4,10 @@ import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import VodkaCalcContainer from "../Components/Calcs/Vodka/VodkaCalcContainer";
 import vodkaImg from "../assets/img/kalkulyator-vodki-iz-spirta.png";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
 const Vodka = (props) => {
   return (
@@ -23,16 +27,49 @@ const Vodka = (props) => {
         }}
       />
 
-      <div className="container mt-5">
-        <p className="text-left mb-4">
-          У Вас есть медицинский спирт, домашний ректификат или крепкий
-          дистиллят (самогон) из которого хотите получить водку или настойку
-          крепостью в 40°? Воспользуйтесь калькулятором водки, чтобы узнать,
-          какой объем напитка получится после разбавления и сколько нужно
-          добавить воды к имеющемуся объему спирта.
-        </p>
-      </div>
+      <Container>
+        <Row>
+          <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              У Вас есть медицинский спирт, домашний ректификат или крепкий
+              дистиллят (самогон) из которого хотите получить водку или настойку
+              крепостью в 40°? Воспользуйтесь калькулятором водки, чтобы узнать,
+              какой объем напитка получится после разбавления и сколько нужно
+              добавить воды к имеющемуся объему спирта.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <VodkaCalcContainer />
+      <Container>
+        <Row>
+          <Col className="text-left mt-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              Например, у вас есть 3 литра медицинского спирта, вы хотите
+              рассчитать сколько воды нужно долить и сколько водки получится
+              после разбавления. Введите в левую часть калькулятора "Объем
+              спирта или дистиллята" (например, 3 л.), "Крепость спирта или
+              дистиллята" (например, 96°), "Температура спирта или дистиллята"
+              (25 °С) и "Температура воды" (20 °С). Никаких кнопок для расчета
+              нажимать не нужно, результат появится автоматически после ввода
+              всех параметров.
+            </p>
+            <p>Результат:</p>
+            <ul>
+              <li>Воды долить: 4.09 л.</li>
+              <li>Объем водки: 7.09 л.</li>
+            </ul>
+            <p>
+              Если вы хотите разбавить самогон или спирт до какой-то другой
+              крепости, то{" "}
+              <a href="/kalkulyator-razbavleniya-samogona-vodoj">
+                Калькулятор разбавления спирта водой
+              </a>{" "}
+              вам поможет.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </div>
   );
