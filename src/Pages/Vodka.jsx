@@ -7,7 +7,6 @@ import vodkaImg from "../assets/img/kalkulyator-vodki-iz-spirta.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
 
 const Vodka = (props) => {
   return (

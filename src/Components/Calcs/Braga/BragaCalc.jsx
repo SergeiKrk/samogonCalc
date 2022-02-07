@@ -74,16 +74,10 @@ const BragaCalc = (props) => {
 
   return (
     <div className="container">
-      <h2>Рассчитайте параметры сахарной или зерновой браги</h2>
-
       <CardGroup>
         <Card border="dark">
           <Card.Body>
-            <Card.Title>
-              Введите данные для расчета крепости браги, количества воды для
-              сусла и потенциального объема спирта-сырца (первого самогона) на
-              выходе:
-            </Card.Title>
+            <Card.Title>Введите данные для расчета:</Card.Title>
             <Card.Text>
               <Form.Group>
                 <br />
