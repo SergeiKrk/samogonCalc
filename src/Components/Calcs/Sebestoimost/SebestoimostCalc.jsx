@@ -107,8 +107,6 @@ const SebestoimostCalc = (props) => {
 
   return (
     <div className="container">
-      <h2>Рассчитайте стоимость уже готового напитка</h2>
-
       <CardGroup>
         <Card border="dark">
           <Card.Body>

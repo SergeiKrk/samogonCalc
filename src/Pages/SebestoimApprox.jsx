@@ -2,6 +2,9 @@ import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import SebestoimApproxCalcContainer from "../Components/Calcs/SebestoimApprox/SebestoimApproxCalcContainer";
 import sebestoimostAprImg from "../assets/img/kalkulyator-sebestoimosti-samogona.png";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const SebestoimApprox = (props) => {
   return (
@@ -20,10 +23,61 @@ const SebestoimApprox = (props) => {
         }}
       />
 
-      <div className="container mt-5">
-        <p className="text-left mb-4">тра-та-та</p>
-      </div>
+      <Container>
+        <Row>
+          <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              Калькулятор поможет рассчитать примерную себестоимость и объем
+              самогона даже если вы еще не ставили брагу и не перегоняли
+              дистиллят.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <SebestoimApproxCalcContainer />
+      <Container>
+        <Row>
+          <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              Если вы ещё не начали готовить самогон, не поставили брагу, но
+              задумались о выгоде мероприятия, логичным будет посчитать
+              примерную стоимость будущего напитка.
+            </p>
+            <h2>
+              Как рассчитывается примерная стоимость ещё неготового самогона?
+            </h2>
+            <p>
+              Для расчёта примерной стоимости дистиллята требуется немного
+              больше параметров, которые сложнее учесть вручную.
+              Онлайн-калькуляторы упрощают эту работу, предлагают вам указать:
+            </p>
+            <ul>
+              <li>Вид используемого сырья (сахар или вид круп);</li>
+              <li>Общая предполагаемая масса сырья;</li>
+              <li>Цена сырья за 1 кг.;</li>
+              <li>Стоимость дрожжей;</li>
+              <li>Стоимость бентонита;</li>
+              <li>Стоимость угля;</li>
+              <li>Энергозатраты в рублях (ожидаемые затраты);</li>
+              <li>КПД самогонного аппарата в процентах;</li>
+              <li>Доли "голов" и "хвостов" от общего объёма в процентах.</li>
+            </ul>
+            <p>
+              В ходе расчёта с данными параметрами вы получите значения
+              стоимости за литр готового напитка, объём абсолютного спирта и
+              объём итогового дистиллята с крепостью в 40 градусов.
+            </p>
+            <p>
+              Если дистиллят уже готов и вы хотите быстро посчитать стоимоть
+              литра или полулитра, то можно воспользоваться{" "}
+              <a href="/kalkulyator-sebestoimosti-samogona">
+                калькулятором себестоимости самогона
+              </a>
+              .
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </div>
   );

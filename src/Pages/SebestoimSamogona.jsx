@@ -6,7 +6,6 @@ import sebestoimostImg from "../assets/img/kalkulyator-sebestoimosti-samogona.pn
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/Card";
 
 const SebestoimSamogona = (props) => {
   return (

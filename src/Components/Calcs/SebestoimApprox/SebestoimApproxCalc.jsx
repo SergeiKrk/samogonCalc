@@ -128,13 +128,6 @@ const SebestoimApproxCalc = (props) => {
   );
   return (
     <div className="container">
-      <br />
-      <h2>Оцените примерную стоимость самогона</h2>
-      <p>
-        Если брагу еще не ставили, но хотите хотя бы примерно оценить
-        себестоимость будущего напитка.
-      </p>
-
       <CardGroup>
         <Card border="dark">
           <Card.Body>
