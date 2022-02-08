@@ -2,6 +2,9 @@ import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import ZamenaCalcContainer from "../Components/Calcs/Zamena/ZamenaCalcContainer";
 import zamenaSaharaImg from "../assets/img/kalkulyator-zameny-sahara-glyukozoj.png";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const ZamenyGlyukozoj = (props) => {
   return (
@@ -19,17 +22,32 @@ const ZamenyGlyukozoj = (props) => {
           urlSeo: "https://samogoncalc.ru/kalkulyator-zameny-sahara-glyukozoj/",
         }}
       />
-
-      <div className="container mt-5">
-        <p className="text-left mb-4">
-          Вы хотите полоучить более качественный дистилят, чем получали раньше
-          из обычного сахара? У Вас есть глюкоза или декстроза, но вы не знаете
-          сколько глюкозы понадобится, чтобы выход спирта из браги был как с 1
-          кг обычного сахара? Воспользуйтесь калькулятором ЗАМЕНЫ САХАРА
-          ГЛЮКОЗОЙ, чтобы узнать.
-        </p>
-      </div>
+      <Container>
+        <Row>
+          <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              Вы хотите полоучить более качественный дистилят, чем получали
+              раньше из обычного сахара? У Вас есть глюкоза или декстроза, но вы
+              не знаете сколько глюкозы понадобится, чтобы выход спирта из браги
+              был как с 1 кг обычного сахара? Воспользуйтесь калькулятором
+              ЗАМЕНЫ САХАРА ГЛЮКОЗОЙ, чтобы узнать.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <ZamenaCalcContainer />
+      <Container>
+        <Row>
+          <Col className="text-left" md={{ span: 8, offset: 2 }}>
+            <p>
+              Например, вы хотите получить дистиллят из декстрозы такое же
+              количество, как получили бы из 6 кг сахара. Заполняем поле
+              "Количество сахара" и автоматически получаем ответ "6.3 кг." в
+              поле справа.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </div>
   );
