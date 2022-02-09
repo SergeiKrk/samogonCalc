@@ -2,6 +2,9 @@ import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import TemperatureCalcContainer from "../Components/Calcs/Temperature/TemperatureCalcContainer";
 import otTemperaturyImg from "../assets/img/kalkulyator-spirta-ot-temperatury.png";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const SpirtaTemper = (props) => {
   return (
@@ -13,22 +16,37 @@ const SpirtaTemper = (props) => {
           Description:
             "Рассчитает реальную крепость самогона (дистиллята) при температуре отличной от 20 °C.",
           Href: "kalkulyator-spirta-ot-temperatury",
-          titleSeo: "Калькулятор крепости самогона (спирта) от температуры",
+          titleSeo:
+            "Калькулятор крепости самогона от температуры - коррекция показаний ареометра",
           descriptionSeo:
             "Онлайн калькулятор поможет скорректировать крепость самогона в зависимости от температуры дистиллята",
           urlSeo: "https://samogoncalc.ru/kalkulyator-spirta-ot-temperatury/",
         }}
       />
 
-      <div className="container mt-5">
-        <p className="text-left mb-4">
-          У Вас есть медицинский спирт или крепкий дистиллят (самогон) из
-          которого хотите получить водку? Воспользуйтесь калькулятором водки,
-          чтобы узнать, какой объем напитка получится после разбавления и
-          сколько нужно добавить воды к имеющемуся объему спирта.
-        </p>
-      </div>
+      <Container>
+        <Row>
+          <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              Калькулятор спирта от температуры поможет рассчитать реальную
+              крепость при любой температуре дистиллята
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <TemperatureCalcContainer />
+      <Container>
+        <Row>
+          <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p>
+              Ареометр, к примеру, бытовой спиртомер АСП-3, верно измеряет
+              крепость только при температуре 20 °C. Наш онлайн калькулятор
+              подскажет реальную крепость самогона при температуре больше или
+              меньше 20 °C.
+            </p>
+          </Col>
+        </Row>
+      </Container>
       <Footer />
     </div>
   );
