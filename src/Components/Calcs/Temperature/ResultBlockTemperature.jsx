@@ -6,7 +6,7 @@ const ResultBlockTemperature = (props) => {
     <div key={props.id}>
       <p>Крепость с поправкой:</p>
       <p className={s.sought}>
-        <span> {props.volStrenghth} </span> °
+        <span> {props.volStrenghth < 0 ? "0" : props.volStrenghth} </span> °
       </p>
       <p className={s.explanation}>
         Результаты расчетов представлены с поправкой на температуру.
