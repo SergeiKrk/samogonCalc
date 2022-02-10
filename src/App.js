@@ -7,6 +7,7 @@ import store from "./redux/redux-store";
 import { withSuspense } from "./hoc/withSuspense";
 import NavbarMenu from "./Components/Header/NavbarMenu";
 import Home from "./Pages/Home/Home";
+import TagManager from "react-gtm-module";
 
 const AbsolyutnijSpirt = React.lazy(() => import("./Pages/AbsolyutnijSpirt"));
 const DrobnayaPeregonka = React.lazy(() => import("./Pages/DrobnayaPeregonka"));
@@ -24,6 +25,12 @@ const SpirtaTemper = React.lazy(() => import("./Pages/SpirtaTemper"));
 const ZamenyGlyukozoj = React.lazy(() => import("./Pages/ZamenyGlyukozoj"));
 const About = React.lazy(() => import("./Pages/About"));
 const NotFound404 = React.lazy(() => import("./Pages/NotFound404"));
+
+const tagManagerArgs = {
+  gtmId: "GTM-MDC575K",
+};
+
+TagManager.initialize(tagManagerArgs);
 
 const App = (props) => {
   //
