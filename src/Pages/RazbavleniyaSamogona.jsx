@@ -116,7 +116,7 @@ const RazbavleniyaSamogona = (props) => {
             <h2>Формула разбавления спирта и самогона водой</h2>
             <Container className="mt-3">
               <Row>
-                <Col>
+                <Col xs="12" md="6">
                   <Card
                     className="text-center mt-2"
                     bg="light"
@@ -128,7 +128,7 @@ const RazbavleniyaSamogona = (props) => {
                     </p>
                   </Card>
                 </Col>
-                <Col>
+                <Col xs="12" md="6" className=" mt-2">
                   <ul>
                     <li>
                       <b>V</b> – требуемый объем воды;
@@ -163,7 +163,7 @@ const RazbavleniyaSamogona = (props) => {
               разбавления, в первой строке - крепость после разбавления, а на
               пересечении - объем воды, который нужно долить.
             </p>
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover responsive="sm" size="sm">
               <thead>
                 <tr>
                   <td>было/стало</td>

@@ -13,7 +13,10 @@ const NavbarMenu = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <NavDropdown title="Все калькуляторы" id="collasible-nav-dropdown">
+            <NavDropdown
+              title="⭐️ Все калькуляторы"
+              id="collasible-nav-dropdown"
+            >
               <LinkContainer to="/kalkulyator-razbavleniya-samogona-vodoj/">
                 <NavDropdown.Item>
                   <FaCalculator /> Разбавления самогона водой
