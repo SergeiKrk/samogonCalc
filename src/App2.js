@@ -1,30 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import store from "./redux/redux-store";
 import { withSuspense } from "./hoc/withSuspense";
 import NavbarMenu from "./Components/Header/NavbarMenu";
-import Home from "./Pages/Home/Home";
 import TagManager from "react-gtm-module";
-
-const AbsolyutnijSpirt = React.lazy(() => import("./Pages/AbsolyutnijSpirt"));
-const DrobnayaPeregonka = React.lazy(() => import("./Pages/DrobnayaPeregonka"));
-const RazbavleniyaSamogona = React.lazy(() =>
-  import("./Pages/RazbavleniyaSamogona")
-);
-const OtborGolov = React.lazy(() => import("./Pages/OtborGolov"));
-const PoslePervoj = React.lazy(() => import("./Pages/PoslePervoj"));
-const SmeshSpirt = React.lazy(() => import("./Pages/SmeshSpirt"));
-const SebestoimSamogona = React.lazy(() => import("./Pages/SebestoimSamogona"));
-const SebestoimApprox = React.lazy(() => import("./Pages/SebestoimApprox"));
-const SaharBragi = React.lazy(() => import("./Pages/SaharBragi"));
-const Vodka = React.lazy(() => import("./Pages/Vodka"));
-const SpirtaTemper = React.lazy(() => import("./Pages/SpirtaTemper"));
-const ZamenyGlyukozoj = React.lazy(() => import("./Pages/ZamenyGlyukozoj"));
-const About = React.lazy(() => import("./Pages/About"));
-const NotFound404 = React.lazy(() => import("./Pages/NotFound404"));
+import Home from "./Pages/Home/Home";
+import AbsolyutnijSpirt from "./Pages/AbsolyutnijSpirt";
+import DrobnayaPeregonka from "./Pages/DrobnayaPeregonka";
+import RazbavleniyaSamogona from "./Pages/RazbavleniyaSamogona";
+import OtborGolov from "./Pages/OtborGolov";
+import PoslePervoj from "./Pages/PoslePervoj";
+import SmeshSpirt from "./Pages/SmeshSpirt";
+import SebestoimSamogona from "./Pages/SebestoimSamogona";
+import SebestoimApprox from "./Pages/SebestoimApprox";
+import SaharBragi from "./Pages/SaharBragi";
+import Vodka from "./Pages/Vodka";
+import SpirtaTemper from "./Pages/SpirtaTemper";
+import ZamenyGlyukozoj from "./Pages/ZamenyGlyukozoj";
+import About from "./Pages/About";
+import NotFound404 from "./Pages/NotFound404";
 
 const tagManagerArgs = {
   gtmId: "GTM-MDC575K",
