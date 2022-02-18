@@ -1,7 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import store from "./redux/redux-store";
 import { withSuspense } from "./hoc/withSuspense";

@@ -7,7 +7,7 @@ const NavbarMenu = () => {
   return (
     <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <LinkContainer to="//">
+        <LinkContainer to="/">
           <Navbar.Brand>SamagonCalc</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
