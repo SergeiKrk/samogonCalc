@@ -31,14 +31,12 @@ const TemperatureCalc = (props) => {
       <CardGroup>
         <Card border="dark">
           <Card.Body>
-            <Card.Title>
-              Введите данные для разбавления до водочной крепости
-            </Card.Title>
+            <Card.Title>Введите данные для расчета:</Card.Title>
             <Card.Text>
               <Form.Group>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -59,7 +57,7 @@ const TemperatureCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >

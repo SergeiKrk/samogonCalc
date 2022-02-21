@@ -51,7 +51,7 @@ const VodkaCalc = (props) => {
               <Form.Group>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -72,7 +72,7 @@ const VodkaCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -93,7 +93,7 @@ const VodkaCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -115,7 +115,7 @@ const VodkaCalc = (props) => {
                 <br />
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >

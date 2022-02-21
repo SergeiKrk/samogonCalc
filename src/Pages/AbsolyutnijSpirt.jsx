@@ -70,7 +70,7 @@ const AbsolyutnijSpirt = (props) => {
             <h2>Формула абсолютного спирта</h2>
             <Container className="mt-3">
               <Row>
-                <Col>
+                <Col xs="12" md="6">
                   <Card
                     className="text-center mt-2"
                     bg="light"
@@ -82,7 +82,7 @@ const AbsolyutnijSpirt = (props) => {
                     </p>
                   </Card>
                 </Col>
-                <Col>
+                <Col xs="12" md="6">
                   <ul>
                     <li>
                       <b>Sa</b> – абсолютный спирт;
@@ -106,7 +106,7 @@ const AbsolyutnijSpirt = (props) => {
             <h2>Формула чистого спирта</h2>
             <Container className="mt-3">
               <Row>
-                <Col>
+                <Col xs="12" md="6">
                   <ul>
                     <li>
                       <b>Sч</b> – Объем чистого спирт;
@@ -119,7 +119,7 @@ const AbsolyutnijSpirt = (props) => {
                     </li>
                   </ul>
                 </Col>
-                <Col>
+                <Col xs="12" md="6">
                   <Card
                     className="text-center mt-2"
                     bg="light"

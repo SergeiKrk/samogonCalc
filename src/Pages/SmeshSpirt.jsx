@@ -48,7 +48,7 @@ const SmeshSpirt = (props) => {
             <h2>Формула смешивания спиртов</h2>
             <Container className="mt-3">
               <Row>
-                <Col>
+                <Col xs="12" md="6">
                   <Card
                     className="text-center mt-2"
                     bg="light"
@@ -60,7 +60,7 @@ const SmeshSpirt = (props) => {
                     </p>
                   </Card>
                 </Col>
-                <Col>
+                <Col xs="12" md="6">
                   <ul>
                     <li>
                       <b>K</b> – крепость смешанной жидкости,

@@ -48,7 +48,7 @@ const PoslePervojCalc = (props) => {
                 <br />
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -69,7 +69,7 @@ const PoslePervojCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -91,7 +91,7 @@ const PoslePervojCalc = (props) => {
                 <br />
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >

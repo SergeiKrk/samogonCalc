@@ -143,14 +143,14 @@ const SebestoimApproxCalc = (props) => {
                   overlay={rawMaterialsOverlay}
                 >
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
                     Сырье для самогона (дистиллята):
                   </Form.Label>
                 </OverlayTrigger>
-                <Col xs={6} md={6}>
+                <Col xs={9} md={4}>
                   <select
                     ref={rawMaterialsRef}
                     onChange={allValuesOnChange}
@@ -170,7 +170,7 @@ const SebestoimApproxCalc = (props) => {
               </Form.Row>
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >
@@ -197,7 +197,7 @@ const SebestoimApproxCalc = (props) => {
               </Form.Row>
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >
@@ -224,7 +224,7 @@ const SebestoimApproxCalc = (props) => {
               </Form.Row>
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >
@@ -252,7 +252,7 @@ const SebestoimApproxCalc = (props) => {
               <br />
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >
@@ -279,7 +279,7 @@ const SebestoimApproxCalc = (props) => {
               </Form.Row>
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >
@@ -307,7 +307,7 @@ const SebestoimApproxCalc = (props) => {
               <br />
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >
@@ -335,7 +335,7 @@ const SebestoimApproxCalc = (props) => {
               <br />
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >
@@ -362,7 +362,7 @@ const SebestoimApproxCalc = (props) => {
               </Form.Row>
               <Form.Row>
                 <Form.Label
-                  className={`${s.p10} text-right`}
+                  className={`${s.p10} text-md-right`}
                   column="sm"
                   lg={6}
                 >

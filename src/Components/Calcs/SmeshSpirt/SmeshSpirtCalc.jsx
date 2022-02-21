@@ -69,7 +69,7 @@ const SmeshSpirtCalc = (props) => {
               <Form.Group>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -90,7 +90,7 @@ const SmeshSpirtCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -111,7 +111,7 @@ const SmeshSpirtCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -133,7 +133,7 @@ const SmeshSpirtCalc = (props) => {
                 <br />
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -154,7 +154,7 @@ const SmeshSpirtCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -175,7 +175,7 @@ const SmeshSpirtCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >

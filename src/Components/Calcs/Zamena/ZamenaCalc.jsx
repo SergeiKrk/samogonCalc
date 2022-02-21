@@ -23,7 +23,7 @@ const ZamenaCalc = (props) => {
     <ResultBlockZamena key={c.id} volGlucose={c.volGlucose} />
   ));
   return (
-    <div className="container  mb-5">
+    <div className="container">
       <CardGroup>
         <Card border="dark">
           <Card.Body>
@@ -32,7 +32,7 @@ const ZamenaCalc = (props) => {
               <Form.Group>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >

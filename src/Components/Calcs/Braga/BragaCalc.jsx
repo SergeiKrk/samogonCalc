@@ -88,7 +88,7 @@ const BragaCalc = (props) => {
                     overlay={rawMaterialsOverlay}
                   >
                     <Form.Label
-                      className={`${s.p10} text-right`}
+                      className={`${s.p10} text-md-right`}
                       column="sm"
                       lg={6}
                     >
@@ -115,7 +115,7 @@ const BragaCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -142,7 +142,7 @@ const BragaCalc = (props) => {
                 </Form.Row>
                 <Form.Row>
                   <Form.Label
-                    className={`${s.p10} text-right`}
+                    className={`${s.p10} text-md-right`}
                     column="sm"
                     lg={6}
                   >
@@ -164,7 +164,7 @@ const BragaCalc = (props) => {
                     />
                   </Col>
                   <Col className={`${s.p10} text-left`} xs={3} md={1}>
-                    , ₽.
+                    , л.
                   </Col>
                 </Form.Row>
               </Form.Group>
