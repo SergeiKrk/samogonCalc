@@ -15,6 +15,14 @@ const HelmetSeoTags = (props) => {
         property="og:image"
         content={`https://samogoncalc.ru${props.Img}`}
       />
+      <meta
+        property="og:image:secure_url"
+        content={`https://samogoncalc.ru${props.Img}`}
+      />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="300" />
+      <meta property="og:image:height" content="300" />
+      <meta property="og:image:alt" content={props.titleSeo} />
       <meta property="og:site_name" content="SamogonCalc" />
       <meta property="og:locale" content="ru_RU" />
     </Helmet>

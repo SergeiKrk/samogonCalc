@@ -10,6 +10,8 @@ const HeaderBlock = (props) => {
         <div className="container d-flex align-items-center flex-column">
           <img
             src={props.HeaderBlock.Img}
+            width="240"
+            height="240"
             className="masthead-avatar mb-5"
             alt={props.HeaderBlock.Title}
           />
