@@ -59,7 +59,7 @@ const PoslePervojCalc = (props) => {
                       ref={InitVol}
                       onChange={allValuesOnChange}
                       value={props.valInitVol}
-                      type="text"
+                      type="number"
                       placeholder="начальный объем, литров"
                     />
                   </Col>
@@ -80,7 +80,7 @@ const PoslePervojCalc = (props) => {
                       ref={InitFortr}
                       onChange={allValuesOnChange}
                       value={props.valInitFortr}
-                      type="text"
+                      type="number"
                       placeholder="начальная крепость, градусов"
                     />
                   </Col>

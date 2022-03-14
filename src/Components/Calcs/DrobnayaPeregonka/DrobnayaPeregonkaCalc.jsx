@@ -85,7 +85,7 @@ const DrobnayaPeregonkaCalc = (props) => {
                       ref={rawAlcoholVol}
                       onChange={allValuesOnChange}
                       value={props.alcoholVol}
-                      type="text"
+                      type="number"
                       placeholder="начальный объем, литров"
                     />
                   </Col>
@@ -106,7 +106,7 @@ const DrobnayaPeregonkaCalc = (props) => {
                       ref={rawAlcoholFortr}
                       onChange={allValuesOnChange}
                       value={props.alcoholFortr}
-                      type="text"
+                      type="number"
                       placeholder="начальная крепость, градусов"
                     />
                   </Col>
@@ -127,7 +127,7 @@ const DrobnayaPeregonkaCalc = (props) => {
                       ref={afterDistillingFortr}
                       onChange={allValuesOnChange}
                       value={props.distillingFortr}
-                      type="text"
+                      type="number"
                       placeholder="требуемая крепость, градусов"
                     />
                   </Col>

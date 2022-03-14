@@ -132,7 +132,7 @@ const BragaCalc = (props) => {
                       ref={massMaterialsRef}
                       onChange={allValuesOnChange}
                       value={props.massMaterials}
-                      type="text"
+                      type="number"
                       placeholder="масса, кг."
                     />
                   </Col>
@@ -159,7 +159,7 @@ const BragaCalc = (props) => {
                       ref={mashVolumeRef}
                       onChange={allValuesOnChange}
                       value={props.mashVolume}
-                      type="text"
+                      type="number"
                       placeholder="объем, л."
                     />
                   </Col>

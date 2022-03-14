@@ -47,7 +47,7 @@ const TemperatureCalc = (props) => {
                       ref={firstStrRef}
                       onChange={allValuesOnChange}
                       value={props.firstStr}
-                      type="text"
+                      type="number"
                       placeholder="градусов"
                     />
                   </Col>
@@ -68,7 +68,7 @@ const TemperatureCalc = (props) => {
                       ref={firstTempRef}
                       onChange={allValuesOnChange}
                       value={props.firstTemp}
-                      type="text"
+                      type="number"
                       placeholder="температура, градусов"
                     />
                   </Col>

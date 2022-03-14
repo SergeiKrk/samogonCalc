@@ -43,7 +43,7 @@ const ZamenaCalc = (props) => {
                       ref={sugarRef}
                       onChange={allValuesOnChange}
                       value={props.sugar}
-                      type="text"
+                      type="number"
                       placeholder="масса сахара"
                     />
                   </Col>

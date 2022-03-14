@@ -62,7 +62,7 @@ const VodkaCalc = (props) => {
                       ref={firstVolume}
                       onChange={allValuesOnChange}
                       value={props.firstVol}
-                      type="text"
+                      type="number"
                       placeholder="объем, литров"
                     />
                   </Col>
@@ -83,7 +83,7 @@ const VodkaCalc = (props) => {
                       ref={alcoholStrRef}
                       onChange={allValuesOnChange}
                       value={props.firstStr}
-                      type="text"
+                      type="number"
                       placeholder="градусов"
                     />
                   </Col>
@@ -104,7 +104,7 @@ const VodkaCalc = (props) => {
                       ref={firstTemperature}
                       onChange={allValuesOnChange}
                       value={props.firstTemp}
-                      type="text"
+                      type="number"
                       placeholder="объем, литров"
                     />
                   </Col>
@@ -126,7 +126,7 @@ const VodkaCalc = (props) => {
                       ref={secondTemperature}
                       onChange={allValuesOnChange}
                       value={props.secondTemp}
-                      type="text"
+                      type="number"
                       placeholder="крепость, градусов"
                     />
                   </Col>

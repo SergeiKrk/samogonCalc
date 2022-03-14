@@ -187,7 +187,7 @@ const SebestoimApproxCalc = (props) => {
                     ref={massMaterialsRef}
                     onChange={allValuesOnChange}
                     value={props.massMaterials}
-                    type="text"
+                    type="number"
                     placeholder="масса, кг."
                   />
                 </Col>
@@ -214,7 +214,7 @@ const SebestoimApproxCalc = (props) => {
                     ref={costMaterialsRef}
                     onChange={allValuesOnChange}
                     value={props.costMaterials}
-                    type="text"
+                    type="number"
                     placeholder="стоимость, руб."
                   />
                 </Col>
@@ -241,7 +241,7 @@ const SebestoimApproxCalc = (props) => {
                     ref={yeastCostRef}
                     onChange={allValuesOnChange}
                     value={props.yeastCost}
-                    type="text"
+                    type="number"
                     placeholder="цена, руб."
                   />
                 </Col>
@@ -269,7 +269,7 @@ const SebestoimApproxCalc = (props) => {
                     ref={wgeRef}
                     onChange={allValuesOnChange}
                     value={props.wge}
-                    type="text"
+                    type="number"
                     placeholder="стоимость, руб."
                   />
                 </Col>
@@ -296,7 +296,7 @@ const SebestoimApproxCalc = (props) => {
                     ref={bentoniteCoalRef}
                     onChange={allValuesOnChange}
                     value={props.bentoniteCoal}
-                    type="text"
+                    type="number"
                     placeholder="стоимость, руб."
                   />
                 </Col>
@@ -324,7 +324,7 @@ const SebestoimApproxCalc = (props) => {
                     ref={efficiencyRef}
                     onChange={allValuesOnChange}
                     value={props.efficiency}
-                    type="text"
+                    type="number"
                     placeholder="КПД, %"
                   />
                 </Col>

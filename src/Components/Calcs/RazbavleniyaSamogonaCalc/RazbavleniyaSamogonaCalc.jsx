@@ -56,7 +56,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                       ref={InitVol}
                       onChange={allValuesOnChange}
                       value={props.valInitVol}
-                      type="text"
+                      type="number"
                       placeholder="начальный объем, литров"
                     />
                   </Col>
@@ -73,7 +73,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                       ref={InitFortr}
                       onChange={allValuesOnChange}
                       value={props.valInitFortr}
-                      type="text"
+                      type="number"
                       placeholder="начальная крепость, градусов"
                     />
                   </Col>
@@ -90,7 +90,7 @@ const RazbavleniyaSamogonaCalc = (props) => {
                       ref={NecessFortr}
                       onChange={allValuesOnChange}
                       value={props.valNecessFortr}
-                      type="text"
+                      type="number"
                       placeholder="требуемая крепость, градусов"
                     />
                   </Col>

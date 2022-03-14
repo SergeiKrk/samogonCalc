@@ -135,7 +135,7 @@ const SebestoimostCalc = (props) => {
                       ref={materialCostRef}
                       onChange={allValuesOnChange}
                       value={props.materialCost}
-                      type="text"
+                      type="number"
                       placeholder="цена за 1 кг."
                     />
                   </Col>
@@ -162,7 +162,7 @@ const SebestoimostCalc = (props) => {
                       ref={materialMassRef}
                       onChange={allValuesOnChange}
                       value={props.materialMass}
-                      type="text"
+                      type="number"
                       placeholder="масса, кг."
                     />
                   </Col>
@@ -190,7 +190,7 @@ const SebestoimostCalc = (props) => {
                       ref={yeastCostRef}
                       onChange={allValuesOnChange}
                       value={props.yeastCost}
-                      type="text"
+                      type="number"
                       placeholder="цена, руб."
                     />
                   </Col>
@@ -217,7 +217,7 @@ const SebestoimostCalc = (props) => {
                       ref={bentoniteCostRef}
                       onChange={allValuesOnChange}
                       value={props.bentoniteCost}
-                      type="text"
+                      type="number"
                       placeholder="стоимость, руб."
                     />
                   </Col>
@@ -244,7 +244,7 @@ const SebestoimostCalc = (props) => {
                       ref={coalCostRef}
                       onChange={allValuesOnChange}
                       value={props.coalCost}
-                      type="text"
+                      type="number"
                       placeholder="стоимость, руб."
                     />
                   </Col>
@@ -271,7 +271,7 @@ const SebestoimostCalc = (props) => {
                       ref={wgeCostRef}
                       onChange={allValuesOnChange}
                       value={props.wgeCostCost}
-                      type="text"
+                      type="number"
                       placeholder="стоимость, руб."
                     />
                   </Col>
@@ -299,7 +299,7 @@ const SebestoimostCalc = (props) => {
                       ref={volumeDrinkRef}
                       onChange={allValuesOnChange}
                       value={props.volumeDrink}
-                      type="text"
+                      type="number"
                       placeholder="Объем напитка, л."
                     />
                   </Col>

@@ -58,7 +58,7 @@ const AbsolyutnijSpirtCalc = (props) => {
                       ref={InitVol}
                       onChange={allValuesOnChange}
                       value={props.alcoholVol}
-                      type="text"
+                      type="number"
                       placeholder="объем, литров"
                     />
                   </Col>
@@ -79,7 +79,7 @@ const AbsolyutnijSpirtCalc = (props) => {
                       ref={InitFortr}
                       onChange={allValuesOnChange}
                       value={props.alcoholFortr}
-                      type="text"
+                      type="number"
                       placeholder="крепость, градусов"
                     />
                   </Col>
@@ -100,7 +100,7 @@ const AbsolyutnijSpirtCalc = (props) => {
                       ref={InitTemperature}
                       onChange={allValuesOnChange}
                       value={props.firstTemp}
-                      type="text"
+                      type="number"
                       placeholder="температура, °C"
                     />
                   </Col>

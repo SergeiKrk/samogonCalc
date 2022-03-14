@@ -59,7 +59,7 @@ const OtborGolovCalc = (props) => {
                       ref={InitVol}
                       onChange={allValuesOnChange}
                       value={props.alcoholVol}
-                      type="text"
+                      type="number"
                       placeholder="объем, литров"
                     />
                   </Col>
@@ -80,7 +80,7 @@ const OtborGolovCalc = (props) => {
                       ref={InitFortr}
                       onChange={allValuesOnChange}
                       value={props.alcoholFortr}
-                      type="text"
+                      type="number"
                       placeholder="крепость, градусов"
                     />
                   </Col>
