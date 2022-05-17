@@ -402,6 +402,7 @@ const RazbavleniyaSamogona = (props) => {
               . Он поможет подобрать пропорции и разбавить спирт или самогон
               водой до 40 градусов
             </p>
+            <div id="id-C-A-1654628-3"></div>
           </Col>
         </Row>
       </Container>
