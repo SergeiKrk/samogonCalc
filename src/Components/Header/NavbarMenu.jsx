@@ -76,6 +76,9 @@ const NavbarMenu = () => {
             </NavDropdown>
           </Nav>
           <Nav>
+            {/* <LinkContainer to="/samogonovarenie/">
+              <Nav.Link>Самогоноварение</Nav.Link>
+            </LinkContainer> */}
             <LinkContainer to="/about/">
               <Nav.Link>О проекте</Nav.Link>
             </LinkContainer>

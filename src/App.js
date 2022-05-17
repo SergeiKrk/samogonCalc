@@ -22,6 +22,7 @@ const Vodka = React.lazy(() => import("./Pages/Vodka"));
 const SpirtaTemper = React.lazy(() => import("./Pages/SpirtaTemper"));
 const ZamenyGlyukozoj = React.lazy(() => import("./Pages/ZamenyGlyukozoj"));
 const About = React.lazy(() => import("./Pages/About"));
+const Blog = React.lazy(() => import("./Pages/Blog"));
 const NotFound404 = React.lazy(() => import("./Pages/NotFound404"));
 
 const tagManagerArgs = {
@@ -39,11 +40,11 @@ const App = (props) => {
         <Switch>
           <Route exact path="/" render={() => <Home store={store} />} />
           <Route
-            path="/kalkulyator-razbavleniya-samogona-vodoj"
+            path="/kalkulyator-razbavleniya-samogona-vodoj/"
             render={withSuspense(RazbavleniyaSamogona)}
           />
           <Route
-            path="/kalkulyator-otbor-golov"
+            path="/kalkulyator-otbor-golov/"
             render={withSuspense(OtborGolov)}
           />
           <Route
@@ -51,43 +52,45 @@ const App = (props) => {
             render={withSuspense(DrobnayaPeregonka)}
           />
           <Route
-            path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki"
+            path="/razbavlenie-samogona-vodoj-posle-pervoj-peregonki/"
             render={withSuspense(PoslePervoj)}
           />
           <Route
-            path="/kalkulyator-absolyutnogo-spirta"
+            path="/kalkulyator-absolyutnogo-spirta/"
             render={withSuspense(AbsolyutnijSpirt)}
           />
           <Route
-            path="/kalkulyator-smeshivaniya-spirtov"
+            path="/kalkulyator-smeshivaniya-spirtov/"
             render={withSuspense(SmeshSpirt)}
           />
           <Route
-            path="/kalkulyator-sebestoimosti-samogona"
+            path="/kalkulyator-sebestoimosti-samogona/"
             render={withSuspense(SebestoimSamogona)}
           />
           <Route
-            path="/primernaya-stoimost-samogona"
+            path="/primernaya-stoimost-samogona/"
             render={withSuspense(SebestoimApprox)}
           />
           <Route
-            path="/kalkulyator-saharnoj-bragi"
+            path="/kalkulyator-saharnoj-bragi/"
             render={withSuspense(SaharBragi)}
           />
           <Route
-            path="/kalkulyator-vodki-iz-spirta"
+            path="/kalkulyator-vodki-iz-spirta/"
             render={withSuspense(Vodka)}
           />
           <Route
-            path="/kalkulyator-spirta-ot-temperatury"
+            path="/kalkulyator-spirta-ot-temperatury/"
             render={withSuspense(SpirtaTemper)}
           />
           <Route
-            path="/kalkulyator-zameny-sahara-glyukozoj"
+            path="/kalkulyator-zameny-sahara-glyukozoj/"
             render={withSuspense(ZamenyGlyukozoj)}
           />
-          <Route path="/about" render={withSuspense(About)} />
-          <Route render={withSuspense(NotFound404)} />
+          <Route path="/about/" render={withSuspense(About)} />
+          {/* <Route path="/samogonovarenie/" render={withSuspense(Blog)} /> */}
+          <Route exact patch="/404/" render={withSuspense(NotFound404)} />
+          <Route path="*" render={withSuspense(NotFound404)} />
         </Switch>
       </Router>
     </div>

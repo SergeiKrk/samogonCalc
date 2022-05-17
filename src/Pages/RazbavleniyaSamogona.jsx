@@ -124,7 +124,7 @@ const RazbavleniyaSamogona = (props) => {
                     body
                   >
                     <p>
-                      <b>V = С * (А / В-1)</b>
+                      <b>V = AC/B - C</b>
                     </p>
                   </Card>
                 </Col>

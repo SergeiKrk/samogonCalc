@@ -75,7 +75,7 @@ let initialState = {
   calcsData: [
     {
       id: 1,
-      href: "kalkulyator-razbavleniya-samogona-vodoj",
+      href: "kalkulyator-razbavleniya-samogona-vodoj/",
       img: `${razbavlenieVodoj}`,
       title: "Калькулятор разбавления самогона водой",
       description:
@@ -83,7 +83,7 @@ let initialState = {
     },
     {
       id: 2,
-      href: "kalkulyator-otbor-golov",
+      href: "kalkulyator-otbor-golov/",
       img: `${otborGolov}`,
       title: "Калькулятор отбор голов",
       description:
@@ -91,7 +91,7 @@ let initialState = {
     },
     {
       id: 3,
-      href: "kalkulyator-drobnoj-peregonki",
+      href: "kalkulyator-drobnoj-peregonki/",
       img: `${drobnojPeregonki}`,
       title: "Калькулятор дробной перегонки спирта-сырца",
       description:
@@ -99,7 +99,7 @@ let initialState = {
     },
     {
       id: 4,
-      href: "razbavlenie-samogona-vodoj-posle-pervoj-peregonki",
+      href: "razbavlenie-samogona-vodoj-posle-pervoj-peregonki/",
       img: `${poslePervoj}`,
       title: "Калькулятор разбавления спирта-сырца (после первого перегона)",
       description:
@@ -107,7 +107,7 @@ let initialState = {
     },
     {
       id: 5,
-      href: "kalkulyator-smeshivaniya-spirtov",
+      href: "kalkulyator-smeshivaniya-spirtov/",
       img: `${smeshivaniyaSpirtov}`,
       title: "Калькулятор смешивания спиртов",
       description:
@@ -115,7 +115,7 @@ let initialState = {
     },
     {
       id: 6,
-      href: "kalkulyator-absolyutnogo-spirta",
+      href: "kalkulyator-absolyutnogo-spirta/",
       img: `${absolyutnogoSpirta}`,
       title: "Калькулятор абсолютного спирта",
       description:
@@ -123,7 +123,7 @@ let initialState = {
     },
     {
       id: 7,
-      href: "kalkulyator-sebestoimosti-samogona",
+      href: "kalkulyator-sebestoimosti-samogona/",
       img: `${sebestoimostiSamogona}`,
       title: "Калькулятор себестоимости самогона",
       description:
@@ -131,7 +131,7 @@ let initialState = {
     },
     {
       id: 8,
-      href: "primernaya-stoimost-samogona",
+      href: "primernaya-stoimost-samogona/",
       img: `${stoimostSamogona}`,
       title: "Калькулятор примерной стоимости самогона",
       description:
@@ -139,7 +139,7 @@ let initialState = {
     },
     {
       id: 9,
-      href: "kalkulyator-saharnoj-bragi",
+      href: "kalkulyator-saharnoj-bragi/",
       img: `${saharnojBragi}`,
       title: "Калькулятор браги",
       description:
@@ -147,7 +147,7 @@ let initialState = {
     },
     {
       id: 10,
-      href: "kalkulyator-vodki-iz-spirta",
+      href: "kalkulyator-vodki-iz-spirta/",
       img: `${vodkiIzSpirta}`,
       title: "Калькулятор водки из спирта",
       description:
@@ -155,7 +155,7 @@ let initialState = {
     },
     {
       id: 11,
-      href: "kalkulyator-spirta-ot-temperatury",
+      href: "kalkulyator-spirta-ot-temperatury/",
       img: `${otTemperatury}`,
       title: "Калькулятор спирта от температуры",
       description:
@@ -163,7 +163,7 @@ let initialState = {
     },
     {
       id: 12,
-      href: "kalkulyator-zameny-sahara-glyukozoj",
+      href: "kalkulyator-zameny-sahara-glyukozoj/",
       img: `${zamenySahara}`,
       title: "Калькулятор замены сахара декстрозой",
       description:

@@ -12,7 +12,7 @@ const DisqusBlock = () => {
       <DiscussionEmbed
         shortname="SamagonCalc"
         config={{
-          url: "http://localhost:3000",
+          url: "https://samogoncalc.ru",
           identifier: 0,
           title: "Комментарии:",
           language: "ru_ru",

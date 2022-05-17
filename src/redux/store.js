@@ -19,7 +19,7 @@ let store = {
       calcsData: [
         {
           id: 1,
-          href: "kalkulyator-razbavleniya-samogona-vodoj",
+          href: "kalkulyator-razbavleniya-samogona-vodoj/",
           img: "https://samogoncalc.ru/img/kalkulyator-razbavleniya-samogona-vodoj.png",
           title: "Калькулятор разбавления самогона водой",
           description:
@@ -27,7 +27,7 @@ let store = {
         },
         {
           id: 2,
-          href: "kalkulyator-otbor-golov",
+          href: "kalkulyator-otbor-golov/",
           img: "https://samogoncalc.ru/img/kalkulyator-otbor-golov.png",
           title: "Калькулятор отбор голов",
           description:
@@ -35,7 +35,7 @@ let store = {
         },
         {
           id: 3,
-          href: "kalkulyator-drobnoj-peregonki",
+          href: "kalkulyator-drobnoj-peregonki/",
           img: "https://samogoncalc.ru/img/kalkulyator-drobnoj-peregonki.png",
           title: "Калькулятор дробной перегонки спирта-сырца",
           description:
@@ -43,7 +43,7 @@ let store = {
         },
         {
           id: 4,
-          href: "razbavlenie-samogona-vodoj-posle-pervoj-peregonki",
+          href: "razbavlenie-samogona-vodoj-posle-pervoj-peregonki/",
           img: "https://samogoncalc.ru/img/razbavlenie-samogona-vodoj-posle-pervoj-peregonki.png",
           title:
             "Калькулятор разбавления самогона водой (после первого перегона)",
@@ -52,7 +52,7 @@ let store = {
         },
         {
           id: 5,
-          href: "razbavlenie-samogona-vodoj-posle-vtorogo-peregona",
+          href: "razbavlenie-samogona-vodoj-posle-vtorogo-peregona/",
           img: "https://samogoncalc.ru/img/razbavlenie-samogona-vodoj-posle-vtorogo-peregona.png",
           title:
             "Калькулятор разбавления самогона водой (после второго перегона)",
@@ -61,7 +61,7 @@ let store = {
         },
         {
           id: 6,
-          href: "kalkulyator-smeshivaniya-spirtov",
+          href: "kalkulyator-smeshivaniya-spirtov/",
           img: "https://samogoncalc.ru/img/kalkulyator-smeshivaniya-spirtov.png",
           title: "Калькулятор смешивания спиртов",
           description:
@@ -69,7 +69,7 @@ let store = {
         },
         {
           id: 7,
-          href: "kalkulyator-absolyutnogo-spirta",
+          href: "kalkulyator-absolyutnogo-spirta/",
           img: "https://samogoncalc.ru/img/kalkulyator-absolyutnogo-spirta.png",
           title: "Калькулятор абсолютного спирта",
           description:
@@ -77,7 +77,7 @@ let store = {
         },
         {
           id: 8,
-          href: "kalkulyator-sebestoimosti-samogona",
+          href: "kalkulyator-sebestoimosti-samogona/",
           img: "https://samogoncalc.ru/img/kalkulyator-sebestoimosti-samogona.png",
           title: "Калькулятор себестоимости самогона",
           description:
@@ -85,7 +85,7 @@ let store = {
         },
         {
           id: 9,
-          href: "kalkulyator-saharnoj-bragi",
+          href: "kalkulyator-saharnoj-bragi/",
           img: "https://samogoncalc.ru/img/kalkulyator-saharnoj-bragi.png",
           title: "Калькулятор сахарной браги",
           description:
@@ -93,7 +93,7 @@ let store = {
         },
         {
           id: 10,
-          href: "kalkulyator-vodki-iz-spirta",
+          href: "kalkulyator-vodki-iz-spirta/",
           img: "https://samogoncalc.ru/img/kalkulyator-vodki-iz-spirta.png",
           title: "Калькулятор водки из спирта",
           description:
@@ -101,7 +101,7 @@ let store = {
         },
         {
           id: 11,
-          href: "kalkulyator-spirta-ot-temperatury",
+          href: "kalkulyator-spirta-ot-temperatury/",
           img: "https://samogoncalc.ru/img/kalkulyator-spirta-ot-temperatury.png",
           title: "Калькулятор спирта от температуры",
           description:
@@ -109,7 +109,7 @@ let store = {
         },
         {
           id: 12,
-          href: "kalkulyator-zameny-sahara-glyukozoj",
+          href: "kalkulyator-zameny-sahara-glyukozoj/",
           img: "https://samogoncalc.ru/img/kalkulyator-zameny-sahara-glyukozoj.png",
           title: "Калькулятор замены сахара глюкозой",
           description:

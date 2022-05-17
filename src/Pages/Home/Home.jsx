@@ -6,6 +6,7 @@ import logoImg from "../../assets/img/kalkulyator-samogonshchika.png";
 import HeaderBlockHome from "../../Components/Header/HeaderBlockHome";
 import Footer from "../../Components/Footer/Footer";
 import HomeContainer from "./HomeContainer";
+import YandexAds from "../../Components/YandexAds/YandexAds";
 const DisqusBlock = lazy(() => import("../../Components/Header/DisqusBlock"));
 
 const Home = (props) => {
@@ -29,6 +30,8 @@ const Home = (props) => {
           <h2 className="page-section-heading text-center text-uppercase text-white">
             Онлайн калькуляторы самогонщика
           </h2>
+
+          <YandexAds />
 
           <div className="divider-custom divider-light">
             <div className="divider-custom-line"></div>
