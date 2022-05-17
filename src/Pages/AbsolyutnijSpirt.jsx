@@ -186,6 +186,7 @@ const AbsolyutnijSpirt = (props) => {
               содержится 4% воды. В абсолютном спирте вода и другие примеси
               отсутствуют.
             </p>
+            <div id="id-C-A-1654628-3"></div>
           </Col>
         </Row>
       </Container>

@@ -45,6 +45,7 @@ const ZamenyGlyukozoj = (props) => {
               "Количество сахара" и автоматически получаем ответ "6.3 кг." в
               поле справа.
             </p>
+            <div id="id-C-A-1654628-3"></div>
           </Col>
         </Row>
       </Container>
