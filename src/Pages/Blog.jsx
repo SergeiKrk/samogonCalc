@@ -6,20 +6,20 @@ import aboutImg from "../assets/img/samogoncalc-bender.png";
 import Footer from "../Components/Footer/Footer";
 import CardBlog from "../Components/Blog/CardBlog";
 
-const About = (props) => {
+const Blog = (props) => {
   return (
     <>
       <HeaderBlock
         HeaderBlock={{
           Img: `${aboutImg}`,
-          Title: "О проекте",
+          Title: "Интересные статьи о винокурении",
           Description:
-            "SamogonCalc - Набор быстрых онлайн-калькуляторов для винокуров и самогонщиков",
+            "Читайте, варите, гоните, настаивайте, пейте, наслаждайтесь, но не спивайтесь",
           Href: "kalkulyator-zameny-sahara-glyukozoj",
-          titleSeo: "О проекте - SamogonCalc",
+          titleSeo: "О самогоне",
           descriptionSeo:
-            "SamogonCalc - набор быстрых онлайн-калькуляторов для винокуров и самогонщиков",
-          urlSeo: "https://samogoncalc.ru/kalkulyator-zameny-sahara-glyukozoj/",
+            "Читайте, варите, гоните, настаивайте, пейте, наслаждайтесь, но не спивайтесь",
+          urlSeo: "https://samogoncalc.ru/samogon/",
         }}
       />
 
@@ -30,4 +30,4 @@ const About = (props) => {
   );
 };
 
-export default About;
+export default Blog;

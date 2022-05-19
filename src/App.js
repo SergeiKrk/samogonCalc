@@ -88,7 +88,7 @@ const App = (props) => {
             render={withSuspense(ZamenyGlyukozoj)}
           />
           <Route path="/about/" render={withSuspense(About)} />
-          {/* <Route path="/samogonovarenie/" render={withSuspense(Blog)} /> */}
+          <Route path="/blog/" render={withSuspense(Blog)} />
           <Route exact patch="/404/" render={withSuspense(NotFound404)} />
           <Route path="*" render={withSuspense(NotFound404)} />
         </Switch>
