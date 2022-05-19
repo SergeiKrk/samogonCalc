@@ -8,37 +8,49 @@ let initialState = {
       id: 1,
       title:
         "Название статьи про то какие могут быть название статей в этом месте #1",
-      like: "false",
+      photoUrl:
+        "https://static.insales-cdn.com/images/products/1/1609/213943881/lg100.jpg",
+      like: false,
     },
     {
       id: 2,
       title:
         "Название статьи про то какие могут быть название статей в этом месте #2",
-      like: "false",
+      photoUrl:
+        "https://static.insales-cdn.com/images/products/1/1609/213943881/lg100.jpg",
+      like: false,
     },
     {
       id: 3,
       title:
         "Название статьи про то какие могут быть название статей в этом месте #3",
-      like: "true",
+      photoUrl:
+        "https://static.insales-cdn.com/images/products/1/1609/213943881/lg100.jpg",
+      like: true,
     },
     {
       id: 4,
       title:
         "Название статьи про то какие могут быть название статей в этом месте #4",
-      like: "false",
+      photoUrl:
+        "https://static.insales-cdn.com/images/products/1/1609/213943881/lg100.jpg",
+      like: false,
     },
     {
       id: 5,
       title:
         "Название статьи про то какие могут быть название статей в этом месте #5",
-      like: "true",
+      photoUrl:
+        "https://static.insales-cdn.com/images/products/1/1609/213943881/lg100.jpg",
+      like: true,
     },
     {
       id: 6,
       title:
         "Название статьи про то какие могут быть название статей в этом месте #6",
-      like: "false",
+      photoUrl:
+        "https://static.insales-cdn.com/images/products/1/1609/213943881/lg100.jpg",
+      like: false,
     },
   ],
 };
@@ -49,7 +61,7 @@ const postsReducer = (state = initialState, action) => {
       return {
         ...state,
         posts: state.posts.map((p) => {
-          if (p.id === action.id) {
+          if (p.id === action.postId) {
             return { ...p, like: true };
           }
           return p;
@@ -61,7 +73,7 @@ const postsReducer = (state = initialState, action) => {
       return {
         ...state,
         posts: state.posts.map((p) => {
-          if (p.id === action.id) {
+          if (p.id === action.postId) {
             return { ...p, like: false };
           }
           return p;
