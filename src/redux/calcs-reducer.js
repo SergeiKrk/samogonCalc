@@ -2,7 +2,6 @@ import razbavlenieVodoj from "../assets/img/kalkulyator-razbavleniya-samogona-vo
 import otborGolov from "../assets/img/kalkulyator-otbor-golov.png";
 import drobnojPeregonki from "../assets/img/kalkulyator-drobnoj-peregonki.png";
 import poslePervoj from "../assets/img/razbavlenie-samogona-vodoj-posle-pervoj-peregonki.png";
-import posleVtorogo from "../assets/img/razbavlenie-samogona-vodoj-posle-vtorogo-peregona.png";
 import smeshivaniyaSpirtov from "../assets/img/kalkulyator-smeshivaniya-spirtov.png";
 import absolyutnogoSpirta from "../assets/img/kalkulyator-absolyutnogo-spirta.png";
 import sebestoimostiSamogona from "../assets/img/kalkulyator-sebestoimosti-samogona.png";

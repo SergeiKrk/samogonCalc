@@ -2,6 +2,8 @@ const SET_POSTS = "SET_POSTS";
 
 let initialState = {
   posts: [],
+  pageSize: 6,
+  
 };
 
 const postsReducer = (state = initialState, action) => {

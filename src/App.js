@@ -22,7 +22,7 @@ const Vodka = React.lazy(() => import("./Pages/Vodka"));
 const SpirtaTemper = React.lazy(() => import("./Pages/SpirtaTemper"));
 const ZamenyGlyukozoj = React.lazy(() => import("./Pages/ZamenyGlyukozoj"));
 const About = React.lazy(() => import("./Pages/About"));
-const Blog = React.lazy(() => import("./Pages/Blog"));
+// const Blog = React.lazy(() => import("./Pages/Blog"));
 const NotFound404 = React.lazy(() => import("./Pages/NotFound404"));
 
 const tagManagerArgs = {
@@ -88,7 +88,7 @@ const App = (props) => {
             render={withSuspense(ZamenyGlyukozoj)}
           />
           <Route path="/about/" render={withSuspense(About)} />
-          <Route path="/blog/" render={withSuspense(Blog)} />
+          {/* <Route path="/blog/" render={withSuspense(Blog)} /> */}
           <Route exact patch="/404/" render={withSuspense(NotFound404)} />
           <Route path="*" render={withSuspense(NotFound404)} />
         </Switch>

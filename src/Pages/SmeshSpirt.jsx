@@ -41,6 +41,7 @@ const SmeshSpirt = (props) => {
       <Container>
         <Row>
           <Col className="text-left" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               В случае его недоступности можно воспользоваться формулой
               смешивания спиртов.
@@ -126,7 +127,7 @@ const SmeshSpirt = (props) => {
               спиртометром (ареометром), при этом следует иметь в виду, что
               ареометры калибруются при температуре жидкости 20 градусов.
             </p>
-            <div id="id-C-A-1654628-3"></div>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>

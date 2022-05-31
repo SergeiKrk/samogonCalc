@@ -11,6 +11,7 @@ const Breadcrumbs = (props) => {
           {props.Breadcrumbs.Title}
         </Breadcrumb.Item>
       </Breadcrumb>
+      <div id="yandex_rtb_R-A-1654628-5"></div>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import PoslePervojCalcContainer from "../Components/Calcs/PoslePervojCalc/PoslePervojCalcContainer";
-import React from "react";
 import poslePervojImg from "../assets/img/razbavlenie-samogona-vodoj-posle-pervoj-peregonki.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -50,6 +49,7 @@ const PoslePervoj = (props) => {
       <Container>
         <Row>
           <Col className="text-left" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               Считается, что домашний самогон по качеству превосходит фабричную
               водку и многие крепкие напитки из магазина. Но это не совсем так.
@@ -121,7 +121,7 @@ const PoslePervoj = (props) => {
               процесс перегонки может увеличиться. Допускается крепость сырца и
               до 40 градусов.
             </p>
-            <div id="id-C-A-1654628-3"></div>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>

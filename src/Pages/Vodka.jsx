@@ -43,6 +43,7 @@ const Vodka = (props) => {
       <Container>
         <Row>
           <Col className="text-left mt-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               Например, у вас есть 3 литра медицинского спирта, вы хотите
               рассчитать сколько воды нужно долить и сколько водки получится
@@ -66,6 +67,7 @@ const Vodka = (props) => {
               </a>{" "}
               вам поможет.
             </p>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>

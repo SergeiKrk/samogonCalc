@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import logoImg from "../../assets/img/kalkulyator-samogonshchika.png";
 
 const Footer = () => {

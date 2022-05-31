@@ -38,6 +38,7 @@ const SebestoimApprox = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               Если вы ещё не начали готовить самогон, не поставили брагу, но
               задумались о выгоде мероприятия, логичным будет посчитать
@@ -75,7 +76,7 @@ const SebestoimApprox = (props) => {
               </a>
               .
             </p>
-            <div id="id-C-A-1654628-3"></div>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>

@@ -2,8 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/styles.css";
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
-// import DisqusBlock from "../Components/Header/DisqusBlock";
-import React from "react";
 import RazbavleniyaSamogonaCalcContainer from "../Components/Calcs/RazbavleniyaSamogonaCalc/RazbavleniyaSamogonaCalcContainer";
 import razbavVodoi from "../assets/img/kalkulyator-razbavleniya-samogona-vodoj.png";
 import Container from "react-bootstrap/Container";
@@ -11,9 +9,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
-const DisqusBlock = React.lazy(() =>
-  import("../Components/Header/DisqusBlock")
-);
 
 const RazbavleniyaSamogona = (props) => {
   return (
@@ -55,6 +50,7 @@ const RazbavleniyaSamogona = (props) => {
       <Container>
         <Row>
           <Col className="text-left mt-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               Например, есть 6 литров дистиллята крепостью в 90°. Вы хотите
               развести самогон до 45°. Вводим все 3 параметра "Объем
@@ -402,7 +398,7 @@ const RazbavleniyaSamogona = (props) => {
               . Он поможет подобрать пропорции и разбавить спирт или самогон
               водой до 40 градусов
             </p>
-            <div id="id-C-A-1654628-3"></div>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>

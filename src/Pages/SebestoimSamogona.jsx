@@ -1,7 +1,6 @@
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import SebestoimostCalcContainer from "../Components/Calcs/Sebestoimost/SebestoimostCalcContainer";
-import SebestoimApproxCalcContainer from "../Components/Calcs/SebestoimApprox/SebestoimApproxCalcContainer";
 import sebestoimostImg from "../assets/img/kalkulyator-sebestoimosti-samogona.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -38,6 +37,7 @@ const SebestoimSamogona = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               Не знаете, как рассчитать себестоимость самогона? Вы можете
               сделать это вручную с учётом всех входных параметров, а можете
@@ -85,7 +85,7 @@ const SebestoimSamogona = (props) => {
               </a>
               .
             </p>
-            <div id="id-C-A-1654628-3"></div>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>

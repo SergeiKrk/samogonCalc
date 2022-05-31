@@ -1,7 +1,6 @@
 import HeaderBlock from "../Components/Header/HeaderBlock";
 import Footer from "../Components/Footer/Footer";
 import OtborGolovCalcContainer from "../Components/Calcs/OtborGolovCalc/OtborGolovCalcContainer";
-import React from "react";
 import otborGolovImg from "../assets/img/kalkulyator-otbor-golov.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -51,6 +50,7 @@ const OtborGolov = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3 mt-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               При дробной перегонке браги осуществляется разделение ее на
               фракции. Помимо воды и этилового спирта (этанола), в браге
@@ -163,7 +163,7 @@ const OtborGolov = (props) => {
               температуру поднимают до 78°С и отбирается тело, вплоть до
               повышения температуры до 85°С.
             </p>
-            <div id="id-C-A-1654628-3"></div>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>

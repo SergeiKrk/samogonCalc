@@ -40,6 +40,7 @@ const AbsolyutnijSpirt = (props) => {
       <Container>
         <Row>
           <Col className="text-left" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-4"></p>
             <p>
               Чтобы выяснить сколько чистого и абсолютного спирта содержится в
               вашем дистилляте, в калькуляторе нужно ввести параметр "Объем
@@ -186,7 +187,7 @@ const AbsolyutnijSpirt = (props) => {
               содержится 4% воды. В абсолютном спирте вода и другие примеси
               отсутствуют.
             </p>
-            <div id="id-C-A-1654628-3"></div>
+            <p id="id-C-A-1654628-3"></p>
           </Col>
         </Row>
       </Container>
