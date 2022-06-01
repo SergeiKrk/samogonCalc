@@ -28,6 +28,7 @@ const DrobnayaPeregonka = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Калькулятор дробной перегонки спирта-сырца поможет узнать объем
               абсолютного спирта, отобрать «головы» и «хвосты», а так же

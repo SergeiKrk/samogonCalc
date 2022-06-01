@@ -24,9 +24,10 @@ const Footer = () => {
             <div className="col-lg-4">
               <h4 className="text-uppercase mb-4">Контакты</h4>
               <p className="lead mb-0">
-                По всем вопросам пишите в Telegram <br />
-                Sergei Krk{" "}
-                <a href="https://telegram.me/sergeikrk">@sergeikrk</a>
+                Подписывайтесь на наш канал
+                <br />
+                "Самогон и самогонщики"{" "}
+                <a href="https://telegram.me/samogonco">@samogonco</a>
               </p>
             </div>
           </div>

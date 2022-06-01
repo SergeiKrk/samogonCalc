@@ -26,6 +26,7 @@ const SebestoimApprox = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Калькулятор поможет рассчитать примерную себестоимость и объем
               самогона даже если вы еще не ставили брагу и не перегоняли

@@ -29,6 +29,7 @@ const AbsolyutnijSpirt = (props) => {
       <Container>
         <Row>
           <Col className="text-left" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Калькулятор рассчитает объем абсолютного (100°) и чистого спирта в
               полученном спирте сырце, дистилляте и ректификате.

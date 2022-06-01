@@ -27,6 +27,7 @@ const OtborGolov = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Онлайн калькулятор отбора голов рассчитает объем вредной верхней
               фракции и объем абсолютного спирта в полученном дистилляте.

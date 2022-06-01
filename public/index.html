@@ -20,24 +20,32 @@
     <noscript>
       Калькулятор самогонщика: онлайн расчет всех важных параметров.
     </noscript>
-    <div id="root"></div>
-    <script>
-      window.yaContextCb.push(() => {
-        Ya.Context.AdvManager.renderWidget(
-          {
+    <script async>
+      setInterval(() => {
+        window.yaContextCb.push(() => {
+          Ya.Context.AdvManager.render({
             renderTo: "yandex_rtb_R-A-1654628-5",
             blockId: "R-A-1654628-5",
-          },
-          {
+          });
+        });
+      }, 5000);
+      setInterval(() => {
+        window.yaContextCb.push(() => {
+          Ya.Context.AdvManager.render({
             renderTo: "yandex_rtb_R-A-1654628-4",
             blockId: "R-A-1654628-4",
-          },
-          {
+          });
+        });
+      }, 7000);
+      setInterval(() => {
+        window.yaContextCb.push(() => {
+          Ya.Context.AdvManager.renderWidget({
             renderTo: "id-C-A-1654628-3",
             blockId: "C-A-1654628-3",
-          }
-        );
-      });
+          });
+        });
+      }, 8000);
     </script>
+    <div id="root"></div>
   </body>
 </html>

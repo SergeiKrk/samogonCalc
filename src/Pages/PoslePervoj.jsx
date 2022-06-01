@@ -28,12 +28,8 @@ const PoslePervoj = (props) => {
 
       <Container>
         <Row>
-          <Col className="text-left" md={{ span: 8, offset: 2 }}></Col>
-        </Row>
-      </Container>
-      <Container>
-        <Row>
           <Col className="text-left" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Чтобы разбавить спирт-сырец водой до оптимальной для второй
               перегонки крепости в 20° (25, 30, 35, 40), нужно выяснить, какой

@@ -26,6 +26,7 @@ const SebestoimSamogona = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Калькулятор поможет рассчитать стоимость получившегося дистиллята
               исходя из затрат на сырье и ингредиенты.

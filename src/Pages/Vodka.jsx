@@ -29,6 +29,7 @@ const Vodka = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               У Вас есть медицинский спирт, домашний ректификат или крепкий
               дистиллят (самогон) из которого хотите получить водку или настойку

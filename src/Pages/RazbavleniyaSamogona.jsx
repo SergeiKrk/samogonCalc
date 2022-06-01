@@ -32,6 +32,7 @@ const RazbavleniyaSamogona = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Нужно разбавить спирт или дистиллят до конкретной крепости? Наш
               быстрый онлайн калькулятор разбавления самогона водой поможет.

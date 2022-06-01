@@ -28,6 +28,7 @@ const SmeshSpirt = (props) => {
       <Container>
         <Row>
           <Col className="text-left" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               В практике работы со спиртосодержащими жидкостями зачастую
               приходится смешивать две жидкости разной крепости и разного

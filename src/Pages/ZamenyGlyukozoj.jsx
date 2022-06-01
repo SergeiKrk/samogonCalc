@@ -25,6 +25,7 @@ const ZamenyGlyukozoj = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Вы хотите получить более качественный дистиллят, чем получали
               раньше из обычного сахара? У Вас есть глюкоза или декстроза, но вы

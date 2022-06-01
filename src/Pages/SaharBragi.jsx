@@ -27,6 +27,7 @@ const SaharBragi = (props) => {
       <Container>
         <Row>
           <Col className="text-left mb-3" md={{ span: 8, offset: 2 }}>
+            <p id="yandex_rtb_R-A-1654628-5"></p>
             <p>
               Калькулятор поможет вычислить крепость браги и рассчитает
               оптимальные пропорции сырья и воды для затора.
