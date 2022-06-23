@@ -97,7 +97,11 @@ let Posts = (props) => {
                   src="https://static.insales-cdn.com/images/products/1/1609/213943881/lg100.jpg"
                 />
                 <Card.Body>
-                  <Card.Title>{p.title.rendered}</Card.Title>
+                  <Card.Title>
+                    <div
+                      dangerouslySetInnerHTML={{ __html: p.title.rendered }}
+                    ></div>
+                  </Card.Title>
                 </Card.Body>
               </Card>
             </Col>

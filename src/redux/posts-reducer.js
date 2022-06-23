@@ -7,7 +7,7 @@ let initialState = {
   posts: [],
   isLoaded: false,
   pageNumber: 1,
-  perPage: 3,
+  perPage: 6,
   totalPageCount: 12,
 };
 
