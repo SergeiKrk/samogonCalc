@@ -4,6 +4,16 @@ import logoImg from "../../assets/img/kalkulyator-samogonshchika.png";
 const Footer = () => {
   return (
     <div className="mt-4">
+      <div
+        className="tgx-rlf"
+        data-rlf-id="7547"
+        data-rlf-auto="1"
+        data-rlf-flt="1"
+        data-rlf-dock="0"
+        data-rlf-align="rb"
+        data-rlf-min-time="60"
+        data-rlf-fw="600"
+      ></div>
       <footer className="footer text-center">
         <div className="container">
           <div className="row">
